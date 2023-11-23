@@ -101,16 +101,16 @@ function HomeContent() {
       <Grid item xs={0.2} style={{ borderRight: '1px solid	#cdcdcd', height: '100%', marginRight: "20px"}}/>
       <Grid item container justifyItems="center" alignItems="center" xs={9}>
         <Grid item container xs={2} maxHeight="100px" direction="column" wrap='wrap' alignItems="flex-start">
-                <Grid item xs={4} fontSize={16} color='black' marginBottom="2px"> Central Rama 2 </Grid>
-                <Grid item xs={4} fontSize={10} marginBottom="3px"> 10 km from you </Grid>
-                <Grid item xs={4} fontSize={10} textAlign="left"> <LocationOnIcon style={{ fontSize: '10px', marginLeft: '1px', marginRight: '4px' }} /> Lorem ipsum dolor sit amet consectetur adipisicing elit. A, magni? asd asd adas ad asda asdadasa as da d </Grid>
+          <Link item xs={4} marginBottom="2px" style={{textDecoration: 'none'}} to='/plan'> <Grid fontSize={16} color='black'> Central Rama 2 </Grid> </Link>
+          <Grid item xs={4} fontSize={10} marginBottom="3px"> 10 km from you </Grid>
+          <Grid item xs={4} fontSize={10} textAlign="left"> <LocationOnIcon style={{ fontSize: '10px', marginLeft: '1px', marginRight: '4px' }} /> Lorem ipsum dolor sit amet consectetur adipisicing elit. A, magni? asd asd adas ad asda asdadasa as da d </Grid>
         </Grid>
 
         <Grid item container xs={10} spacing={2} justifyContent="center" alignItems="center">
             <Grid item xs={1.5} onClick={handleLeftButtonClick}> 
               <HoverIcon direction="left"/> 
             </Grid>
-            <Grid item xs={3}> 
+            <Grid item xs={3} > 
             <Img
                 src={images[currentImageIndex]}
                 loading="lazy"
@@ -132,11 +132,6 @@ function HomeContent() {
                 <HoverIcon direction="right"/>
             </Grid>
         </Grid>
-        {/* <Stack spacing={2} direction="row">
-          <Button variant="text">Text</Button>
-          <Button variant="contained">Contained</Button>
-          <Button variant="outlined">Outlined</Button>
-        </Stack> */}
       </Grid>
     </Item>
   );
