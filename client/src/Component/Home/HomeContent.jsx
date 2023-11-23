@@ -79,7 +79,7 @@ const Item = styled(Paper)(({ theme }) => ({
   }
 }));
 
-function HomeContent() {
+function HomeContent({ name, distance, address }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const handleLeftButtonClick = () => {
@@ -101,9 +101,12 @@ function HomeContent() {
       <Grid item xs={0.2} style={{ borderRight: '1px solid	#cdcdcd', height: '100%', marginRight: "20px"}}/>
       <Grid item container justifyItems="center" alignItems="center" xs={9}>
         <Grid item container xs={2} maxHeight="100px" direction="column" wrap='wrap' alignItems="flex-start">
-          <Link item xs={4} marginBottom="2px" style={{textDecoration: 'none'}} to='/plan'> <Grid fontSize={16} color='black'> Central Rama 2 </Grid> </Link>
-          <Grid item xs={4} fontSize={10} marginBottom="3px"> 10 km from you </Grid>
-          <Grid item xs={4} fontSize={10} textAlign="left"> <LocationOnIcon style={{ fontSize: '10px', marginLeft: '1px', marginRight: '4px' }} /> Lorem ipsum dolor sit amet consectetur adipisicing elit. A, magni? asd asd adas ad asda asdadasa as da d </Grid>
+          {/*Show name of place*/}
+          <Link item xs={4} marginBottom="2px" style={{textDecoration: 'none'}} to='/plan'> <Grid fontSize={16} color='black'> {name} </Grid> </Link>
+          {/*Show distance from user*/}
+          <Grid item xs={4} fontSize={10} marginBottom="3px"> {distance} </Grid>
+          {/*Show description*/}
+          <Grid item xs={4} fontSize={10} textAlign="left"> <LocationOnIcon style={{ fontSize: '10px', marginLeft: '1px', marginRight: '4px' }} /> {address} </Grid>
         </Grid>
 
         <Grid item container xs={10} spacing={2} justifyContent="center" alignItems="center">
