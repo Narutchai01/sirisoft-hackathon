@@ -9,10 +9,10 @@ export default function Home() {
       <Grid item container alignItems="center" justifyItems="center" spacing={2}>
         <Grid item xs={1.5}></Grid>
         <Grid item xs={9}>
-          <Typography variant="h5" color='grey' gutterBottom>
-            Popular Mall
+          <Typography item variant="h5" color='grey' marginLeft={1} gutterBottom>
+            Popular Mall        
           </Typography>
-          <hr style={{ width: '99%', border: '1px solid	#cdcdcd', marginBottom: '30px' }} />
+          <hr style={{ width: '99%', border: '1px solid	#cdcdcd', marginBottom: '30px' }} />    
           <HomeMain />
         </Grid>
         <Grid item xs={1.5}></Grid>
