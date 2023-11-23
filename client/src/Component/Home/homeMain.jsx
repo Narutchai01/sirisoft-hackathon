@@ -5,22 +5,15 @@ import MallData from '../Data/MallData.js'
 
 export default function HomeMain() {
     const getMallData = mallDataObj => {
-        return <HomeContent {...mallDataObj}/>
+        return (
+            <Grid item xs={4}>
+                <HomeContent {...mallDataObj}/>
+            </Grid>
+        );
     }
     return (
-        <Grid container direction="column" spacing={3}>
-            <Grid item xs={4}>
-                <HomeContent/>
-            </Grid>
-            <Grid item xs={4}>
-                <HomeContent/>
-            </Grid>
-            <Grid item xs={4}>
-                <HomeContent/>
-            </Grid>
-            <Grid item xs={4}>
-                <HomeContent/>
-            </Grid>
+        <Grid container direction="column" spacing={3}>  
+            {MallData.map(mallDataObjl => getMallData(mallDataObjl))}
         </Grid>
     );
 }
