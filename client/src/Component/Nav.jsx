@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -11,6 +12,7 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import { Button } from '@mui/material';
+import MallSearch from './Search/MallSearch';
 
 const pages = [ "HOME", "PLAN", "MINIGAME", "PROMOTOPN" ]
 
@@ -56,6 +58,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Nav() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
+    const [mallSearch, setMallSearch] = React.useState('');
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -121,10 +124,13 @@ export default function Nav() {
                         <SearchIcon />
                     </SearchIconWrapper>
                     <StyledInputBase
-                    placeholder="Search…"
-                    inputProps={{ 'aria-label': 'search' }}
+                        placeholder="Search…"
+                        value={mallSearch}
+                        inputProps={{ 'aria-label': 'search' }}
+                        onChange={(e) => setMallSearch(e.target.value)}
                     />
                 </Search>
+                <MallSearch mallSearch={mallSearch}/>
                 
                 <Box sx={{  display: { xs: 'none', md: 'flex' } }}>
                     {pages.map((page) => (
