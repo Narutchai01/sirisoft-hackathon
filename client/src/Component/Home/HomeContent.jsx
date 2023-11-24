@@ -94,8 +94,8 @@ function HomeContent(props) {
       </Grid>
       <Grid item xs={0.2} style={{ borderRight: '1px solid	#cdcdcd', height: '100%', marginRight: "20px"}}/>
       <Grid item container justifyItems="center" alignItems="center" xs={9} style={{ height: '100%' }}>
-        <Grid item container xs={2} maxHeight="100px" direction="column" wrap='wrap' alignItems="flex-start">
-          <Link item xs={4} marginBottom="2px" style={{textDecoration: 'none'}} to='/plan'> <Grid fontSize={16} color='black'> {mallName} </Grid> </Link>
+        <Grid item container xs={2} maxHeight="100px" direction="column" wrap='nowrap' alignItems="flex-start">
+          <Link item xs={4} marginBottom="2px" style={{textDecoration: 'none'}} to='/plan'> <Grid fontSize={14} color='black'> {mallName} </Grid> </Link>
           <Grid item xs={4} fontSize={9} marginBottom="3px"> {nearYou} from you </Grid>
           <Grid item xs={4} fontSize={9} textAlign="left"> <LocationOnIcon style={{ fontSize: '10px', marginLeft: '0px', marginRight: '1px' }} /> {mallPosition} </Grid>
         </Grid>

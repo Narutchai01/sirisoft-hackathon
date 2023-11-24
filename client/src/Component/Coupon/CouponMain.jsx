@@ -5,16 +5,19 @@ import CouponData from '../Data/CouponData.js';
 import CouponPopup from './CouponPopup.jsx';
 
 export default function CouponMain() {
+    const [open, setOpen] = React.useState(false);
+    console.log(open);
+
     const getCouponData = CouponDataObj => {
         return (
             <Grid item xs={4}>
-                <CouponContent {...CouponDataObj}/>
+                <CouponContent displayCoupon={() => setOpen(!open)}  {...CouponDataObj}/>
             </Grid>
         );
     }
     return (
         <Grid>
-            <CouponPopup />
+            { open && <CouponPopup displayCoupon={() => setOpen(!open)} style={{ zIndex: 9999 }}/>}
             <Grid container direction="column" spacing={3}>  
                 {CouponData.map(CouponDataObjl => getCouponData(CouponDataObjl))}
             </Grid>

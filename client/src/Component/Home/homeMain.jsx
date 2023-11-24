@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
-import HomeContent from './HomeContent';
+import HomeContent from './HomeContent.jsx';
 import MallData from '../Data/MallData.js'
 
 export default function HomeMain() {

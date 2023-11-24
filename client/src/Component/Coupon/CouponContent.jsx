@@ -70,8 +70,8 @@ const Item = styled(Paper)(({ theme }) => ({
   }
 }));
 
-function CouponContent(props) {
-  const { mallName, mallPosition, nearYou,iconImg, storeImg  } = props;
+function CouponContent( props ) {
+  const { mallName, mallPosition, nearYou, iconImg, storeImg, displayCoupon  } = props;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const handleLeftButtonClick = () => {
@@ -98,8 +98,9 @@ function CouponContent(props) {
             </Grid>
             <Grid item xs={2.5} style={{ height: '90%' }}> 
             <Img
-                src={storeImg[currentImageIndex]}
-                loading="lazy"
+              src={storeImg[currentImageIndex]}
+              loading="lazy"
+              onClick={displayCoupon}
             />
             </Grid>
             <Grid item xs={2.5} style={{ height: '90%' }}> 
