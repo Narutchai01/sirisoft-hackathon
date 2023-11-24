@@ -15,7 +15,7 @@ import { Button } from '@mui/material';
 import MallSearch from './Search/MallSearch';
 import { Unstable_Popup as BasePopup } from '@mui/base/Unstable_Popup';
 
-const pages = [ "HOME", "PLAN", "MINIGAME", "PROMOTOPN" ]
+const pages = [ "HOME", "PLAN", "MINIGAME", "PROMOTION" ]
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
