@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PlanMain from '../Component/Plan/PlanMain';
 import PlanSidebar from '../Component/Plan/PlanSidebar';
 import { Input as BaseInput } from '@mui/base/Input';
@@ -16,11 +15,10 @@ const Img = styled('img') ({
   display: 'block',
   width: '80%',
   height: '100%',
-  maxHeight: '130px',
   objectFit: 'cover',
-  transition: 'transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out',
+  transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
   ":hover": {
-    transform: 'scale(1.1)',
+    transform: 'scale(1.01)',
     boxShadow: '0px 5px 20px 0px #ccc',
     cursor: 'pointer',
   },
@@ -92,9 +90,9 @@ const InputElement = styled('input')(
 export default function Plan() {
   return (
     <Grid container height='100vh'>
-      <Grid item container direction='column' alignItems="center" justifyContent='center' height='100%' width='100%'>
-        <Grid item xs={2} height='100%' width='100%' marginBottom={2} display='flex' justifyContent='center' alignContent='center'>
-          <Img src='https://mui.com/static/images/cards/contemplative-reptile.jpg' alt="Mall" />
+      <Grid item container direction='column' alignItems="center" justifyContent='space-evenly' height='100%' width='100%'>
+        <Grid item container xs={2} height='20vh' width='100%' marginY={2} justifyContent='center' alignContent='center'>
+          <Img src='https://mui.com/static/images/cards/contemplative-reptile.jpg' />
         </Grid>
         <Grid item xs={1} width='80%' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Typography alignSelf='start' variant="h5" color='grey' gutterBottom>

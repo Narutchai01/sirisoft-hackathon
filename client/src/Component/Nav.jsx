@@ -13,6 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import { Button } from '@mui/material';
 import MallSearch from './Search/MallSearch';
+import { Unstable_Popup as BasePopup } from '@mui/base/Unstable_Popup';
 
 const pages = [ "HOME", "PLAN", "MINIGAME", "PROMOTOPN" ]
 
@@ -46,7 +47,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',
     '& .MuiInputBase-input': {
         padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
         paddingLeft: `calc(1em + ${theme.spacing(4)})`,
         transition: theme.transitions.create('width'),
         width: '100%',
@@ -58,12 +58,26 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Nav() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
+    const [anchor, setAnchor] = React.useState(null);
     const [mallSearch, setMallSearch] = React.useState('');
+    const [isSearchFocused, setIsSearchFocused] = React.useState(false);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
-
+    
+    const handleClickSearch = (event) => {
+        setAnchor(anchor ? null : event.currentTarget);
+        setIsSearchFocused(true);
+    };
+    
+    const handleSearchBlur = () => {
+        setIsSearchFocused(false);
+    };
+    
+    const open = Boolean(anchor);
+    const id = open ? 'simple-popup' : undefined;
+    
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
@@ -128,10 +142,17 @@ export default function Nav() {
                         value={mallSearch}
                         inputProps={{ 'aria-label': 'search' }}
                         onChange={(e) => setMallSearch(e.target.value)}
+                        onClick={handleClickSearch}
+                        onFocus={handleClickSearch}
+                        onBlur={handleSearchBlur}
                     />
-                </Search>
-                <MallSearch mallSearch={mallSearch}/>
-                
+                    
+                    {isSearchFocused && (
+                        <BasePopup id={id} open={isSearchFocused} anchor={anchor} style={{ zIndex: 9999 }}>
+                            <MallSearch mallSearch={mallSearch} />
+                        </BasePopup>
+                    )}
+                </Search>          
                 <Box sx={{  display: { xs: 'none', md: 'flex' } }}>
                     {pages.map((page) => (
                         <Button

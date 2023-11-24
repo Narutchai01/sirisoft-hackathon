@@ -21,7 +21,7 @@ export default [
         "https://i.pinimg.com/736x/3a/48/26/3a482603c3bee598a471950a3fdc2ce5.jpg"]
     },
     {
-        mallName: "Central World",
+        mallName: "The Mall Bangkapi",
         mallPosition: "999/9 ถ. พระรามที่ 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร 10330",
         nearYou: "10 km.",
         iconImg: "https://mui.com/static/images/cards/contemplative-reptile.jpg",
@@ -31,7 +31,7 @@ export default [
         "https://i.pinimg.com/736x/3a/48/26/3a482603c3bee598a471950a3fdc2ce5.jpg"]
     },
     {
-        mallName: "Central World",
+        mallName: "Central Ladprao",
         mallPosition: "999/9 ถ. พระรามที่ 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร 10330",
         nearYou: "10 km.",
         iconImg: "https://mui.com/static/images/cards/contemplative-reptile.jpg",
@@ -41,7 +41,7 @@ export default [
         "https://i.pinimg.com/736x/3a/48/26/3a482603c3bee598a471950a3fdc2ce5.jpg"]
     },
     {
-        mallName: "Central World",
+        mallName: "Central Rama 9",
         mallPosition: "999/9 ถ. พระรามที่ 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร 10330",
         nearYou: "10 km.",
         iconImg: "https://mui.com/static/images/cards/contemplative-reptile.jpg",
