@@ -7,7 +7,6 @@ import Nav from '../Component/Nav.jsx';
 export default function Home() {
   return (
     <>
-      <Nav />
       <Grid container direction="column" style={{ minHeight: '100vh', marginTop: '20px' }}>
         <Grid item container alignItems="center" justifyItems="center" spacing={2}>
           <Grid item xs={1.5}></Grid>
