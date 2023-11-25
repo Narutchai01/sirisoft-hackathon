@@ -71,20 +71,21 @@ function performNearbyPlaces(location) {
         }
     });
 }
-// app.post("/api/nearby-places", async (req, res) => {
-//   try {
-//     const { lat, lng } = req.body;
-//     if (!lat || !lng) {
-//       return res.status(400).json({ error: 'Invalid or missing location parameters' });
-//     }
-//     const userLocation = { lat: parseFloat(lat), lng: parseFloat(lng)};
-//     const nearbyPlaces = await performNearbyPlaces(userLocation);
-//     res.json({ nearbyPlaces });
-//   } catch (error) {
-//     console.error('Error handling Nearby Places request:', error);
-//     res.status(500).json({ error: 'Internal Server Error' });
-//   }
-// });
+app.post("/api/nearby-places", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const { lat, lng } = req.body;
+        if (!lat || !lng) {
+            return res.status(400).json({ error: 'Invalid or missing location parameters' });
+        }
+        const userLocation = { lat: parseFloat(lat), lng: parseFloat(lng) };
+        const nearbyPlaces = yield performNearbyPlaces(userLocation);
+        res.json({ nearbyPlaces });
+    }
+    catch (error) {
+        console.error('Error handling Nearby Places request:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+}));
 // listen
 app.listen(port, () => {
     console.log(`Server started on at http://localhost:${port}`);

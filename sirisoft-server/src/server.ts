@@ -72,22 +72,22 @@ async function performNearbyPlaces(location: { lat: number; lng: number }): Prom
   }
 }
 
-// app.post("/api/nearby-places", async (req, res) => {
-//   try {
-//     const { lat, lng } = req.body;
+app.post("/api/nearby-places", async (req, res) => {
+  try {
+    const { lat, lng } = req.body;
 
-//     if (!lat || !lng) {
-//       return res.status(400).json({ error: 'Invalid or missing location parameters' });
-//     }
+    if (!lat || !lng) {
+      return res.status(400).json({ error: 'Invalid or missing location parameters' });
+    }
 
-//     const userLocation = { lat: parseFloat(lat), lng: parseFloat(lng)};
-//     const nearbyPlaces = await performNearbyPlaces(userLocation);
-//     res.json({ nearbyPlaces });
-//   } catch (error) {
-//     console.error('Error handling Nearby Places request:', error);
-//     res.status(500).json({ error: 'Internal Server Error' });
-//   }
-// });
+    const userLocation = { lat: parseFloat(lat), lng: parseFloat(lng)};
+    const nearbyPlaces = await performNearbyPlaces(userLocation);
+    res.json({ nearbyPlaces });
+  } catch (error) {
+    console.error('Error handling Nearby Places request:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
 
 // listen
 app.listen(port, () => {
