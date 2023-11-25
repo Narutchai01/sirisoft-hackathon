@@ -21,6 +21,7 @@ app.use(cors({
     credentials: true,
 }));
 const port = 3000;
+// const client = new Client({});
 // routes
 app.post("/api/calculatedistance", CalculateDistaceFunc_1.CalculateDistanceFunc);
 app.post("/api/findplace", FindplacePlan_1.FindplacePlan);
