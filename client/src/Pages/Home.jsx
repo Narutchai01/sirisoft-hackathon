@@ -2,7 +2,6 @@ import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import HomeMain from '../Component/Home/HomeMain.jsx';
-import Nav from '../Component/Nav.jsx';
 
 export default function Home() {
   return (
