@@ -25,13 +25,42 @@ export default function LocationInput() {
     const [selectedTime, setSelectedTime] = useState([]);
     
 
-    const handleDescriptionClick = (description) => {
-        setSelectedDescription(description);
-        setIsSearchFocused(false); // Close the dropdown when a description is selected
+    const [travelMode, setTravelMode] = React.useState('');
+    const [time, setTime] = React.useState('');
+    const [destination, setDestination] = React.useState('');
+    // console.log(destination);
+    console.log(time);
+    // console.log(travelMode);
+
+    const props = {
+        travelMode,
+        setTravelMode,
+        time,
     };
 
-    const handleFocus = () => {
-        setIsSearchFocused(!isSearchFocused);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // console.log(destination);
+    }
+    const handleTimeChange = (newTime) => {
+        setTime(newTime);
+        // console.log(time);
+    }
+
+
+  const [location, setLocation] = React.useState({
+    lat: 13.745704,
+    lng: 100.535912
+  });
+
+  React.useEffect(() => {
+    const sendLocation = async () => {
+      if (location.lat === 0 && location.lng === 0) {
+        return false;
+      }
+      await axios.post("http://localhost:3000/api/direction", location).then((res) => {
+        console.log(res.data);
+      });
     };
 
     const handleChangeFindPlace = (event) => {
@@ -74,7 +103,7 @@ export default function LocationInput() {
             <Grid item container xs={6}>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DemoContainer components={['TimePicker']}>
-                        <TimePicker label="Time" />
+                        <TimePicker label="Time" value={setTime} onChange={handleTimeChange} />
                     </DemoContainer>
                 </LocalizationProvider>
             </Grid>
