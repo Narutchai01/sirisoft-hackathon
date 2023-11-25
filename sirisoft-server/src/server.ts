@@ -1,7 +1,7 @@
 //import Zone
 import express from 'express';
 const cors = require('cors');
-
+import { Client } from '@googlemaps/google-maps-services-js';
 
 
 
@@ -15,10 +15,17 @@ app.use(cors(
     }
 ));
 const port = 3000;
+const client = new Client({});
 
 
 // routes
-app.post('/api/googlemap', );
+app.post('/api/googlemap', (req, res) => {
+    try {
+
+    } catch (error) {
+
+    }
+});
 
 
 // listen
