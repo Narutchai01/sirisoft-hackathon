@@ -8,9 +8,9 @@ export const Direction = async (req: Request, res: Response) => {
         const { TravelMode } = req.body;
         const { Time } = req.body;
         //only origin to destination
-        // maybe fetch first transit the
+        // maybe fetch first transit 
         // we fetch only arrival time
-        //TODO: need to is it generate departure time, send to front end
+        //TODO: need to know is it generate departure time, send to front end
         // fetch step as possible, them review data and send to front end
         const destination_URL = `https://maps.googleapis.com/maps/api/directions/json?origin=${lat}%2c${lng}&mode=transit&key=${API_KEY}`;
         

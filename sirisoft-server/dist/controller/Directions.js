@@ -22,9 +22,9 @@ const Direction = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         const { TravelMode } = req.body;
         const { Time } = req.body;
         //only origin to destination
-        // maybe fetch first transit the
+        // maybe fetch first transit 
         // we fetch only arrival time
-        //TODO: need to is it generate departure time, send to front end
+        //TODO: need to know is it generate departure time, send to front end
         // fetch step as possible, them review data and send to front end
         const destination_URL = `https://maps.googleapis.com/maps/api/directions/json?origin=${lat}%2c${lng}&mode=transit&key=${server_1.API_KEY}`;
         const response = yield axios_1.default.get(destination_URL);
