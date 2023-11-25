@@ -46,20 +46,21 @@ const CalculateDistanceFunc = (req, res) => __awaiter(void 0, void 0, void 0, fu
             const distance = cal(lat1, lon1, lat2, lon2);
             return {
                 name: item.name,
-                distance: distance
+                distance: distance,
+                adress: item.vicinity
             };
         });
         const result3 = result2.sort((a, b) => {
             return a.distance - b.distance;
         });
-        const result4 = result3;
-        const result5 = result4.map((item) => {
-            return item;
-        });
-        res.send({
-            distance: result5,
-            data: data
-        });
+        // const result4 = result3.map((item: any) => {
+        //     return {
+        //         name: item.name,
+        //         distance: item.distance.toFixed(2),
+        //         adress : data.vicinity
+        //     }
+        // })
+        res.send(result3);
     }
     catch (error) {
         res.send(error);
