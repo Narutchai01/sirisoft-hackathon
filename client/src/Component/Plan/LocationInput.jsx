@@ -7,6 +7,7 @@ import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
+import axios from 'axios';
 
 export default function LocationInput() {
     const timeOptions = [
@@ -32,6 +33,23 @@ export default function LocationInput() {
         console.log(destination);
     }
 
+
+  const [location, setLocation] = React.useState({
+    lat: 13.745704,
+    lng: 100.535912
+  });
+
+  React.useEffect(() => {
+    const sendLocation = async () => {
+      if (location.lat === 0 && location.lng === 0) {
+        return false;
+      }
+      await axios.post("http://localhost:3000/2", location).then((res) => {
+        console.log(res.data);
+      });
+    };
+    sendLocation();
+  }, [location]);
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
