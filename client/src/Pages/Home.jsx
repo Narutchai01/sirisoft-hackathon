@@ -1,7 +1,7 @@
-import * as React from 'react';
+// import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import HomeMain from '../Component/Home/HomeMain.jsx';
+import HomeMain from '../Component/Home/HomeMain';
 
 export default function Home() {
   return (

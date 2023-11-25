@@ -66,7 +66,7 @@ const InputElement = styled('input')(
   border-radius: 8px;
   color: ${theme.palette.mode === 'dark' ? grey[300] : grey[900]};
   background: ${theme.palette.mode === 'dark' ? grey[900] : '#fff'};
-  border: 1px solid ${theme.palette.mode === 'dark' ? grey[700] : grey[200]};
+  border: 1px solid ${theme.palette.mode === 'dark' ? grey[800] : grey[300]};
   box-shadow: 0px 2px 4px ${
     theme.palette.mode === 'dark' ? 'rgba(0,0,0, 0.5)' : 'rgba(0,0,0, 0.05)'
   };
@@ -103,7 +103,7 @@ export default function Plan() {
           <hr style={{ width: '99%', border: '1px solid #cdcdcd'}} />
         </Grid>
         <Grid item container xs={8} width='80%'>
-          <Grid item container xs={3} paddingRight={3} direction='column' justifyContent='start'>
+          <Grid item container xs={3} paddingRight={3} direction='column' justifyContent='start'  height='65vh' padding={2} boxShadow= '-10px 10px 20px 0px #ccc'>
             <Grid item style={{ textAlign: 'center', maxWidth: '100%' }} xs={1}>
               <Input aria-label="Demo input" placeholder="Search Store" />
             </Grid>
@@ -114,8 +114,9 @@ export default function Plan() {
               <PlanDestination/>
             </Grid>
           </Grid>
-          <Grid item xs={0.5} borderLeft={2} height='65vh' borderColor='#cdcdcd'> </Grid>
-          <Grid item xs={8.5} height='65vh' display='flex'>
+          <Grid item xs={0.5} borderRight={2} height='65vh' borderColor='#cdcdcd'> </Grid>
+          <Grid item xs={0.5}> </Grid>
+          <Grid item xs={8} height='65vh' display='flex'>
             <Map/>
           </Grid>
         </Grid>

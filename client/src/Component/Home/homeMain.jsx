@@ -1,7 +1,9 @@
-import * as React from 'react';
-import Grid from '@mui/material/Grid';
-import HomeContent from './HomeContent';
-import MallData from '../Data/MallData.js'
+// import * as React from "react";
+import Grid from "@mui/material/Grid";
+// import HomeContent from "./HomeContent";
+// import MallData from "../Data/MallData.js";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function HomeMain() {
     const getMallData = mallDataObj => {

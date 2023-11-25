@@ -9,19 +9,13 @@ const Popup = styled(Paper)({
     borderRadius: 12,
     position: 'fixed',
     width: '100vh',
-    top: '50vh',
-    left: '-35vh',
+    top: 0,
+    left: '30vh',
     transform: 'translate(-50%, -50%)',
     boxShadow: "0px 5px 20px 0px #ccc",
     padding: '25px',
     paddingBottom : '15px',
 });
-
-const data = [
-    { mallName: 'Central Rama 2' },
-    { mallName: 'Central World' },
-    { mallName: 'The Mall' },
-];
 
 const MallSearch = ({ mallSearch }) => {
     console.log(mallSearch);
