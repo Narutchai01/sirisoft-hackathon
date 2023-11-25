@@ -2,6 +2,10 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 
 export default function LocationInput() {
     const timeOptions = [
@@ -19,14 +23,18 @@ export default function LocationInput() {
                 <br /><br />
                 <TextField fullWidth label="Destination" variant="outlined" />
             </Grid>
-            <Grid item xs={6}>
-                <TextField fullWidth label="Time" variant="outlined" />
+            <Grid item container xs={6}>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <DemoContainer components={['TimePicker']}>
+                        <TimePicker label="Time" />
+                    </DemoContainer>
+                </LocalizationProvider>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item container xs={6} marginTop={1}>
                 <TextField
                     fullWidth
                     select
-                    label="Select"
+                    label="Travel Mode"
                     variant="outlined"
                 >
                     {timeOptions.map((option) => (
