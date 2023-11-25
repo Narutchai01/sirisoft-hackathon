@@ -42,7 +42,8 @@ export const CalculateDistanceFunc = async (req: Request, res: Response) => {
             const distance = cal(lat1, lon1, lat2, lon2);
             return {
                 name: item.name,
-                distance: distance
+                distance: distance,
+                adress : item.vicinity
             }
         })
 
@@ -50,17 +51,17 @@ export const CalculateDistanceFunc = async (req: Request, res: Response) => {
             return a.distance - b.distance;
         })
 
-        const result4 = result3;
+        // const result4 = result3.map((item: any) => {
+        //     return {
+        //         name: item.name,
+        //         distance: item.distance.toFixed(2),
+        //         adress : data.vicinity
+        //     }
+        // })
 
-        const result5 = result4.map((item: any) => {
-            return item;
-        })
+        
+        res.send(result3);
 
-        res.send({
-            distance : result5,
-            data: data
-            
-        });
     } catch (error) {
         res.send(error);
     }

@@ -8,13 +8,20 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindplacePlan = void 0;
+const axios_1 = __importDefault(require("axios"));
 const FindplacePlan = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { lat, lng } = req.body;
-        const MAP_API;
-        `  `;
+        const destination = 'Siam Paragon fluk';
+        const output = destination.replace(/\s/g, '%2c');
+        const MAP_URL = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&input=${output}&inputtype=textquery&key=AIzaSyBkY8q3PCEZFCjDJrvIO75yHM6d3H-LzQ4`;
+        const response = yield axios_1.default.get(MAP_URL);
+        res.send(response.data);
     }
     catch (error) {
     }
