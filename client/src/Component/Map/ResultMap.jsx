@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 class ResultMap extends Component {
+  
   constructor(props) {
     super(props);
 
