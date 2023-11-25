@@ -17,22 +17,36 @@ export default function LocationInput() {
         { value: 'Public', label: 'Public' },
     ];
     const [dropdown, setDropdown] = useState([]);
-
     const [destination, setDestination] = useState({
         place: '',
     });
+    const [isSearchFocused, setIsSearchFocused] = useState(false);
+    const [selectedDescription, setSelectedDescription] = useState('');
+
+    const handleDescriptionClick = (description) => {
+        setSelectedDescription(description);
+        setIsSearchFocused(false); // Close the dropdown when a description is selected
+    };
+
+    const handleFocus = () => {
+        setIsSearchFocused(!isSearchFocused);
+    };
 
     const handleChangeFindPlace = (event) => {
-        setDestination(event.target.value);
-        axios.post('http://localhost:3000/api/findplace', { destination })
+        const newDestination = event.target.value;
+
+        setDestination(newDestination);
+        setSelectedDescription(''); // Clear the selected description when a new place is selected
+
+        axios.post('http://localhost:3000/api/findplace', { destination: newDestination })
             .then(res => {
                 console.log(res.data);
-                setDropdown(res.data.predictions || []); // Use an empty array if predictions is falsy
+                setDropdown(res.data.predictions || []);
             })
             .catch(err => {
                 console.log(err);
             });
-    }
+    };
 
     console.log(dropdown);
 
@@ -40,8 +54,20 @@ export default function LocationInput() {
         <Grid container spacing={2}>
             <Grid item xs={12}>
                 <br /><br />
-                <TextField fullWidth label="Destination" name='dilect' variant="outlined" onChange={handleChangeFindPlace} />
-                <LocationSearch dropdown={dropdown}/>
+                <TextField
+                    fullWidth
+                    value={selectedDescription || destination.place}
+                    label="Destination"
+                    variant="outlined"
+                    onFocus={handleFocus}
+                    onChange={handleChangeFindPlace}
+                />
+                { isSearchFocused && (
+                    <LocationSearch
+                        dropdown={dropdown}
+                        onDescriptionClick={handleDescriptionClick}
+                    />
+                )}
             </Grid>
             <Grid item container xs={6}>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
