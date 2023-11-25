@@ -10,11 +10,17 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import { Link } from 'react-router-dom'
 import { Button } from '@mui/material';
 import MallSearch from './Search/MallSearch';
 import { Unstable_Popup as BasePopup } from '@mui/base/Unstable_Popup';
 
-const pages = [ "HOME", "PLAN", "MINIGAME", "PROMOTION" ]
+const pages = [
+    { name: 'HOME', path: '/' },
+    { name: 'PLAN', path: '/plan' },
+    { name: 'MINIGAME', path: '/minigame' },
+    { name: 'PROMOTION', path: '/coupon' },
+]
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -116,7 +122,10 @@ export default function Nav() {
                     >
                         {pages.map((page) => (
                             <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">{page}</Typography>
+                                <Typography textAlign='center'>
+                                    <Link to={page.path} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                        {page.name}
+                                    </Link></Typography>
                             </MenuItem>
                         ))}
                     </Menu>
@@ -160,7 +169,9 @@ export default function Nav() {
                             onClick={handleCloseNavMenu}
                             sx={{ my: 2, color: 'white', display: 'block' }}
                         >
-                            {page}
+                            <Link to={page.path} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                {page.name}
+                            </Link>
                         </Button>
                     ))}
                 </Box>
