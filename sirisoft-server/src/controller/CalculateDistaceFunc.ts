@@ -43,7 +43,8 @@ export const CalculateDistanceFunc = async (req: Request, res: Response) => {
             return {
                 name: item.name,
                 distance: distance,
-                adress : item.vicinity
+                adress : item.vicinity,
+                place_id : item.place_id
             }
         })
 
