@@ -1,8 +1,8 @@
 import React from 'react'
-import { Grid, Typography, Button } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import styled from '@emotion/styled'
 import LocationInput from '../Component/Plan/LocationInput'
-import { fontWeight } from '@mui/system'
+import ResultMap from '../Component/Map/ResultMap'
 
 const Box = styled('div') ({
   border: '1px solid #C4C4C4',
@@ -30,13 +30,8 @@ const Plan = () => {
               <br />
               <LocationInput />
               <br />
-              <Button variant="contained">Get Directions</Button>
-{/* 
-              <br /><br /><hr /><br /><br />
 
-              <Typography item variant="h6" fontWeight={{ fontWeight: 'bold' }} margin={0}>
-                Input locations  
-              </Typography> */}
+              <ResultMap />
             </Box>
           </Grid>
           <Grid item xs={1.5}></Grid>

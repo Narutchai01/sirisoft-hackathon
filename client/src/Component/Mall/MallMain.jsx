@@ -21,16 +21,16 @@ return (
     <Grid container borderLeft='1px solid #AAA' spacing={2}>
     <Grid item xs={6}>
         <TextField
-        fullWidth
-        select
-        label="Select"
-        variant="outlined"
-        value={selectedFloor}
-        onChange={handleFloorChange}
+            fullWidth
+            select
+            label="Select"
+            variant="outlined"
+            value={selectedFloor}
+            onChange={handleFloorChange}
         >
         {floorOptions.map((option) => (
             <MenuItem key={option.floor} value={option.floor}>
-            {option.floor}
+                {option.floor}
             </MenuItem>
         ))}
         </TextField>

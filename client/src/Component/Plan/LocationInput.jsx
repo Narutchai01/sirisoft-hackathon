@@ -2,6 +2,7 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
+import Button from '@mui/material/Button';
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -43,6 +44,9 @@ export default function LocationInput() {
                         </MenuItem>
                     ))}
                 </TextField>
+            </Grid>
+            <Grid item xs={12}>
+                <Button variant="contained">Get Directions</Button>
             </Grid>
         </Grid>
     );
