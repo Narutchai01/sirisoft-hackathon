@@ -13,6 +13,8 @@ exports.FindplacePlan = void 0;
 const FindplacePlan = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { lat, lng } = req.body;
+        const MAP_API;
+        `  `;
     }
     catch (error) {
     }

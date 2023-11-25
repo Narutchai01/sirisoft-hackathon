@@ -9,18 +9,18 @@ export default function HomeMain() {
 
   const [distance, setDistance] = useState([]);
   const [location, setLocation] = useState({
-    lat: 0,
-    lng: 0
+    lat: 13.745704,
+    lng: 100.535912
   });
 
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      setLocation({
-        lat: position.coords.latitude,
-        lng: position.coords.longitude,
-      });
-    });
-  }, []);
+  // useEffect(() => {
+  //   navigator.geolocation.getCurrentPosition(function (position) {
+  //     setLocation({
+  //       lat: position.coords.latitude,
+  //       lng: position.coords.longitude,
+  //     });
+  //   });
+  // }, []);
 
 
   useEffect(() => {
@@ -31,13 +31,13 @@ export default function HomeMain() {
       await axios.post("http://localhost:3000/api/calculatedistance", location).then((res) => {
         console.log(res.data);
         setDistance(res.data);
-        console.log(location.lat, location.lng);
+        // console.log(location.lat, location.lng);
       });
     };
     sendLocation();
   }, [location]);
 
-  
+
 
   const getMallData = mallDataObj => {
     return (

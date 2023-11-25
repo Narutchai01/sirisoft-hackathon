@@ -22,7 +22,8 @@ const CalculateDistanceFunc = (req, res) => __awaiter(void 0, void 0, void 0, fu
         // const MAP_URL = `https://maps.googleapis.com/maps/api/directions/json?origin=13.721018375867724%2C100.49869457086534&destination=13.7245187%2C100.5050806&mode=driving&key=AIzaSyBkY8q3PCEZFCjDJrvIO75yHM6d3H-LzQ4`;
         const response = yield axios_1.default.get(MAP_URL);
         const data = response.data.results;
-        const result = {};
+        // const result = {
+        // }
         const cal = (lat1, lon1, lat2, lon2) => {
             const R = 6371; // Radius of the earth in km
             const dLat = deg2rad(lat2 - lat1); // deg2rad below
@@ -56,8 +57,8 @@ const CalculateDistanceFunc = (req, res) => __awaiter(void 0, void 0, void 0, fu
             return item;
         });
         res.send({
-            result: result5,
-            length: result5.length
+            distance: result5,
+            data: data
         });
     }
     catch (error) {

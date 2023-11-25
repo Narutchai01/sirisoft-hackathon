@@ -13,11 +13,9 @@ export const CalculateDistanceFunc = async (req: Request, res: Response) => {
 
         const data = response.data.results;
 
-        const result = {
+        // const result = {
 
-        }
-
-
+        // }
         const cal = (lat1: number, lon1: number, lat2: number, lon2: number) => {
             const R = 6371; // Radius of the earth in km
             const dLat = deg2rad(lat2 - lat1);  // deg2rad below
@@ -59,8 +57,9 @@ export const CalculateDistanceFunc = async (req: Request, res: Response) => {
         })
 
         res.send({
-            result: result5,
-            length: result5.length
+            distance : result5,
+            data: data
+            
         });
     } catch (error) {
         res.send(error);
