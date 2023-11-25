@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
@@ -7,22 +7,41 @@ import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
+import axios from 'axios';
 
 export default function LocationInput() {
     const timeOptions = [
-        { value: 'Drive', label: 'Drive' },
-        { value: 'Motorcycle', label: 'Motorcycle' },
-        { value: 'Bicycle', label: 'Bicycle' },
-        { value: 'Transit', label: 'Transit' },
-        { value: 'Walk', label: 'Walk' },
+        { value: 'Private', label: 'Private' },
+        { value: 'Public', label: 'Public' },
     ];
+    const [dropdown, setDropdown] = useState();
+
+    const [destination, setDestination] = useState({
+        place: '',
+    });
+
+    const handleChangeFindPlace = (event) => {
+        setDestination(event.target.value);
+        axios.post('http://localhost:3000/api/findplace', { destination})
+            .then(res => {
+                console.log(res.data);
+                setDropdown(res.data);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
+
+
+
+    console.log(dropdown);
 
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
-                <TextField fullWidth label="Origin" variant="outlined" />
+                {/* <TextField fullWidth label="Origin" variant="outlined" value={origin} /> */}
                 <br /><br />
-                <TextField fullWidth label="Destination" variant="outlined" />
+                <TextField fullWidth label="Destination" name='dilect' variant="outlined" onChange={handleChangeFindPlace} />
             </Grid>
             <Grid item container xs={6}>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -46,7 +65,7 @@ export default function LocationInput() {
                 </TextField>
             </Grid>
             <Grid item xs={12}>
-                <Button variant="contained">Get Directions</Button>
+                <Button variant="contained" >Get Directions</Button>
             </Grid>
         </Grid>
     );

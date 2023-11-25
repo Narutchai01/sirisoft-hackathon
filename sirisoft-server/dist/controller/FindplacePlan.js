@@ -16,14 +16,17 @@ exports.FindplacePlan = void 0;
 const axios_1 = __importDefault(require("axios"));
 const FindplacePlan = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { lat, lng } = req.body;
-        const destination = 'Siam Paragon fluk';
+        const { destination } = req.body;
         const output = destination.replace(/\s/g, '%2c');
-        const MAP_URL = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&input=${output}&inputtype=textquery&key=AIzaSyBkY8q3PCEZFCjDJrvIO75yHM6d3H-LzQ4`;
-        const response = yield axios_1.default.get(MAP_URL);
-        res.send(response.data);
+        // const MAP_URL = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry&input=${output}&inputtype=textquery&key=AIzaSyBkY8q3PCEZFCjDJrvIO75yHM6d3H-LzQ4`
+        const MAP_URL = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${output}&types=shopping_mall&key=AIzaSyBkY8q3PCEZFCjDJrvIO75yHM6d3H-LzQ4&region=th`;
+        const response = yield axios_1.default.post(MAP_URL);
+        const data = response.data;
+        ;
+        res.send(data);
     }
     catch (error) {
+        res.send(error);
     }
 });
 exports.FindplacePlan = FindplacePlan;
