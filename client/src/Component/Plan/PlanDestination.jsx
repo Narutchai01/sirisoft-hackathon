@@ -10,7 +10,7 @@ export default function PlanDestination() {
         { value: 'Bicycle', label: 'Bicycle' },
         { value: 'Transit', label: 'Transit' },
         { value: 'Walk', label: 'Walk' },
-    ];
+];
 
     return (
         <Grid container spacing={2}>
