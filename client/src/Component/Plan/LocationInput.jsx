@@ -22,6 +22,8 @@ export default function LocationInput() {
     });
     const [isSearchFocused, setIsSearchFocused] = useState(false);
     const [selectedDescription, setSelectedDescription] = useState('');
+    const [selectedTime, setSelectedTime] = useState([]);
+    
 
     const handleDescriptionClick = (description) => {
         setSelectedDescription(description);
