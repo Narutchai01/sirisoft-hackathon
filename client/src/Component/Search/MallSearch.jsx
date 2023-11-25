@@ -6,12 +6,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
 const Popup = styled(Paper)({
-    borderRadius: 12,
-    position: 'fixed',
-    width: '100vh',
-    top: 0,
-    left: '30vh',
-    transform: 'translate(-50%, -50%)',
+    borderRadius: 6,
     boxShadow: "0px 5px 20px 0px #ccc",
     padding: '25px',
     paddingBottom : '15px',
@@ -50,7 +45,7 @@ const MallSearch = ({ mallSearch }) => {
                                     <Grid item xs={6}> {match.mallName}  </Grid>
                                     <Grid item xs={4}/> 
                                 </Grid>
-                                <Grid item xs={8} color='gray'>{match.mallPosition}</Grid> 
+                                <Grid item xs={8} fontSize={10} color='gray'>{match.mallPosition}</Grid> 
                             </Grid>
                             <Box marginY={2} width='100%' borderBottom={1} borderColor='#ccc'></Box>
                         </Grid>

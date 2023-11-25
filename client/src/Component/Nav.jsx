@@ -10,6 +10,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import Grid from '@mui/material/Grid'
 import { Link } from 'react-router-dom'
 import { Button } from '@mui/material';
 import MallSearch from './Search/MallSearch';
@@ -22,7 +23,7 @@ const pages = [
     { name: 'PROMOTION', path: '/coupon', id: '3' },
 ]
 
-const Search = styled('div')(({ theme }) => ({
+const Search = styled('div')(({ theme, isSearchFocused }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
     backgroundColor: alpha(theme.palette.common.white, 0.15),
@@ -37,6 +38,7 @@ const Search = styled('div')(({ theme }) => ({
         width: '50%',
     },
 }));
+
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
     padding: theme.spacing(0, 2),
@@ -66,6 +68,8 @@ export default function Nav() {
     const [anchor, setAnchor] = React.useState(null);
     const [mallSearch, setMallSearch] = React.useState('');
     const [isSearchFocused, setIsSearchFocused] = React.useState(false);
+
+    console.log(isSearchFocused);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -156,10 +160,12 @@ export default function Nav() {
                         onBlur={handleSearchBlur}
                     />
                     
-                    {isSearchFocused && (
-                        <BasePopup id={id} open={isSearchFocused} anchor={anchor} style={{ zIndex: 9999 }}>
-                            <MallSearch mallSearch={mallSearch} />
-                        </BasePopup>
+                    { isSearchFocused && (
+                        <Grid container justifyContent='center'>
+                            <Grid item style={{ position: 'fixed', width: '50%', paddingLeft: '10px', paddingRight: '10px' }}>
+                                <MallSearch mallSearch={mallSearch} />
+                            </Grid>
+                        </Grid> 
                     )}
                 </Search>          
                 <Box sx={{  display: { xs: 'none', md: 'flex' } }}>
