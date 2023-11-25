@@ -9,7 +9,7 @@ const express_1 = __importDefault(require("express"));
 const CalculateDistaceFunc_1 = require("./controller/CalculateDistaceFunc");
 const cors = require("cors");
 const axios = require("axios");
-exports.API_KEY = "AIzaSyCZBeJA2Iq-vVE3HmLe_xqw_g7S6YQIWmg";
+exports.API_KEY = 'AIzaSyBkY8q3PCEZFCjDJrvIO75yHM6d3H-LzQ4';
 // define zone
 const app = (0, express_1.default)();
 app.use(express_1.default.json());

@@ -4,7 +4,7 @@ import express from "express";
 import { CalculateDistanceFunc } from './controller/CalculateDistaceFunc';
 const cors = require("cors");
 const axios = require("axios");
-export const API_KEY = "AIzaSyCZBeJA2Iq-vVE3HmLe_xqw_g7S6YQIWmg";
+export const API_KEY = 'AIzaSyBkY8q3PCEZFCjDJrvIO75yHM6d3H-LzQ4';
 
 // define zone
 const app = express();

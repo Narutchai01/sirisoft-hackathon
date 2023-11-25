@@ -2,15 +2,12 @@
 import Grid from "@mui/material/Grid";
 // import HomeContent from "./HomeContent";
 // import MallData from "../Data/MallData.js";
-import { useEffect, useState, useCallback } from "react";
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function HomeMain() {
 
-  const containerStyle = {
-    width: '400px',
-    height: '400px'
-  };
+
 
   const [location, setLocation] = useState({
     lat: 0,
@@ -18,7 +15,7 @@ export default function HomeMain() {
   });
 
 
-  const [map, setMap] = useState(null);
+
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -29,38 +26,37 @@ export default function HomeMain() {
     });
   }, []);
 
-  const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
-    googleMapsApiKey: 'AIzaSyBkY8q3PCEZFCjDJrvIO75yHM6d3H-LzQ4'
-  });
-
-  const onLoad = useCallback(function callback(map) {
-    const bounds = new window.google.maps.LatLngBounds();
-    map.fitBounds(bounds);
-    setMap(map)
-  }, []);
-
-  const onUnmount = useCallback(function callback(map) {
-    setMap(null)
-  }, []);
 
 
-  return isLoaded ? (
+
+
+  useEffect(() => {
+    const sendLocation = async () => {
+      if (location.lat === 0 && location.lng === 0) {
+        return false;
+      }
+      await axios.post("http://localhost:3000/api/calculatedistance", location).then((res) => {
+        console.log(res.data);
+        console.log(location.lat, location.lng);
+      });
+    };
+    sendLocation();
+  }, [location]);
+
+
+  // console.log(location.lat, location.lng);
+
+
+
+  return (
     <>
-      <Grid container spacing={2}>
-        <GoogleMap
-          mapContainerStyle={containerStyle}
-          center={{lat: location.lat, lng: location.lng}}
-          zoom={60}
-          onLoad={onLoad}
-          onUnmount={onUnmount}
-        ></GoogleMap>
-      </Grid>
+      <h1>{location.lat}:{location.lng}</h1>
     </>
-  ) :
-    (
-      <>
-        <h1>error</h1>
-      </>
-    )
+  )
 }
+// https://maps.googleapis.com/maps/api/place/nearbysearch/json
+//   ?keyword=cruise
+//   &location=-13.721032471423577%2C100.49869276326653
+//   &radius=1500
+//   &type=shopping_mall
+//   &key=AIzaSyBkY8q3PCEZFCjDJrvIO75yHM6d3H-LzQ4

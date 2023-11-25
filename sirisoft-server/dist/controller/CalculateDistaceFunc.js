@@ -18,8 +18,9 @@ const axios_1 = __importDefault(require("axios"));
 const CalculateDistanceFunc = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { lat, lng } = req.body;
-        const respone = yield axios_1.default.get(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=${server_1.API_KEY}&location=${lat},${lng}&radius=5000&type=restaurant`);
-        res.send(respone);
+        const MAP_URL = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=&location=${lat}%2c${lng}&radius=10000&type=shopping_mall&key=${server_1.API_KEY}`;
+        const response = yield axios_1.default.get(MAP_URL);
+        res.send(response.data.results);
     }
     catch (error) {
         res.send(error);
