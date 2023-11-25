@@ -31,7 +31,7 @@ const fetchNearbyPlaces = async (location) => {
   try {
 
     // Send the user location to the server
-    const response = await fetch(`http://localhost:5000/api/nearby-places?lat=${location.lat}&lng=${location.lng}`);
+    const response = await fetch(`http://localhost:3000/api/nearby-places?lat=${latitude}&lng=${longitude}`);
     const data = await response.json();
     return data.nearbyPlaces;
 
