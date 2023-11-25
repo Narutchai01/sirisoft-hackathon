@@ -14,6 +14,7 @@ export default function LocationInput() {
         { value: 'Private', label: 'Private' },
         { value: 'Public', label: 'Public' },
     ];
+    const [dropdown, setDropdown] = useState();
 
     const [destination, setDestination] = useState({
         place: '',
@@ -24,6 +25,7 @@ export default function LocationInput() {
         axios.post('http://localhost:3000/api/findplace', { destination})
             .then(res => {
                 console.log(res.data);
+                setDropdown(res.data);
             })
             .catch(err => {
                 console.log(err);
@@ -31,8 +33,8 @@ export default function LocationInput() {
     }
 
 
-    console.log(destination);
 
+    console.log(dropdown);
 
     return (
         <Grid container spacing={2}>
