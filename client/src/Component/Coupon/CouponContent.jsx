@@ -71,7 +71,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function CouponContent(props) {
-  const { mallName, mallPosition, nearYou,iconImg, storeImg  } = props;
+  const { mallName, mallPosition, nearYou, iconImg, storeImg  } = props;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const handleLeftButtonClick = () => {

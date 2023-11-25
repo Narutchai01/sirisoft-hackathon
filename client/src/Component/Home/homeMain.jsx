@@ -40,16 +40,27 @@ export default function HomeMain() {
 
   console.log(distance);
 
-  const getMallData = mallDataObj => {
-    return (
-      <Grid item xs={4}>
-        <HomeContent {...mallDataObj} />
-      </Grid>
-    );
-  }
+  const getMallData = (mallDataObj) => {
+    const matchingDistance = distance.find((dist) => dist.place_id === mallDataObj.placeId);
+
+    if (matchingDistance) {
+      return (
+        <Grid item xs={4} key={mallDataObj.placeId}>
+          <HomeContent {...mallDataObj} distance={matchingDistance.distance}/>
+        </Grid>
+      );
+    }
+
+    return null;
+  };
+
+  const filteredMallData = MallData.filter((mallDataObj) => {
+    const matchingDistance = distance.find((dist) => dist.place_id === mallDataObj.placeId);
+    return !!matchingDistance; // Keep only if matching distance is found
+  });
   return (
     <Grid container direction="column" spacing={3}>
-      {MallData.map(mallDataObjl => getMallData(mallDataObjl))}
+      {filteredMallData.map((mallDataObj) => getMallData(mallDataObj))}
     </Grid>
   );
 }

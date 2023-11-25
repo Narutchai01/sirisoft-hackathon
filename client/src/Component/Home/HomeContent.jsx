@@ -73,7 +73,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function HomeContent(props) {
-  const { mallName, mallPosition, nearYou, iconImg, storeImg  } = props;
+  const { mallName, mallPosition, nearYou, iconImg, storeImg, distance  } = props;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const handleLeftButtonClick = () => {
@@ -100,7 +100,7 @@ function HomeContent(props) {
           {mallName}
         </Link>
         </Grid>
-          <Grid item xs={4} fontSize={9} marginBottom="3px"> {nearYou} from you </Grid>
+          <Grid item xs={4} fontSize={9} marginBottom="3px"> {distance.toFixed(2)} km. from you </Grid>
           <Grid item xs={4} fontSize={9} textAlign="left"> <LocationOnIcon style={{ fontSize: '10px', marginLeft: '0px', marginRight: '1px' }} /> {mallPosition} </Grid>
         </Grid>
 
