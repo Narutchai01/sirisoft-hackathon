@@ -2,7 +2,7 @@ export default [
     {
     mallName: "Central World",
     mallPosition: "999/9 ถ. พระรามที่ 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร 10330",
-    nearYou: "10 km.",
+    placeId: "ChIJ4VX0ws-e4jARBGaQ2IACrcQ",
     iconImg: "https://download-th.com/wp-content/uploads/2021/02/CentralWorld.jpg",
     mallImg: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/05/7e/9d/centralworld.jpg?w=1200&h=1200&s=1",
     "https://www.prachachat.net/wp-content/uploads/2022/01/Central-@-Central-World.jpg",
@@ -53,8 +53,7 @@ export default [
     {
     mallName: "Siam Paragon",
     mallPosition: "991 ถ. พระรามที่ 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร 10330",
-    nearYou: "10 km.",
-    mallPosGeo: 0.13994943454355846,
+    placeId: "ChIJIeWu482e4jARYymvLJqTQ58",
     iconImg: "https://www.siamparagon.co.th/BIFW2022/images/sponser/4.png?v=1",
     mallImg: ["https://www.siamparagon.co.th/public/images/aboutus/SPD.jpg"],
     storeImg: ["https://www.ryoiireview.com/upload/article/202304/1680862291_ab885040af1e35a501be782bd1ac800b.jpg",
@@ -65,8 +64,7 @@ export default [
     {
         mallName: "Siam Square One",
         mallPosition: "388 ถ. พระรามที่ 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร 10330",
-        nearYou: "10 km.",
-        mallPosGeo: 0.2457988160107302,
+        placeId: "ChIJLdw3yiyZ4jARaNnG-XlHZfA",
         iconImg: "https://thewoodstale.com/wp-content/uploads/2020/06/SQ1png-1024x511.png",
         mallImg: ["https://img.salehere.co.th/p/1200x0/2022/11/01/to6rrjh7pynw.jpg"],
         storeImg: ["https://www.ryoiireview.com/upload/article/202012/1607932346_90acd730d57166b62185022bb2b5b4db.jpg",
@@ -76,8 +74,7 @@ export default [
     {
         mallName: "Siam Discovery",
         mallPosition: "194 ถ. พญาไท แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร 10330",
-        nearYou: "10 km.",
-        mallPosGeo: 0.5089305291873564,
+        placeId: "ChIJgUSJZM2e4jAREnHS1rSuWRk",
         iconImg: "https://www.mendetails.com/wp-content/uploads/2016/03/New-Siam-Dis-3.jpg",
         mallImg: ["https://www.siamdiscovery.co.th/public/upload/0865cfb73f28fcefb55f67ac555ede43.jpg"],
         storeImg: ["https://www.siamdiscovery.co.th/public/upload/9ed264008a3580b18f08f935fda676d0.png",
