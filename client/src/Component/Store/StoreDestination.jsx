@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 
-export default function PlanDestination() {
+export default function StoreDestination() {
     const timeOptions = [
         { value: 'Drive', label: 'Drive' },
         { value: 'Motorcycle', label: 'Motorcycle' },

@@ -1,12 +1,12 @@
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import PlanMain from '../Component/Plan/PlanMain';
-import PlanSidebar from '../Component/Plan/PlanSidebar';
+import StoreMain from '../Component/Store/StoreMain.jsx'
+import StoreSidebar from '../Component/Store/StoreSidebar.jsx'
 import { Input as BaseInput } from '@mui/base/Input';
 import { styled } from '@mui/system';
 import Map from '../Component/Map/Map.jsx'
-import PlanDestination from '../Component/Plan/PlanDestination.jsx';
+import StoreDestination from '../Component/Store/StoreDestination.jsx'
 
 const Input = React.forwardRef(function CustomInput(props, ref) {
   return <BaseInput slots={{ input: InputElement }} {...props} ref={ref} />;
@@ -89,38 +89,38 @@ const InputElement = styled('input')(
 `,
 );
 
-export default function Plan() {
-  return (
-    <Grid container height='100vh'>
-      <Grid item container direction='column' alignItems="center" justifyContent='space-evenly' height='100%' width='100%'>
-        <Grid item container xs={2} height='20vh' width='100%' marginY={2} justifyContent='center' alignContent='center'>
-          <Img src='https://mui.com/static/images/cards/contemplative-reptile.jpg' />
-        </Grid>
-        <Grid item xs={1} width='80%' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <Typography alignSelf='start' variant="h5" color='grey' gutterBottom>
-            Central Rama 2
-          </Typography>
-          <hr style={{ width: '99%', border: '1px solid #cdcdcd'}} />
-        </Grid>
-        <Grid item container xs={8} width='80%'>
-          <Grid item container xs={3} paddingRight={3} direction='column' justifyContent='start'  height='65vh' padding={2} boxShadow= '-10px 10px 20px 0px #ccc'>
-            <Grid item style={{ textAlign: 'center', maxWidth: '100%' }} xs={1}>
-              <Input aria-label="Demo input" placeholder="Search Store" />
+export default function Store() {
+    return (
+        <Grid container height='100vh'>
+        <Grid item container direction='column' alignItems="center" justifyContent='space-evenly' height='100%' width='100%'>
+            <Grid item container xs={2} height='20vh' width='100%' marginY={2} justifyContent='center' alignContent='center'>
+            <Img src='https://mui.com/static/images/cards/contemplative-reptile.jpg' />
             </Grid>
-            <Grid item width='90%' paddingLeft='10px' color='#AAA' style={{ marginTop: '10px' }} xs={2}>
-              <PlanSidebar/>
+            <Grid item xs={1} width='80%' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <Typography alignSelf='start' variant="h5" color='grey' gutterBottom>
+                Central Rama 2
+            </Typography>
+            <hr style={{ width: '99%', border: '1px solid #cdcdcd'}} />
             </Grid>
-            <Grid item xs={8} container justifyContent='center' alignContent='center'>
-              <PlanDestination/>
+            <Grid item container xs={8} width='80%'>
+            <Grid item container xs={3} paddingRight={3} direction='column' justifyContent='start'  height='65vh' padding={2} boxShadow= '-10px 10px 20px 0px #ccc'>
+                <Grid item style={{ textAlign: 'center', maxWidth: '100%' }} xs={1}>
+                <Input aria-label="Demo input" placeholder="Search Store" />
+                </Grid>
+                <Grid item width='90%' paddingLeft='10px' color='#AAA' style={{ marginTop: '10px' }} xs={2}>
+                <StoreSidebar/>
+                </Grid>
+                <Grid item xs={8} container justifyContent='center' alignContent='center'>
+                <StoreDestination/>
+                </Grid>
             </Grid>
-          </Grid>
-          <Grid item xs={0.5} borderRight={2} height='65vh' borderColor='#cdcdcd'> </Grid>
-          <Grid item xs={0.5}> </Grid>
-          <Grid item xs={8} height='65vh' display='flex'>
-            <Map/>
-          </Grid>
+            <Grid item xs={0.5} borderRight={2} height='65vh' borderColor='#cdcdcd'> </Grid>
+            <Grid item xs={0.5}> </Grid>
+            <Grid item xs={8} height='65vh' display='flex'>
+                <Map/>
+            </Grid>
+            </Grid>
         </Grid>
-      </Grid>
-    </Grid>
-  );
+        </Grid>
+    );
 }
