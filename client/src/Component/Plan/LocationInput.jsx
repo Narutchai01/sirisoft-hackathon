@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
@@ -7,6 +7,7 @@ import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
+import axios from 'axios';
 
 export default function LocationInput() {
     const timeOptions = [
@@ -14,35 +15,36 @@ export default function LocationInput() {
         { value: 'Public', label: 'Public' },
     ];
 
-    const [travelMode, setTravelMode] = React.useState('');
-    const [time, setTime] = React.useState('');
-    const [destination, setDestination] = React.useState('');
-    console.log(destination);
-    console.log(time);
-    console.log(travelMode);
+    const [destination, setDestination] = useState({
+        place: '',
+    });
 
-    const props = {
-        travelMode,
-        setTravelMode,
-        time,
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(destination);
+    const handleChangeFindPlace = (event) => {
+        setDestination(event.target.value);
+        axios.post('http://localhost:3000/api/findplace', { destination})
+            .then(res => {
+                console.log(res.data);
+            })
+            .catch(err => {
+                console.log(err);
+            })
     }
+
+
+    console.log(destination);
+
 
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
                 {/* <TextField fullWidth label="Origin" variant="outlined" value={origin} /> */}
                 <br /><br />
-                <TextField fullWidth label="Destination" variant="outlined" value={destination} onChange={(e) => setDestination(e.target.value)} />
+                <TextField fullWidth label="Destination" name='dilect' variant="outlined" onChange={handleChangeFindPlace} />
             </Grid>
             <Grid item container xs={6}>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DemoContainer components={['TimePicker']}>
-                        <TimePicker label="Time" value={setTime} onChange={(e) => setTime(e.target.value)} />
+                        <TimePicker label="Time" />
                     </DemoContainer>
                 </LocalizationProvider>
             </Grid>
@@ -52,8 +54,6 @@ export default function LocationInput() {
                     select
                     label="Travel Mode"
                     variant="outlined"
-                    value={travelMode}
-                    onChange={(e) => setTravelMode(e.target.value)}
                 >
                     {timeOptions.map((option) => (
                         <MenuItem key={option.value} value={option.value}>
@@ -63,7 +63,7 @@ export default function LocationInput() {
                 </TextField>
             </Grid>
             <Grid item xs={12}>
-                <Button variant="contained" onClick={handleSubmit}>Get Directions</Button>
+                <Button variant="contained" >Get Directions</Button>
             </Grid>
         </Grid>
     );
