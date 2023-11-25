@@ -18,9 +18,9 @@ export default function LocationInput() {
     const [travelMode, setTravelMode] = React.useState('');
     const [time, setTime] = React.useState('');
     const [destination, setDestination] = React.useState('');
-    console.log(destination);
+    // console.log(destination);
     console.log(time);
-    console.log(travelMode);
+    // console.log(travelMode);
 
     const props = {
         travelMode,
@@ -30,7 +30,11 @@ export default function LocationInput() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(destination);
+        // console.log(destination);
+    }
+    const handleTimeChange = (newTime) => {
+        setTime(newTime);
+        // console.log(time);
     }
 
 
@@ -44,7 +48,7 @@ export default function LocationInput() {
       if (location.lat === 0 && location.lng === 0) {
         return false;
       }
-      await axios.post("http://localhost:3000/2", location).then((res) => {
+      await axios.post("http://localhost:3000/api/direction", location).then((res) => {
         console.log(res.data);
       });
     };
@@ -60,7 +64,7 @@ export default function LocationInput() {
             <Grid item container xs={6}>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DemoContainer components={['TimePicker']}>
-                        <TimePicker label="Time" value={setTime} onChange={(e) => setTime(e.target.value)} />
+                        <TimePicker label="Time" value={setTime} onChange={handleTimeChange} />
                     </DemoContainer>
                 </LocalizationProvider>
             </Grid>
