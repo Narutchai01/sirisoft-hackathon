@@ -5,6 +5,8 @@ import PlanMain from '../Component/Plan/PlanMain';
 import PlanSidebar from '../Component/Plan/PlanSidebar';
 import { Input as BaseInput } from '@mui/base/Input';
 import { styled } from '@mui/system';
+import Map from '../Component/Map/Map.jsx'
+import PlanDestination from '../Component/Plan/PlanDestination.jsx';
 
 const Input = React.forwardRef(function CustomInput(props, ref) {
   return <BaseInput slots={{ input: InputElement }} {...props} ref={ref} />;
@@ -108,11 +110,13 @@ export default function Plan() {
             <Grid item width='90%' paddingLeft='10px' color='#AAA' style={{ marginTop: '10px' }} xs={2}>
               <PlanSidebar/>
             </Grid>
-            <Grid item xs={8}></Grid>
+            <Grid item xs={8} container justifyContent='center' alignContent='center'>
+              <PlanDestination/>
+            </Grid>
           </Grid>
-          <Grid item xs={1} borderLeft={2} borderColor='#cdcdcd'> </Grid>
-          <Grid item xs={8} display='flexs' justifyContent='center' alignContent='center'>
-            <PlanMain item/>
+          <Grid item xs={0.5} borderLeft={2} height='65vh' borderColor='#cdcdcd'> </Grid>
+          <Grid item xs={8.5} height='65vh' display='flex'>
+            <Map/>
           </Grid>
         </Grid>
       </Grid>

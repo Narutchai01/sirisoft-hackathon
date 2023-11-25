@@ -16,10 +16,10 @@ import MallSearch from './Search/MallSearch';
 import { Unstable_Popup as BasePopup } from '@mui/base/Unstable_Popup';
 
 const pages = [
-    { name: 'HOME', path: '/' },
-    { name: 'PLAN', path: '/plan' },
-    { name: 'MINIGAME', path: '/minigame' },
-    { name: 'PROMOTION', path: '/coupon' },
+    { name: 'HOME', path: '/', id: '0' },
+    { name: 'PLAN', path: '/plan', id: '1' },
+    { name: 'MINIGAME', path: '/minigame', id: '2' },
+    { name: 'PROMOTION', path: '/coupon', id: '3' },
 ]
 
 const Search = styled('div')(({ theme }) => ({
@@ -87,7 +87,7 @@ export default function Nav() {
         setAnchorElNav(null);
     };
 
-  return (
+    return (
     <>
         <AppBar position="sticky">
             <Toolbar>
@@ -121,11 +121,12 @@ export default function Nav() {
                         }}
                     >
                         {pages.map((page) => (
-                            <MenuItem key={page} onClick={handleCloseNavMenu}>
+                            <MenuItem key={page.id} onClick={handleCloseNavMenu}>
                                 <Typography textAlign='center'>
                                     <Link to={page.path} style={{ textDecoration: 'none', color: 'inherit' }}>
                                         {page.name}
-                                    </Link></Typography>
+                                    </Link>
+                                </Typography>
                             </MenuItem>
                         ))}
                     </Menu>
@@ -165,7 +166,7 @@ export default function Nav() {
                     {pages.map((page) => (
                         <Button
                             variant="text"
-                            key={page}
+                            key={page.id}
                             onClick={handleCloseNavMenu}
                             sx={{ my: 2, color: 'white', display: 'block' }}
                         >
