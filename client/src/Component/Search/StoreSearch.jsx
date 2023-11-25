@@ -36,11 +36,11 @@ const InputElement = styled('input')(
     font-weight: 400;
     line-height: 1.5;
     padding: 16px;
-    width: 90%;
+    width: 92%;
     border-radius: 8px;
     color: ${theme.palette.mode === 'dark' ? grey[300] : grey[900]};
     background: ${theme.palette.mode === 'dark' ? grey[900] : '#fff'};
-    border: 1px solid ${theme.palette.mode === 'dark' ? grey[800] : grey[300]};
+    border: 1px solid #C4C4C4;
     box-shadow: 0px 2px 4px ${
     theme.palette.mode === 'dark' ? 'rgba(0,0,0, 0.5)' : 'rgba(0,0,0, 0.05)'
     };

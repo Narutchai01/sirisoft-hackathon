@@ -4,6 +4,7 @@ import { Typography, Box } from '@mui/material';
 import { styled } from '@mui/system';
 import StoreSearch from '../Component/Search/StoreSearch';
 import MallMain from '../Component/Mall/MallMain';
+import StoreDetail from '../Component/Mall/StoreDetail';
 
 const Img = styled('img') ({
     borderRadius: 12,
@@ -26,6 +27,14 @@ const Img = styled('img') ({
 },
 });
 
+const DetailBox = styled('div') ({
+    border: '1px solid #C4C4C4',
+    borderRadius: '10px',
+    padding: '35px 16px',
+    width: '92%',
+    marginTop: '20px'
+})
+
 const Mall = () => {
 return (
     <Grid container xs={12} justifyContent='center'>
@@ -42,6 +51,11 @@ return (
         <Grid item container xs={9} sx={{ height: '58vh'}}>
             <Grid xs={3.5} sx={{ width: '100%', height: '100%', paddingBottom: '10px', paddingRight: '40px' }}>
                 <StoreSearch/>
+
+                <DetailBox>
+                    <Typography variant='h6' fontWeight={{ fontWeight: 'bold' }} marginBottom={2}>Store detail</Typography>
+                    <StoreDetail />
+                </DetailBox>
             </Grid>
             <Grid xs={8.5} sx={{ width: '100%', height: '100%' }}>
                 <MallMain/>
