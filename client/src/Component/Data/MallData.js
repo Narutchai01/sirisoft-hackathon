@@ -23,7 +23,7 @@ export default [
         "เสื้อโค้ท Ultra Warm Hybrid Down ลดเหลื่อ 5,990 THB จาก 6,990 THB", "กางเกง จ็อกเกอร์ ผ้าไนลอน ลดเหลื่อ 990 THB จาก 1,490 THB"],
     },
     {
-    shopName: "Nike",
+        shopName: "Nike",
         shopID: "G3-1",
         shopFloor: "3",
         floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_3-scaled.jpg",
@@ -49,10 +49,12 @@ export default [
         shopPromotion: ["ซื้อสินค้าประเภทรองเท้าหรือตุ๊กตาทิกเกอร์  1 ชิ้นลด 5%, 2 ชิ้นลด 15% และ 3 ชิ้นขึ้นไปลด 25%"],
     }
     ]
-},
-{
+    },
+    {
     mallName: "Siam Paragon",
-    nearYou: 0.13994943454355846,
+    mallPosition: "991 ถ. พระรามที่ 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร 10330",
+    nearYou: "10 km.",
+    mallPosGeo: 0.13994943454355846,
     iconImg: "https://www.siamparagon.co.th/BIFW2022/images/sponser/4.png?v=1",
     mallImg: ["https://www.siamparagon.co.th/public/images/aboutus/SPD.jpg"],
     storeImg: ["https://www.ryoiireview.com/upload/article/202304/1680862291_ab885040af1e35a501be782bd1ac800b.jpg",
@@ -62,7 +64,9 @@ export default [
     },
     {
         mallName: "Siam Square One",
-        nearYou: 0.2457988160107302,
+        mallPosition: "388 ถ. พระรามที่ 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร 10330",
+        nearYou: "10 km.",
+        mallPosGeo: 0.2457988160107302,
         iconImg: "https://thewoodstale.com/wp-content/uploads/2020/06/SQ1png-1024x511.png",
         mallImg: ["https://img.salehere.co.th/p/1200x0/2022/11/01/to6rrjh7pynw.jpg"],
         storeImg: ["https://www.ryoiireview.com/upload/article/202012/1607932346_90acd730d57166b62185022bb2b5b4db.jpg",
@@ -71,7 +75,9 @@ export default [
     },
     {
         mallName: "Siam Discovery",
-        nearYou: 0.5089305291873564,
+        mallPosition: "194 ถ. พญาไท แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร 10330",
+        nearYou: "10 km.",
+        mallPosGeo: 0.5089305291873564,
         iconImg: "https://www.mendetails.com/wp-content/uploads/2016/03/New-Siam-Dis-3.jpg",
         mallImg: ["https://www.siamdiscovery.co.th/public/upload/0865cfb73f28fcefb55f67ac555ede43.jpg"],
         storeImg: ["https://www.siamdiscovery.co.th/public/upload/9ed264008a3580b18f08f935fda676d0.png",
