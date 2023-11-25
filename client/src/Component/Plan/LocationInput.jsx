@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 
-export default function PlanDestination() {
+export default function LocationInput() {
     const timeOptions = [
         { value: 'Drive', label: 'Drive' },
         { value: 'Motorcycle', label: 'Motorcycle' },
@@ -15,6 +15,8 @@ export default function PlanDestination() {
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
+                <TextField fullWidth label="Origin" variant="outlined" />
+                <br /><br />
                 <TextField fullWidth label="Destination" variant="outlined" />
             </Grid>
             <Grid item xs={6}>
@@ -22,16 +24,16 @@ export default function PlanDestination() {
             </Grid>
             <Grid item xs={6}>
                 <TextField
-                fullWidth
-                select
-                label="Select"
-                variant="outlined"
+                    fullWidth
+                    select
+                    label="Select"
+                    variant="outlined"
                 >
-                {timeOptions.map((option) => (
-                    <MenuItem key={option.value} value={option.value}>
-                    {option.label}
-                    </MenuItem>
-                ))}
+                    {timeOptions.map((option) => (
+                        <MenuItem key={option.value} value={option.value}>
+                            {option.label}
+                        </MenuItem>
+                    ))}
                 </TextField>
             </Grid>
         </Grid>
