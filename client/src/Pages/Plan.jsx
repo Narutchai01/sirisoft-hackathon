@@ -1,8 +1,6 @@
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import PlanMain from '../Component/Plan/PlanMain';
-import PlanSidebar from '../Component/Plan/PlanSidebar';
 import { Input as BaseInput } from '@mui/base/Input';
 import { styled } from '@mui/system';
 import Map from '../Component/Map/Map.jsx'
@@ -108,7 +106,6 @@ export default function Plan() {
               <Input aria-label="Demo input" placeholder="Search Store" />
             </Grid>
             <Grid item width='90%' paddingLeft='10px' color='#AAA' style={{ marginTop: '10px' }} xs={2}>
-              <PlanSidebar/>
             </Grid>
             <Grid item xs={8} container justifyContent='center' alignContent='center'>
               <PlanDestination/>
