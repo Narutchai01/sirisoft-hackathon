@@ -1,14 +1,5 @@
 export default [
     {
-        mallName: "Central Rama 2",
-        mallPosition: "160 ถ. พระรามที่ 2 แขวงแสมดำ เขตบางขุนเทียน กรุงเทพมหานคร 10150",
-        nearYou: "5 km.",
-        iconImg: "https://img.salehere.co.th/p/1200x0/2023/07/17/1qrm9d5idnzc.jpg",
-        mallImg:["https://img.wongnai.com/p/1920x0/2022/10/04/a40a9d641b174fb09acf4623afa4bf40.jpg"],
-        storeImg: ["https://lh3.googleusercontent.com/p/AF1QipN-poBMLtk3QLtVtl9jS3ltjFz7cWrNgGbqXMWI=s1360-w1360-h1020","https://www.prachachat.net/wp-content/uploads/2020/06/13-2p1-5-728x485.jpg","https://www.bkkmenu.com/files/2022/09/Cover-SharelinkFB.jpg"]
-
-    },
-    {
         mallName: "Central World",
         mallPosition: "999/9 ถ. พระรามที่ 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร 10330",
         nearYou: "10 km.",
@@ -20,7 +11,200 @@ export default [
         "https://i0.wp.com/www.iurban.in.th/wp-content/uploads/2020/10/1_Groove-ctw-.jpg"],
         storeImg: ["https://www.prachachat.net/wp-content/uploads/2023/09/New-Uniqlo-Centralworld-%E0%B8%A2%E0%B8%B9%E0%B8%99%E0%B8%B4%E0%B9%82%E0%B8%84%E0%B8%A5%E0%B9%88-%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%A5%E0%B9%80%E0%B8%A7%E0%B8%B4%E0%B8%A5%E0%B8%94%E0%B9%8C.jpeg",
         "https://www.harpersbazaar.co.th/wp-content/uploads/images/banner/5371.jpeg",
-        "https://positioningmag.com/wp-content/uploads/2018/09/CHO.jpg"]
+        "https://positioningmag.com/wp-content/uploads/2018/09/CHO.jpg"],
+        storeData: [{
+            shopName: "Uniqlo",
+            shopID: "G1-1",
+            shopFloor: "1",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_1-scaled.jpg",
+            shopDescription: "Uniqlo (ยูนิโคล่) เป็นแบรนด์เสื้อผ้าที่มีต้นกำเนิดมาจากประเทศญี่ปุ่น และเป็นที่รู้จักอย่างกว้างขวางทั่วโลก. นับเป็นหนึ่งในแบรนด์เสื้อผ้าระดับโลกที่มีความนิยมอย่างสูง โดยUniqlo มีจุดเด่นในด้านคุณภาพ, การออกแบบ, และการให้บริการผลิตภัณฑ์ที่ครอบคลุมทุกไลฟ์สไตล์ ทำให้เป็นที่นิยมมากในวงกว้างของกลุ่มลูกค้า ++ยูนิโคล่ เซ็นทรัลเวิลด์++ ถือเป็นสาขาที่ใหญ่ที่สุดของไทยที่มีพื้นที่กว่า 3,370 ตารางเมตร, และนำเสนอโซน Re.UNIQLO Studio ที่เปิดบริการครั้งแรกในไทยด้วย Re.UNIQLO Studio เป็นบริการที่น่าสนใจ, ช่วยต่ออายุชีวิตของเสื้อผ้ายูนิโคล่ ด้วยการซ่อมแซมหรือเติมแต่งให้เกิดสไตล์ที่รักษ์โลก โดยที่ไทยเป็นประเทศที่ 14 ของโลกและประเทศที่ 3 ในเอเชียตะวันออกเฉียงใต้, หลังจากสิงคโปร์และมาเลเซีย //ยูนิโคล่ เซ็นทรัลเวิลด์ ยังมีการจัดแสดง Global Brand Ambassador ของ ยูนิโคล่พร้อมไอเทมไลฟ์แวร์ โดยเน้นที่ Roger Federer Collection by JW ANDERSON ที่มีจำหน่ายเฉพาะที่ยูนิโคล่เซ็นทรัลเวิลด์ และ ออนไลน์สโตร์ ท้ายที่สุดคือ บริการ MY UNIQLO ที่ให้บริการปักรูปแบบใหม่, ลูกค้าสามารถเลือกลวดลายหรือข้อความที่เป็นเอกลักษณ์จากตัวเลือกของยูนิโคล่ และนำมาปักบนเสื้อหรือกระเป๋าได้อีกด้วย",
+            shopPromotion: ["UNIQLO Gift Card บัตรของขวัญ ที่มีคอลเลคชันพิเศษร่วมกับศิลปินไทย อาทิ Sahred Toy, YOON PHANNAPAST, BHBH และ JARB มูลค่า 1,000 และ 2,000 บาท (สามารถใช้ได้ทุกสาขาในประเทศไทย ตั้งแต่วันที่ 1 ธันวาคม 2566 เป็นต้นไป และไม่สามารถใช้ที่ยูนิโคล่ออนไลน์สโตร์)",
+            "เสื้อโค้ท Ultra Warm Hybrid Down ลดเหลื่อ 5,990 THB จาก 6,990 THB", "กางเกง จ็อกเกอร์ ผ้าไนลอน ลดเหลื่อ 990 THB จาก 1,490 THB"],
+            shopImage: ["https://www.prachachat.net/wp-content/uploads/2023/09/New-Uniqlo-Centralworld-%E0%B8%A2%E0%B8%B9%E0%B8%99%E0%B8%B4%E0%B9%82%E0%B8%84%E0%B8%A5%E0%B9%88-%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%A5%E0%B9%80%E0%B8%A7%E0%B8%B4%E0%B8%A5%E0%B8%94%E0%B9%8C.jpeg",
+            "https://im.uniqlo.com/global-cms/spa/resffc8ff3b9ea3b67c10c49c0546abf6c7fr.jpg",
+            "https://im.uniqlo.com/global-cms/spa/resb2280b2976c0af05a0c8b8eb8108af1cfr.jpg"]
+        },
+        {
+        shopName: "Nike",
+            shopID: "G3-1",
+            shopFloor: "3",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_3-scaled.jpg",
+            shopDescription: "Nike CentralWorld เป็นสาขาที่ใหญ่ที่สุดในประเทศไทย พร้อมบริการผู้ช่วยสไตล์, กิจกรรมพัฒนาทักษะเด็ก, และสินค้าครบวงจร. ร้านมีทั้งรองเท้ากีฬา, เสื้อผ้า, และอุปกรณ์กีฬาคุณภาพสูง. สมาชิกไนกี้สามารถเข้าร่วมกิจกรรมพิเศษและติดตามข้อมูลผ่านแอป Nike และ IAM247 membership. Nike มีคุณภาพสินค้าสูง, นวัตกรรม, และเป็นที่รู้จักในวงการกีฬาและแฟชั่น. มีการสนับสนุนกีฬา, โครงการทางสังคม, และดีไซน์ที่ทันสมัย. ช้อปที่ Nike ไม่เพียงแค่ได้สินค้าคุณภาพ, แต่ยังได้ประสบการณ์ที่ทันสมัยและได้รับการสนับสนุนจากแบรนด์ที่มีชื่อเสียง.",
+            shopPromotion: ["รับสิทธิ์ซื้อรองเท้า NIKE DUNK LOW GS WHITE BLACK ในราคาเพียง 2,900 THB เมื่อซื้อสินค้าครบ2,000 THB",
+            "รองเท้า Nike Dunk Low Retro “ White Black” + กระเป๋า Nike Shoe Box + Nike Premium Lanyard เพียง 5,690 THB",
+            "รองเท้า WMNS Nike Dunk Low Next Nature “ White Black” + กระเป๋า Nike Shoe Box + Nike Premium Lanyard เพียง 5,590"],
+            shopImage: ["https://www.harpersbazaar.co.th/wp-content/uploads/images/banner/5371.jpeg",
+            "https://www.siamsport.co.th/static/6a0fceca-a3c8-4212-b4d6-dfeac3797774.jpg",
+            "https://www.thereporters.co/wp-content/uploads/2022/12/CoverN-Dec22-182-03.jpg"]
+        },
+        {
+            shopName: "Miniso",
+            shopID: "G3-2",
+            shopFloor: "3",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_3-scaled.jpg",
+            shopDescription: "Miniso เป็นร้านที่ขายของใช้ในบ้านจนถึงสินค้าดิจิตอลจากประเทศญี่ปุ่น มีสินค้าหลากหลาย(minimal ม๊ากก) และมีสไตล์การออกแบบร้านที่เป็นเอกลักษณ์น่ารัก",
+            shopPromotion: ["ซื้อสินค้าประเภทรองเท้าหรือตุ๊กตาทิกเกอร์  1 ชิ้นลด 5%, 2 ชิ้นลด 15% และ 3 ชิ้นขึ้นไปลด 25%"],
+            shopImage: ["https://positioningmag.com/wp-content/uploads/2018/09/CHO.jpg",
+            "https://psstorytrip.files.wordpress.com/2018/09/8-22.jpg",
+            "https://psstorytrip.files.wordpress.com/2018/09/1-12.jpg"]
+        },{
+            shopName: "Banana IT",
+            shopID: "G4-1",
+            shopFloor: "4",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_4-scaled.jpg",
+            shopDescription: "BaNANA เป็นร้านค้าที่เชื่อมโยงกับแบรนด์ไอทีชั้นนำและมีสาขามากมายทั่วประเทศ ด้วยนโยบายการขายปลีกที่นำเสนอสินค้าไอทีครบวงจร ร้านได้มีการปรับภาพลักษณ์เพื่อให้การเลือกซื้อสินค้าไอทีเป็นเรื่อง ง่ายยยย โดยเน้นที่ความหลากหลายของสินค้าและมีสาขาตั้งอยู่ในห้างสรรพสินค้าชั้นนำและไฮเปอร์มาร์เก็ตทั่วประเทศ รวมทั้งนำเสนอระบบร้านค้าเครือข่าย (Franchise) ในพื้นที่ต่าง ๆ เพื่อสนับสนุน SMEs ในภูมิภาค สินค้าที่ BaNANA ขายมีหลากหลายประเภท เช่น คอมพิวเตอร์แล็บท็อป, คอมพิวเตอร์ตั้งโต๊ะ, โทรศัพท์เคลื่อนที่, แท็บเล็ต, และอุปกรณ์เสริมอื่นๆ",
+            shopPromotion: ["ลดราคา OPPO A79 5G เหลือ 6,999 THB","พบกับ BaNANA COM SALE @ COMMART งานนี้ห้ามพลาด! ทั้ง Computer, Notebook, Gaming Gear และสินค้าไอทีลดราคาส่งท้ายปี โปรแรง ของแถมจัดเต็ม ลดสูงสุด 70%*"],
+            shopImage: ["https://lh3.googleusercontent.com/p/AF1QipPOaMFcU9ZCJp5vIkDGm3le6DGNBd8mMdLpb2OG=s1360-w1360-h1020",
+            "https://lh3.googleusercontent.com/p/AF1QipOI_hplib9FCh1Y_1gGfAb11BomA2hAZf9M14GI=s1360-w1360-h1020",
+            "https://lh3.googleusercontent.com/p/AF1QipMawIlB86PGwRxwiDRRLHQ6_qXLdP4PDYMJ3c0j=s1360-w1360-h1020"]
+        }]
+    },
+    {
+        mallName: "Central Rama 2",
+        mallPosition: "160 ถ. พระรามที่ 2 แขวงแสมดำ เขตบางขุนเทียน กรุงเทพมหานคร 10150",
+        nearYou: "5 km.",
+        iconImg: "https://img.salehere.co.th/p/1200x0/2023/07/17/1qrm9d5idnzc.jpg",
+        mallImg:["https://img.wongnai.com/p/1920x0/2022/10/04/a40a9d641b174fb09acf4623afa4bf40.jpg"],
+        storeImg: ["https://lh3.googleusercontent.com/p/AF1QipN-poBMLtk3QLtVtl9jS3ltjFz7cWrNgGbqXMWI=s1360-w1360-h1020","https://www.prachachat.net/wp-content/uploads/2020/06/13-2p1-5-728x485.jpg","https://www.bkkmenu.com/files/2022/09/Cover-SharelinkFB.jpg"],
+        storeData: [{
+            shopName: "Uniqlo",
+            shopID: "G1-1",
+            shopFloor: "1",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_1-scaled.jpg",
+            shopDescription: "Uniqlo (ยูนิโคล่) เป็นแบรนด์เสื้อผ้าที่มีต้นกำเนิดมาจากประเทศญี่ปุ่น และเป็นที่รู้จักอย่างกว้างขวางทั่วโลก. นับเป็นหนึ่งในแบรนด์เสื้อผ้าระดับโลกที่มีความนิยมอย่างสูง โดยUniqlo มีจุดเด่นในด้านคุณภาพ, การออกแบบ, และการให้บริการผลิตภัณฑ์ที่ครอบคลุมทุกไลฟ์สไตล์ ทำให้เป็นที่นิยมมากในวงกว้างของกลุ่มลูกค้า ++ยูนิโคล่ เซ็นทรัลเวิลด์++ ถือเป็นสาขาที่ใหญ่ที่สุดของไทยที่มีพื้นที่กว่า 3,370 ตารางเมตร, และนำเสนอโซน Re.UNIQLO Studio ที่เปิดบริการครั้งแรกในไทยด้วย Re.UNIQLO Studio เป็นบริการที่น่าสนใจ, ช่วยต่ออายุชีวิตของเสื้อผ้ายูนิโคล่ ด้วยการซ่อมแซมหรือเติมแต่งให้เกิดสไตล์ที่รักษ์โลก โดยที่ไทยเป็นประเทศที่ 14 ของโลกและประเทศที่ 3 ในเอเชียตะวันออกเฉียงใต้, หลังจากสิงคโปร์และมาเลเซีย //ยูนิโคล่ เซ็นทรัลเวิลด์ ยังมีการจัดแสดง Global Brand Ambassador ของ ยูนิโคล่พร้อมไอเทมไลฟ์แวร์ โดยเน้นที่ Roger Federer Collection by JW ANDERSON ที่มีจำหน่ายเฉพาะที่ยูนิโคล่เซ็นทรัลเวิลด์ และ ออนไลน์สโตร์ ท้ายที่สุดคือ บริการ MY UNIQLO ที่ให้บริการปักรูปแบบใหม่, ลูกค้าสามารถเลือกลวดลายหรือข้อความที่เป็นเอกลักษณ์จากตัวเลือกของยูนิโคล่ และนำมาปักบนเสื้อหรือกระเป๋าได้อีกด้วย",
+            shopPromotion: ["UNIQLO Gift Card บัตรของขวัญ ที่มีคอลเลคชันพิเศษร่วมกับศิลปินไทย อาทิ Sahred Toy, YOON PHANNAPAST, BHBH และ JARB มูลค่า 1,000 และ 2,000 บาท (สามารถใช้ได้ทุกสาขาในประเทศไทย ตั้งแต่วันที่ 1 ธันวาคม 2566 เป็นต้นไป และไม่สามารถใช้ที่ยูนิโคล่ออนไลน์สโตร์)",
+            "เสื้อโค้ท Ultra Warm Hybrid Down ลดเหลื่อ 5,990 THB จาก 6,990 THB", "กางเกง จ็อกเกอร์ ผ้าไนลอน ลดเหลื่อ 990 THB จาก 1,490 THB"],
+            shopImage: ["https://www.prachachat.net/wp-content/uploads/2023/09/New-Uniqlo-Centralworld-%E0%B8%A2%E0%B8%B9%E0%B8%99%E0%B8%B4%E0%B9%82%E0%B8%84%E0%B8%A5%E0%B9%88-%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%A5%E0%B9%80%E0%B8%A7%E0%B8%B4%E0%B8%A5%E0%B8%94%E0%B9%8C.jpeg",
+            "https://im.uniqlo.com/global-cms/spa/resffc8ff3b9ea3b67c10c49c0546abf6c7fr.jpg",
+            "https://im.uniqlo.com/global-cms/spa/resb2280b2976c0af05a0c8b8eb8108af1cfr.jpg"]
+        },
+        {
+        shopName: "Nike",
+            shopID: "G3-1",
+            shopFloor: "3",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_3-scaled.jpg",
+            shopDescription: "Nike CentralWorld เป็นสาขาที่ใหญ่ที่สุดในประเทศไทย พร้อมบริการผู้ช่วยสไตล์, กิจกรรมพัฒนาทักษะเด็ก, และสินค้าครบวงจร. ร้านมีทั้งรองเท้ากีฬา, เสื้อผ้า, และอุปกรณ์กีฬาคุณภาพสูง. สมาชิกไนกี้สามารถเข้าร่วมกิจกรรมพิเศษและติดตามข้อมูลผ่านแอป Nike และ IAM247 membership. Nike มีคุณภาพสินค้าสูง, นวัตกรรม, และเป็นที่รู้จักในวงการกีฬาและแฟชั่น. มีการสนับสนุนกีฬา, โครงการทางสังคม, และดีไซน์ที่ทันสมัย. ช้อปที่ Nike ไม่เพียงแค่ได้สินค้าคุณภาพ, แต่ยังได้ประสบการณ์ที่ทันสมัยและได้รับการสนับสนุนจากแบรนด์ที่มีชื่อเสียง.",
+            shopPromotion: ["รับสิทธิ์ซื้อรองเท้า NIKE DUNK LOW GS WHITE BLACK ในราคาเพียง 2,900 THB เมื่อซื้อสินค้าครบ2,000 THB",
+            "รองเท้า Nike Dunk Low Retro “ White Black” + กระเป๋า Nike Shoe Box + Nike Premium Lanyard เพียง 5,690 THB",
+            "รองเท้า WMNS Nike Dunk Low Next Nature “ White Black” + กระเป๋า Nike Shoe Box + Nike Premium Lanyard เพียง 5,590"],
+            shopImage: ["https://www.harpersbazaar.co.th/wp-content/uploads/images/banner/5371.jpeg",
+            "https://www.siamsport.co.th/static/6a0fceca-a3c8-4212-b4d6-dfeac3797774.jpg",
+            "https://www.thereporters.co/wp-content/uploads/2022/12/CoverN-Dec22-182-03.jpg"],
+            storeData: [{
+                shopName: "Uniqlo",
+                shopID: "G1-1",
+                shopFloor: "1",
+                floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_1-scaled.jpg",
+                shopDescription: "Uniqlo (ยูนิโคล่) เป็นแบรนด์เสื้อผ้าที่มีต้นกำเนิดมาจากประเทศญี่ปุ่น และเป็นที่รู้จักอย่างกว้างขวางทั่วโลก. นับเป็นหนึ่งในแบรนด์เสื้อผ้าระดับโลกที่มีความนิยมอย่างสูง โดยUniqlo มีจุดเด่นในด้านคุณภาพ, การออกแบบ, และการให้บริการผลิตภัณฑ์ที่ครอบคลุมทุกไลฟ์สไตล์ ทำให้เป็นที่นิยมมากในวงกว้างของกลุ่มลูกค้า ++ยูนิโคล่ เซ็นทรัลเวิลด์++ ถือเป็นสาขาที่ใหญ่ที่สุดของไทยที่มีพื้นที่กว่า 3,370 ตารางเมตร, และนำเสนอโซน Re.UNIQLO Studio ที่เปิดบริการครั้งแรกในไทยด้วย Re.UNIQLO Studio เป็นบริการที่น่าสนใจ, ช่วยต่ออายุชีวิตของเสื้อผ้ายูนิโคล่ ด้วยการซ่อมแซมหรือเติมแต่งให้เกิดสไตล์ที่รักษ์โลก โดยที่ไทยเป็นประเทศที่ 14 ของโลกและประเทศที่ 3 ในเอเชียตะวันออกเฉียงใต้, หลังจากสิงคโปร์และมาเลเซีย //ยูนิโคล่ เซ็นทรัลเวิลด์ ยังมีการจัดแสดง Global Brand Ambassador ของ ยูนิโคล่พร้อมไอเทมไลฟ์แวร์ โดยเน้นที่ Roger Federer Collection by JW ANDERSON ที่มีจำหน่ายเฉพาะที่ยูนิโคล่เซ็นทรัลเวิลด์ และ ออนไลน์สโตร์ ท้ายที่สุดคือ บริการ MY UNIQLO ที่ให้บริการปักรูปแบบใหม่, ลูกค้าสามารถเลือกลวดลายหรือข้อความที่เป็นเอกลักษณ์จากตัวเลือกของยูนิโคล่ และนำมาปักบนเสื้อหรือกระเป๋าได้อีกด้วย",
+                shopPromotion: ["UNIQLO Gift Card บัตรของขวัญ ที่มีคอลเลคชันพิเศษร่วมกับศิลปินไทย อาทิ Sahred Toy, YOON PHANNAPAST, BHBH และ JARB มูลค่า 1,000 และ 2,000 บาท (สามารถใช้ได้ทุกสาขาในประเทศไทย ตั้งแต่วันที่ 1 ธันวาคม 2566 เป็นต้นไป และไม่สามารถใช้ที่ยูนิโคล่ออนไลน์สโตร์)",
+                "เสื้อโค้ท Ultra Warm Hybrid Down ลดเหลื่อ 5,990 THB จาก 6,990 THB", "กางเกง จ็อกเกอร์ ผ้าไนลอน ลดเหลื่อ 990 THB จาก 1,490 THB"],
+                shopImage: ["https://www.prachachat.net/wp-content/uploads/2023/09/New-Uniqlo-Centralworld-%E0%B8%A2%E0%B8%B9%E0%B8%99%E0%B8%B4%E0%B9%82%E0%B8%84%E0%B8%A5%E0%B9%88-%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%A5%E0%B9%80%E0%B8%A7%E0%B8%B4%E0%B8%A5%E0%B8%94%E0%B9%8C.jpeg",
+                "https://im.uniqlo.com/global-cms/spa/resffc8ff3b9ea3b67c10c49c0546abf6c7fr.jpg",
+                "https://im.uniqlo.com/global-cms/spa/resb2280b2976c0af05a0c8b8eb8108af1cfr.jpg"]
+            },
+            {
+            shopName: "Nike",
+                shopID: "G3-1",
+                shopFloor: "3",
+                floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_3-scaled.jpg",
+                shopDescription: "Nike CentralWorld เป็นสาขาที่ใหญ่ที่สุดในประเทศไทย พร้อมบริการผู้ช่วยสไตล์, กิจกรรมพัฒนาทักษะเด็ก, และสินค้าครบวงจร. ร้านมีทั้งรองเท้ากีฬา, เสื้อผ้า, และอุปกรณ์กีฬาคุณภาพสูง. สมาชิกไนกี้สามารถเข้าร่วมกิจกรรมพิเศษและติดตามข้อมูลผ่านแอป Nike และ IAM247 membership. Nike มีคุณภาพสินค้าสูง, นวัตกรรม, และเป็นที่รู้จักในวงการกีฬาและแฟชั่น. มีการสนับสนุนกีฬา, โครงการทางสังคม, และดีไซน์ที่ทันสมัย. ช้อปที่ Nike ไม่เพียงแค่ได้สินค้าคุณภาพ, แต่ยังได้ประสบการณ์ที่ทันสมัยและได้รับการสนับสนุนจากแบรนด์ที่มีชื่อเสียง.",
+                shopPromotion: ["รับสิทธิ์ซื้อรองเท้า NIKE DUNK LOW GS WHITE BLACK ในราคาเพียง 2,900 THB เมื่อซื้อสินค้าครบ2,000 THB",
+                "รองเท้า Nike Dunk Low Retro “ White Black” + กระเป๋า Nike Shoe Box + Nike Premium Lanyard เพียง 5,690 THB",
+                "รองเท้า WMNS Nike Dunk Low Next Nature “ White Black” + กระเป๋า Nike Shoe Box + Nike Premium Lanyard เพียง 5,590"],
+                shopImage: ["https://www.harpersbazaar.co.th/wp-content/uploads/images/banner/5371.jpeg",
+                "https://www.siamsport.co.th/static/6a0fceca-a3c8-4212-b4d6-dfeac3797774.jpg",
+                "https://www.thereporters.co/wp-content/uploads/2022/12/CoverN-Dec22-182-03.jpg"]
+            },
+            {
+                shopName: "Miniso",
+                shopID: "G3-2",
+                shopFloor: "3",
+                floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_3-scaled.jpg",
+                shopDescription: "Miniso เป็นร้านที่ขายของใช้ในบ้านจนถึงสินค้าดิจิตอลจากประเทศญี่ปุ่น มีสินค้าหลากหลาย(minimal ม๊ากก) และมีสไตล์การออกแบบร้านที่เป็นเอกลักษณ์น่ารัก",
+                shopPromotion: ["ซื้อสินค้าประเภทรองเท้าหรือตุ๊กตาทิกเกอร์  1 ชิ้นลด 5%, 2 ชิ้นลด 15% และ 3 ชิ้นขึ้นไปลด 25%"],
+                shopImage: ["https://positioningmag.com/wp-content/uploads/2018/09/CHO.jpg",
+                "https://psstorytrip.files.wordpress.com/2018/09/8-22.jpg",
+                "https://psstorytrip.files.wordpress.com/2018/09/1-12.jpg"]
+            },{
+                shopName: "Banana IT",
+                shopID: "G4-1",
+                shopFloor: "4",
+                floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_4-scaled.jpg",
+                shopDescription: "BaNANA เป็นร้านค้าที่เชื่อมโยงกับแบรนด์ไอทีชั้นนำและมีสาขามากมายทั่วประเทศ ด้วยนโยบายการขายปลีกที่นำเสนอสินค้าไอทีครบวงจร ร้านได้มีการปรับภาพลักษณ์เพื่อให้การเลือกซื้อสินค้าไอทีเป็นเรื่อง ง่ายยยย โดยเน้นที่ความหลากหลายของสินค้าและมีสาขาตั้งอยู่ในห้างสรรพสินค้าชั้นนำและไฮเปอร์มาร์เก็ตทั่วประเทศ รวมทั้งนำเสนอระบบร้านค้าเครือข่าย (Franchise) ในพื้นที่ต่าง ๆ เพื่อสนับสนุน SMEs ในภูมิภาค สินค้าที่ BaNANA ขายมีหลากหลายประเภท เช่น คอมพิวเตอร์แล็บท็อป, คอมพิวเตอร์ตั้งโต๊ะ, โทรศัพท์เคลื่อนที่, แท็บเล็ต, และอุปกรณ์เสริมอื่นๆ",
+                shopPromotion: ["ลดราคา OPPO A79 5G เหลือ 6,999 THB","พบกับ BaNANA COM SALE @ COMMART งานนี้ห้ามพลาด! ทั้ง Computer, Notebook, Gaming Gear และสินค้าไอทีลดราคาส่งท้ายปี โปรแรง ของแถมจัดเต็ม ลดสูงสุด 70%*"],
+                shopImage: ["https://lh3.googleusercontent.com/p/AF1QipPOaMFcU9ZCJp5vIkDGm3le6DGNBd8mMdLpb2OG=s1360-w1360-h1020",
+                "https://lh3.googleusercontent.com/p/AF1QipOI_hplib9FCh1Y_1gGfAb11BomA2hAZf9M14GI=s1360-w1360-h1020",
+                "https://lh3.googleusercontent.com/p/AF1QipMawIlB86PGwRxwiDRRLHQ6_qXLdP4PDYMJ3c0j=s1360-w1360-h1020"]
+            }]
+        },
+        {
+            shopName: "Miniso",
+            shopID: "G3-2",
+            shopFloor: "3",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_3-scaled.jpg",
+            shopDescription: "Miniso เป็นร้านที่ขายของใช้ในบ้านจนถึงสินค้าดิจิตอลจากประเทศญี่ปุ่น มีสินค้าหลากหลาย(minimal ม๊ากก) และมีสไตล์การออกแบบร้านที่เป็นเอกลักษณ์น่ารัก",
+            shopPromotion: ["ซื้อสินค้าประเภทรองเท้าหรือตุ๊กตาทิกเกอร์  1 ชิ้นลด 5%, 2 ชิ้นลด 15% และ 3 ชิ้นขึ้นไปลด 25%"],
+            shopImage: ["https://positioningmag.com/wp-content/uploads/2018/09/CHO.jpg",
+            "https://psstorytrip.files.wordpress.com/2018/09/8-22.jpg",
+            "https://psstorytrip.files.wordpress.com/2018/09/1-12.jpg"],
+            storeData: [{
+                shopName: "Uniqlo",
+                shopID: "G1-1",
+                shopFloor: "1",
+                floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_1-scaled.jpg",
+                shopDescription: "Uniqlo (ยูนิโคล่) เป็นแบรนด์เสื้อผ้าที่มีต้นกำเนิดมาจากประเทศญี่ปุ่น และเป็นที่รู้จักอย่างกว้างขวางทั่วโลก. นับเป็นหนึ่งในแบรนด์เสื้อผ้าระดับโลกที่มีความนิยมอย่างสูง โดยUniqlo มีจุดเด่นในด้านคุณภาพ, การออกแบบ, และการให้บริการผลิตภัณฑ์ที่ครอบคลุมทุกไลฟ์สไตล์ ทำให้เป็นที่นิยมมากในวงกว้างของกลุ่มลูกค้า ++ยูนิโคล่ เซ็นทรัลเวิลด์++ ถือเป็นสาขาที่ใหญ่ที่สุดของไทยที่มีพื้นที่กว่า 3,370 ตารางเมตร, และนำเสนอโซน Re.UNIQLO Studio ที่เปิดบริการครั้งแรกในไทยด้วย Re.UNIQLO Studio เป็นบริการที่น่าสนใจ, ช่วยต่ออายุชีวิตของเสื้อผ้ายูนิโคล่ ด้วยการซ่อมแซมหรือเติมแต่งให้เกิดสไตล์ที่รักษ์โลก โดยที่ไทยเป็นประเทศที่ 14 ของโลกและประเทศที่ 3 ในเอเชียตะวันออกเฉียงใต้, หลังจากสิงคโปร์และมาเลเซีย //ยูนิโคล่ เซ็นทรัลเวิลด์ ยังมีการจัดแสดง Global Brand Ambassador ของ ยูนิโคล่พร้อมไอเทมไลฟ์แวร์ โดยเน้นที่ Roger Federer Collection by JW ANDERSON ที่มีจำหน่ายเฉพาะที่ยูนิโคล่เซ็นทรัลเวิลด์ และ ออนไลน์สโตร์ ท้ายที่สุดคือ บริการ MY UNIQLO ที่ให้บริการปักรูปแบบใหม่, ลูกค้าสามารถเลือกลวดลายหรือข้อความที่เป็นเอกลักษณ์จากตัวเลือกของยูนิโคล่ และนำมาปักบนเสื้อหรือกระเป๋าได้อีกด้วย",
+                shopPromotion: ["UNIQLO Gift Card บัตรของขวัญ ที่มีคอลเลคชันพิเศษร่วมกับศิลปินไทย อาทิ Sahred Toy, YOON PHANNAPAST, BHBH และ JARB มูลค่า 1,000 และ 2,000 บาท (สามารถใช้ได้ทุกสาขาในประเทศไทย ตั้งแต่วันที่ 1 ธันวาคม 2566 เป็นต้นไป และไม่สามารถใช้ที่ยูนิโคล่ออนไลน์สโตร์)",
+                "เสื้อโค้ท Ultra Warm Hybrid Down ลดเหลื่อ 5,990 THB จาก 6,990 THB", "กางเกง จ็อกเกอร์ ผ้าไนลอน ลดเหลื่อ 990 THB จาก 1,490 THB"],
+                shopImage: ["https://www.prachachat.net/wp-content/uploads/2023/09/New-Uniqlo-Centralworld-%E0%B8%A2%E0%B8%B9%E0%B8%99%E0%B8%B4%E0%B9%82%E0%B8%84%E0%B8%A5%E0%B9%88-%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%A5%E0%B9%80%E0%B8%A7%E0%B8%B4%E0%B8%A5%E0%B8%94%E0%B9%8C.jpeg",
+                "https://im.uniqlo.com/global-cms/spa/resffc8ff3b9ea3b67c10c49c0546abf6c7fr.jpg",
+                "https://im.uniqlo.com/global-cms/spa/resb2280b2976c0af05a0c8b8eb8108af1cfr.jpg"]
+            },
+            {
+            shopName: "Nike",
+                shopID: "G3-1",
+                shopFloor: "3",
+                floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_3-scaled.jpg",
+                shopDescription: "Nike CentralWorld เป็นสาขาที่ใหญ่ที่สุดในประเทศไทย พร้อมบริการผู้ช่วยสไตล์, กิจกรรมพัฒนาทักษะเด็ก, และสินค้าครบวงจร. ร้านมีทั้งรองเท้ากีฬา, เสื้อผ้า, และอุปกรณ์กีฬาคุณภาพสูง. สมาชิกไนกี้สามารถเข้าร่วมกิจกรรมพิเศษและติดตามข้อมูลผ่านแอป Nike และ IAM247 membership. Nike มีคุณภาพสินค้าสูง, นวัตกรรม, และเป็นที่รู้จักในวงการกีฬาและแฟชั่น. มีการสนับสนุนกีฬา, โครงการทางสังคม, และดีไซน์ที่ทันสมัย. ช้อปที่ Nike ไม่เพียงแค่ได้สินค้าคุณภาพ, แต่ยังได้ประสบการณ์ที่ทันสมัยและได้รับการสนับสนุนจากแบรนด์ที่มีชื่อเสียง.",
+                shopPromotion: ["รับสิทธิ์ซื้อรองเท้า NIKE DUNK LOW GS WHITE BLACK ในราคาเพียง 2,900 THB เมื่อซื้อสินค้าครบ2,000 THB",
+                "รองเท้า Nike Dunk Low Retro “ White Black” + กระเป๋า Nike Shoe Box + Nike Premium Lanyard เพียง 5,690 THB",
+                "รองเท้า WMNS Nike Dunk Low Next Nature “ White Black” + กระเป๋า Nike Shoe Box + Nike Premium Lanyard เพียง 5,590"],
+                shopImage: ["https://www.harpersbazaar.co.th/wp-content/uploads/images/banner/5371.jpeg",
+                "https://www.siamsport.co.th/static/6a0fceca-a3c8-4212-b4d6-dfeac3797774.jpg",
+                "https://www.thereporters.co/wp-content/uploads/2022/12/CoverN-Dec22-182-03.jpg"]
+            },
+            {
+                shopName: "Miniso",
+                shopID: "G3-2",
+                shopFloor: "3",
+                floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_3-scaled.jpg",
+                shopDescription: "Miniso เป็นร้านที่ขายของใช้ในบ้านจนถึงสินค้าดิจิตอลจากประเทศญี่ปุ่น มีสินค้าหลากหลาย(minimal ม๊ากก) และมีสไตล์การออกแบบร้านที่เป็นเอกลักษณ์น่ารัก",
+                shopPromotion: ["ซื้อสินค้าประเภทรองเท้าหรือตุ๊กตาทิกเกอร์  1 ชิ้นลด 5%, 2 ชิ้นลด 15% และ 3 ชิ้นขึ้นไปลด 25%"],
+                shopImage: ["https://positioningmag.com/wp-content/uploads/2018/09/CHO.jpg",
+                "https://psstorytrip.files.wordpress.com/2018/09/8-22.jpg",
+                "https://psstorytrip.files.wordpress.com/2018/09/1-12.jpg"]
+            },{
+                shopName: "Banana IT",
+                shopID: "G4-1",
+                shopFloor: "4",
+                floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_4-scaled.jpg",
+                shopDescription: "BaNANA เป็นร้านค้าที่เชื่อมโยงกับแบรนด์ไอทีชั้นนำและมีสาขามากมายทั่วประเทศ ด้วยนโยบายการขายปลีกที่นำเสนอสินค้าไอทีครบวงจร ร้านได้มีการปรับภาพลักษณ์เพื่อให้การเลือกซื้อสินค้าไอทีเป็นเรื่อง ง่ายยยย โดยเน้นที่ความหลากหลายของสินค้าและมีสาขาตั้งอยู่ในห้างสรรพสินค้าชั้นนำและไฮเปอร์มาร์เก็ตทั่วประเทศ รวมทั้งนำเสนอระบบร้านค้าเครือข่าย (Franchise) ในพื้นที่ต่าง ๆ เพื่อสนับสนุน SMEs ในภูมิภาค สินค้าที่ BaNANA ขายมีหลากหลายประเภท เช่น คอมพิวเตอร์แล็บท็อป, คอมพิวเตอร์ตั้งโต๊ะ, โทรศัพท์เคลื่อนที่, แท็บเล็ต, และอุปกรณ์เสริมอื่นๆ",
+                shopPromotion: ["ลดราคา OPPO A79 5G เหลือ 6,999 THB","พบกับ BaNANA COM SALE @ COMMART งานนี้ห้ามพลาด! ทั้ง Computer, Notebook, Gaming Gear และสินค้าไอทีลดราคาส่งท้ายปี โปรแรง ของแถมจัดเต็ม ลดสูงสุด 70%*"],
+                shopImage: ["https://lh3.googleusercontent.com/p/AF1QipPOaMFcU9ZCJp5vIkDGm3le6DGNBd8mMdLpb2OG=s1360-w1360-h1020",
+                "https://lh3.googleusercontent.com/p/AF1QipOI_hplib9FCh1Y_1gGfAb11BomA2hAZf9M14GI=s1360-w1360-h1020",
+                "https://lh3.googleusercontent.com/p/AF1QipMawIlB86PGwRxwiDRRLHQ6_qXLdP4PDYMJ3c0j=s1360-w1360-h1020"]
+            }]
+        },{
+            shopName: "Banana IT",
+            shopID: "G4-1",
+            shopFloor: "4",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_4-scaled.jpg",
+            shopDescription: "BaNANA เป็นร้านค้าที่เชื่อมโยงกับแบรนด์ไอทีชั้นนำและมีสาขามากมายทั่วประเทศ ด้วยนโยบายการขายปลีกที่นำเสนอสินค้าไอทีครบวงจร ร้านได้มีการปรับภาพลักษณ์เพื่อให้การเลือกซื้อสินค้าไอทีเป็นเรื่อง ง่ายยยย โดยเน้นที่ความหลากหลายของสินค้าและมีสาขาตั้งอยู่ในห้างสรรพสินค้าชั้นนำและไฮเปอร์มาร์เก็ตทั่วประเทศ รวมทั้งนำเสนอระบบร้านค้าเครือข่าย (Franchise) ในพื้นที่ต่าง ๆ เพื่อสนับสนุน SMEs ในภูมิภาค สินค้าที่ BaNANA ขายมีหลากหลายประเภท เช่น คอมพิวเตอร์แล็บท็อป, คอมพิวเตอร์ตั้งโต๊ะ, โทรศัพท์เคลื่อนที่, แท็บเล็ต, และอุปกรณ์เสริมอื่นๆ",
+            shopPromotion: ["ลดราคา OPPO A79 5G เหลือ 6,999 THB","พบกับ BaNANA COM SALE @ COMMART งานนี้ห้ามพลาด! ทั้ง Computer, Notebook, Gaming Gear และสินค้าไอทีลดราคาส่งท้ายปี โปรแรง ของแถมจัดเต็ม ลดสูงสุด 70%*"],
+            shopImage: ["https://lh3.googleusercontent.com/p/AF1QipPOaMFcU9ZCJp5vIkDGm3le6DGNBd8mMdLpb2OG=s1360-w1360-h1020",
+            "https://lh3.googleusercontent.com/p/AF1QipOI_hplib9FCh1Y_1gGfAb11BomA2hAZf9M14GI=s1360-w1360-h1020",
+            "https://lh3.googleusercontent.com/p/AF1QipMawIlB86PGwRxwiDRRLHQ6_qXLdP4PDYMJ3c0j=s1360-w1360-h1020"]
+        }]
+
     },
     {
         mallName: "The Mall Bangkapi",
@@ -30,7 +214,53 @@ export default [
         mallImg: ["https://thestandard.co/wp-content/uploads/2023/05/The-Mall-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B0%E0%B8%9B%E0%B8%B4-%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%84.jpg",],
         storeImg: ["https://blog.hungryhub.com/wp-content/uploads/2022/05/%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B8%A1%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D%E0%B8%8B%E0%B8%B5%E0%B8%9F%E0%B8%B9%E0%B9%89%E0%B8%94-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%A1%E0%B8%AD%E0%B8%A5%E0%B8%A5%E0%B9%8C%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B0%E0%B8%9B%E0%B8%B4-1024x769.jpg",
         "https://blog.hungryhub.com/wp-content/uploads/2022/05/Momo-Paradise-%E0%B9%80%E0%B8%94%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%A1%E0%B8%AD%E0%B8%A5%E0%B8%A5%E0%B9%8C%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B0%E0%B8%9B%E0%B8%B4--1024x769.jpg",
-        "https://blog.hungryhub.com/wp-content/uploads/2022/05/Aka-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%A1%E0%B8%AD%E0%B8%A5%E0%B8%A5%E0%B9%8C%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B0%E0%B8%9B%E0%B8%B4-1024x769.jpg"]
+        "https://blog.hungryhub.com/wp-content/uploads/2022/05/Aka-%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B8%A1%E0%B8%AD%E0%B8%A5%E0%B8%A5%E0%B9%8C%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B0%E0%B8%9B%E0%B8%B4-1024x769.jpg"],
+        storeData: [{
+            shopName: "Uniqlo",
+            shopID: "G1-1",
+            shopFloor: "1",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_1-scaled.jpg",
+            shopDescription: "Uniqlo (ยูนิโคล่) เป็นแบรนด์เสื้อผ้าที่มีต้นกำเนิดมาจากประเทศญี่ปุ่น และเป็นที่รู้จักอย่างกว้างขวางทั่วโลก. นับเป็นหนึ่งในแบรนด์เสื้อผ้าระดับโลกที่มีความนิยมอย่างสูง โดยUniqlo มีจุดเด่นในด้านคุณภาพ, การออกแบบ, และการให้บริการผลิตภัณฑ์ที่ครอบคลุมทุกไลฟ์สไตล์ ทำให้เป็นที่นิยมมากในวงกว้างของกลุ่มลูกค้า ++ยูนิโคล่ เซ็นทรัลเวิลด์++ ถือเป็นสาขาที่ใหญ่ที่สุดของไทยที่มีพื้นที่กว่า 3,370 ตารางเมตร, และนำเสนอโซน Re.UNIQLO Studio ที่เปิดบริการครั้งแรกในไทยด้วย Re.UNIQLO Studio เป็นบริการที่น่าสนใจ, ช่วยต่ออายุชีวิตของเสื้อผ้ายูนิโคล่ ด้วยการซ่อมแซมหรือเติมแต่งให้เกิดสไตล์ที่รักษ์โลก โดยที่ไทยเป็นประเทศที่ 14 ของโลกและประเทศที่ 3 ในเอเชียตะวันออกเฉียงใต้, หลังจากสิงคโปร์และมาเลเซีย //ยูนิโคล่ เซ็นทรัลเวิลด์ ยังมีการจัดแสดง Global Brand Ambassador ของ ยูนิโคล่พร้อมไอเทมไลฟ์แวร์ โดยเน้นที่ Roger Federer Collection by JW ANDERSON ที่มีจำหน่ายเฉพาะที่ยูนิโคล่เซ็นทรัลเวิลด์ และ ออนไลน์สโตร์ ท้ายที่สุดคือ บริการ MY UNIQLO ที่ให้บริการปักรูปแบบใหม่, ลูกค้าสามารถเลือกลวดลายหรือข้อความที่เป็นเอกลักษณ์จากตัวเลือกของยูนิโคล่ และนำมาปักบนเสื้อหรือกระเป๋าได้อีกด้วย",
+            shopPromotion: ["UNIQLO Gift Card บัตรของขวัญ ที่มีคอลเลคชันพิเศษร่วมกับศิลปินไทย อาทิ Sahred Toy, YOON PHANNAPAST, BHBH และ JARB มูลค่า 1,000 และ 2,000 บาท (สามารถใช้ได้ทุกสาขาในประเทศไทย ตั้งแต่วันที่ 1 ธันวาคม 2566 เป็นต้นไป และไม่สามารถใช้ที่ยูนิโคล่ออนไลน์สโตร์)",
+            "เสื้อโค้ท Ultra Warm Hybrid Down ลดเหลื่อ 5,990 THB จาก 6,990 THB", "กางเกง จ็อกเกอร์ ผ้าไนลอน ลดเหลื่อ 990 THB จาก 1,490 THB"],
+            shopImage: ["https://www.prachachat.net/wp-content/uploads/2023/09/New-Uniqlo-Centralworld-%E0%B8%A2%E0%B8%B9%E0%B8%99%E0%B8%B4%E0%B9%82%E0%B8%84%E0%B8%A5%E0%B9%88-%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%A5%E0%B9%80%E0%B8%A7%E0%B8%B4%E0%B8%A5%E0%B8%94%E0%B9%8C.jpeg",
+            "https://im.uniqlo.com/global-cms/spa/resffc8ff3b9ea3b67c10c49c0546abf6c7fr.jpg",
+            "https://im.uniqlo.com/global-cms/spa/resb2280b2976c0af05a0c8b8eb8108af1cfr.jpg"]
+        },
+        {
+        shopName: "Nike",
+            shopID: "G3-1",
+            shopFloor: "3",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_3-scaled.jpg",
+            shopDescription: "Nike CentralWorld เป็นสาขาที่ใหญ่ที่สุดในประเทศไทย พร้อมบริการผู้ช่วยสไตล์, กิจกรรมพัฒนาทักษะเด็ก, และสินค้าครบวงจร. ร้านมีทั้งรองเท้ากีฬา, เสื้อผ้า, และอุปกรณ์กีฬาคุณภาพสูง. สมาชิกไนกี้สามารถเข้าร่วมกิจกรรมพิเศษและติดตามข้อมูลผ่านแอป Nike และ IAM247 membership. Nike มีคุณภาพสินค้าสูง, นวัตกรรม, และเป็นที่รู้จักในวงการกีฬาและแฟชั่น. มีการสนับสนุนกีฬา, โครงการทางสังคม, และดีไซน์ที่ทันสมัย. ช้อปที่ Nike ไม่เพียงแค่ได้สินค้าคุณภาพ, แต่ยังได้ประสบการณ์ที่ทันสมัยและได้รับการสนับสนุนจากแบรนด์ที่มีชื่อเสียง.",
+            shopPromotion: ["รับสิทธิ์ซื้อรองเท้า NIKE DUNK LOW GS WHITE BLACK ในราคาเพียง 2,900 THB เมื่อซื้อสินค้าครบ2,000 THB",
+            "รองเท้า Nike Dunk Low Retro “ White Black” + กระเป๋า Nike Shoe Box + Nike Premium Lanyard เพียง 5,690 THB",
+            "รองเท้า WMNS Nike Dunk Low Next Nature “ White Black” + กระเป๋า Nike Shoe Box + Nike Premium Lanyard เพียง 5,590"],
+            shopImage: ["https://www.harpersbazaar.co.th/wp-content/uploads/images/banner/5371.jpeg",
+            "https://www.siamsport.co.th/static/6a0fceca-a3c8-4212-b4d6-dfeac3797774.jpg",
+            "https://www.thereporters.co/wp-content/uploads/2022/12/CoverN-Dec22-182-03.jpg"]
+        },
+        {
+            shopName: "Miniso",
+            shopID: "G3-2",
+            shopFloor: "3",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_3-scaled.jpg",
+            shopDescription: "Miniso เป็นร้านที่ขายของใช้ในบ้านจนถึงสินค้าดิจิตอลจากประเทศญี่ปุ่น มีสินค้าหลากหลาย(minimal ม๊ากก) และมีสไตล์การออกแบบร้านที่เป็นเอกลักษณ์น่ารัก",
+            shopPromotion: ["ซื้อสินค้าประเภทรองเท้าหรือตุ๊กตาทิกเกอร์  1 ชิ้นลด 5%, 2 ชิ้นลด 15% และ 3 ชิ้นขึ้นไปลด 25%"],
+            shopImage: ["https://positioningmag.com/wp-content/uploads/2018/09/CHO.jpg",
+            "https://psstorytrip.files.wordpress.com/2018/09/8-22.jpg",
+            "https://psstorytrip.files.wordpress.com/2018/09/1-12.jpg"]
+        },{
+            shopName: "Banana IT",
+            shopID: "G4-1",
+            shopFloor: "4",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_4-scaled.jpg",
+            shopDescription: "BaNANA เป็นร้านค้าที่เชื่อมโยงกับแบรนด์ไอทีชั้นนำและมีสาขามากมายทั่วประเทศ ด้วยนโยบายการขายปลีกที่นำเสนอสินค้าไอทีครบวงจร ร้านได้มีการปรับภาพลักษณ์เพื่อให้การเลือกซื้อสินค้าไอทีเป็นเรื่อง ง่ายยยย โดยเน้นที่ความหลากหลายของสินค้าและมีสาขาตั้งอยู่ในห้างสรรพสินค้าชั้นนำและไฮเปอร์มาร์เก็ตทั่วประเทศ รวมทั้งนำเสนอระบบร้านค้าเครือข่าย (Franchise) ในพื้นที่ต่าง ๆ เพื่อสนับสนุน SMEs ในภูมิภาค สินค้าที่ BaNANA ขายมีหลากหลายประเภท เช่น คอมพิวเตอร์แล็บท็อป, คอมพิวเตอร์ตั้งโต๊ะ, โทรศัพท์เคลื่อนที่, แท็บเล็ต, และอุปกรณ์เสริมอื่นๆ",
+            shopPromotion: ["ลดราคา OPPO A79 5G เหลือ 6,999 THB","พบกับ BaNANA COM SALE @ COMMART งานนี้ห้ามพลาด! ทั้ง Computer, Notebook, Gaming Gear และสินค้าไอทีลดราคาส่งท้ายปี โปรแรง ของแถมจัดเต็ม ลดสูงสุด 70%*"],
+            shopImage: ["https://lh3.googleusercontent.com/p/AF1QipPOaMFcU9ZCJp5vIkDGm3le6DGNBd8mMdLpb2OG=s1360-w1360-h1020",
+            "https://lh3.googleusercontent.com/p/AF1QipOI_hplib9FCh1Y_1gGfAb11BomA2hAZf9M14GI=s1360-w1360-h1020",
+            "https://lh3.googleusercontent.com/p/AF1QipMawIlB86PGwRxwiDRRLHQ6_qXLdP4PDYMJ3c0j=s1360-w1360-h1020"]
+        }]
     },
     {
         mallName: "Central Ladprao",
@@ -40,7 +270,53 @@ export default [
         mallImg: ["https://roijang.com/wp-content/uploads/2023/07/shutterstock_2076367033-1.jpg"],
         storeImg: ["https://blog.hungryhub.com/wp-content/uploads/2023/02/Audrey-Cafe-%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%A5-%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%A7--1024x576.jpg",
         "https://blog.hungryhub.com/wp-content/uploads/2020/11/blue-sky-rooftop-01-1024x659.jpg",
-        "https://1.bp.blogspot.com/-kin8DujzeHk/Xgt_1m61eXI/AAAAAAAAc28/HoRdWgYDXC4gmMXJWQLkCr577iWESUCAQCLcBGAsYHQ/s1600/Screenshot_20191230-023700.jpg"]
+        "https://1.bp.blogspot.com/-kin8DujzeHk/Xgt_1m61eXI/AAAAAAAAc28/HoRdWgYDXC4gmMXJWQLkCr577iWESUCAQCLcBGAsYHQ/s1600/Screenshot_20191230-023700.jpg"],
+        storeData: [{
+            shopName: "Uniqlo",
+            shopID: "G1-1",
+            shopFloor: "1",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_1-scaled.jpg",
+            shopDescription: "Uniqlo (ยูนิโคล่) เป็นแบรนด์เสื้อผ้าที่มีต้นกำเนิดมาจากประเทศญี่ปุ่น และเป็นที่รู้จักอย่างกว้างขวางทั่วโลก. นับเป็นหนึ่งในแบรนด์เสื้อผ้าระดับโลกที่มีความนิยมอย่างสูง โดยUniqlo มีจุดเด่นในด้านคุณภาพ, การออกแบบ, และการให้บริการผลิตภัณฑ์ที่ครอบคลุมทุกไลฟ์สไตล์ ทำให้เป็นที่นิยมมากในวงกว้างของกลุ่มลูกค้า ++ยูนิโคล่ เซ็นทรัลเวิลด์++ ถือเป็นสาขาที่ใหญ่ที่สุดของไทยที่มีพื้นที่กว่า 3,370 ตารางเมตร, และนำเสนอโซน Re.UNIQLO Studio ที่เปิดบริการครั้งแรกในไทยด้วย Re.UNIQLO Studio เป็นบริการที่น่าสนใจ, ช่วยต่ออายุชีวิตของเสื้อผ้ายูนิโคล่ ด้วยการซ่อมแซมหรือเติมแต่งให้เกิดสไตล์ที่รักษ์โลก โดยที่ไทยเป็นประเทศที่ 14 ของโลกและประเทศที่ 3 ในเอเชียตะวันออกเฉียงใต้, หลังจากสิงคโปร์และมาเลเซีย //ยูนิโคล่ เซ็นทรัลเวิลด์ ยังมีการจัดแสดง Global Brand Ambassador ของ ยูนิโคล่พร้อมไอเทมไลฟ์แวร์ โดยเน้นที่ Roger Federer Collection by JW ANDERSON ที่มีจำหน่ายเฉพาะที่ยูนิโคล่เซ็นทรัลเวิลด์ และ ออนไลน์สโตร์ ท้ายที่สุดคือ บริการ MY UNIQLO ที่ให้บริการปักรูปแบบใหม่, ลูกค้าสามารถเลือกลวดลายหรือข้อความที่เป็นเอกลักษณ์จากตัวเลือกของยูนิโคล่ และนำมาปักบนเสื้อหรือกระเป๋าได้อีกด้วย",
+            shopPromotion: ["UNIQLO Gift Card บัตรของขวัญ ที่มีคอลเลคชันพิเศษร่วมกับศิลปินไทย อาทิ Sahred Toy, YOON PHANNAPAST, BHBH และ JARB มูลค่า 1,000 และ 2,000 บาท (สามารถใช้ได้ทุกสาขาในประเทศไทย ตั้งแต่วันที่ 1 ธันวาคม 2566 เป็นต้นไป และไม่สามารถใช้ที่ยูนิโคล่ออนไลน์สโตร์)",
+            "เสื้อโค้ท Ultra Warm Hybrid Down ลดเหลื่อ 5,990 THB จาก 6,990 THB", "กางเกง จ็อกเกอร์ ผ้าไนลอน ลดเหลื่อ 990 THB จาก 1,490 THB"],
+            shopImage: ["https://www.prachachat.net/wp-content/uploads/2023/09/New-Uniqlo-Centralworld-%E0%B8%A2%E0%B8%B9%E0%B8%99%E0%B8%B4%E0%B9%82%E0%B8%84%E0%B8%A5%E0%B9%88-%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%A5%E0%B9%80%E0%B8%A7%E0%B8%B4%E0%B8%A5%E0%B8%94%E0%B9%8C.jpeg",
+            "https://im.uniqlo.com/global-cms/spa/resffc8ff3b9ea3b67c10c49c0546abf6c7fr.jpg",
+            "https://im.uniqlo.com/global-cms/spa/resb2280b2976c0af05a0c8b8eb8108af1cfr.jpg"]
+        },
+        {
+        shopName: "Nike",
+            shopID: "G3-1",
+            shopFloor: "3",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_3-scaled.jpg",
+            shopDescription: "Nike CentralWorld เป็นสาขาที่ใหญ่ที่สุดในประเทศไทย พร้อมบริการผู้ช่วยสไตล์, กิจกรรมพัฒนาทักษะเด็ก, และสินค้าครบวงจร. ร้านมีทั้งรองเท้ากีฬา, เสื้อผ้า, และอุปกรณ์กีฬาคุณภาพสูง. สมาชิกไนกี้สามารถเข้าร่วมกิจกรรมพิเศษและติดตามข้อมูลผ่านแอป Nike และ IAM247 membership. Nike มีคุณภาพสินค้าสูง, นวัตกรรม, และเป็นที่รู้จักในวงการกีฬาและแฟชั่น. มีการสนับสนุนกีฬา, โครงการทางสังคม, และดีไซน์ที่ทันสมัย. ช้อปที่ Nike ไม่เพียงแค่ได้สินค้าคุณภาพ, แต่ยังได้ประสบการณ์ที่ทันสมัยและได้รับการสนับสนุนจากแบรนด์ที่มีชื่อเสียง.",
+            shopPromotion: ["รับสิทธิ์ซื้อรองเท้า NIKE DUNK LOW GS WHITE BLACK ในราคาเพียง 2,900 THB เมื่อซื้อสินค้าครบ2,000 THB",
+            "รองเท้า Nike Dunk Low Retro “ White Black” + กระเป๋า Nike Shoe Box + Nike Premium Lanyard เพียง 5,690 THB",
+            "รองเท้า WMNS Nike Dunk Low Next Nature “ White Black” + กระเป๋า Nike Shoe Box + Nike Premium Lanyard เพียง 5,590"],
+            shopImage: ["https://www.harpersbazaar.co.th/wp-content/uploads/images/banner/5371.jpeg",
+            "https://www.siamsport.co.th/static/6a0fceca-a3c8-4212-b4d6-dfeac3797774.jpg",
+            "https://www.thereporters.co/wp-content/uploads/2022/12/CoverN-Dec22-182-03.jpg"]
+        },
+        {
+            shopName: "Miniso",
+            shopID: "G3-2",
+            shopFloor: "3",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_3-scaled.jpg",
+            shopDescription: "Miniso เป็นร้านที่ขายของใช้ในบ้านจนถึงสินค้าดิจิตอลจากประเทศญี่ปุ่น มีสินค้าหลากหลาย(minimal ม๊ากก) และมีสไตล์การออกแบบร้านที่เป็นเอกลักษณ์น่ารัก",
+            shopPromotion: ["ซื้อสินค้าประเภทรองเท้าหรือตุ๊กตาทิกเกอร์  1 ชิ้นลด 5%, 2 ชิ้นลด 15% และ 3 ชิ้นขึ้นไปลด 25%"],
+            shopImage: ["https://positioningmag.com/wp-content/uploads/2018/09/CHO.jpg",
+            "https://psstorytrip.files.wordpress.com/2018/09/8-22.jpg",
+            "https://psstorytrip.files.wordpress.com/2018/09/1-12.jpg"]
+        },{
+            shopName: "Banana IT",
+            shopID: "G4-1",
+            shopFloor: "4",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_4-scaled.jpg",
+            shopDescription: "BaNANA เป็นร้านค้าที่เชื่อมโยงกับแบรนด์ไอทีชั้นนำและมีสาขามากมายทั่วประเทศ ด้วยนโยบายการขายปลีกที่นำเสนอสินค้าไอทีครบวงจร ร้านได้มีการปรับภาพลักษณ์เพื่อให้การเลือกซื้อสินค้าไอทีเป็นเรื่อง ง่ายยยย โดยเน้นที่ความหลากหลายของสินค้าและมีสาขาตั้งอยู่ในห้างสรรพสินค้าชั้นนำและไฮเปอร์มาร์เก็ตทั่วประเทศ รวมทั้งนำเสนอระบบร้านค้าเครือข่าย (Franchise) ในพื้นที่ต่าง ๆ เพื่อสนับสนุน SMEs ในภูมิภาค สินค้าที่ BaNANA ขายมีหลากหลายประเภท เช่น คอมพิวเตอร์แล็บท็อป, คอมพิวเตอร์ตั้งโต๊ะ, โทรศัพท์เคลื่อนที่, แท็บเล็ต, และอุปกรณ์เสริมอื่นๆ",
+            shopPromotion: ["ลดราคา OPPO A79 5G เหลือ 6,999 THB","พบกับ BaNANA COM SALE @ COMMART งานนี้ห้ามพลาด! ทั้ง Computer, Notebook, Gaming Gear และสินค้าไอทีลดราคาส่งท้ายปี โปรแรง ของแถมจัดเต็ม ลดสูงสุด 70%*"],
+            shopImage: ["https://lh3.googleusercontent.com/p/AF1QipPOaMFcU9ZCJp5vIkDGm3le6DGNBd8mMdLpb2OG=s1360-w1360-h1020",
+            "https://lh3.googleusercontent.com/p/AF1QipOI_hplib9FCh1Y_1gGfAb11BomA2hAZf9M14GI=s1360-w1360-h1020",
+            "https://lh3.googleusercontent.com/p/AF1QipMawIlB86PGwRxwiDRRLHQ6_qXLdP4PDYMJ3c0j=s1360-w1360-h1020"]
+        }]
     },
     {
         mallName: "Central Rama 9",
@@ -50,6 +326,52 @@ export default [
         mallImg: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/05/86/f1/centralplaza-grand-rama9.jpg?w=1200&h=-1&s=1"],
         storeImg: ["https://www.gourmetandcuisine.com/Images/editor_upload/_editor20211129012537_original.jpg",
         "https://www.pf.co.th/blog/wp-content/uploads/2017/09/jocho_01.png",
-        "https://www.bkkmenu.com/files/2018/02/ZenCentralRama9-7.jpg"]
+        "https://www.bkkmenu.com/files/2018/02/ZenCentralRama9-7.jpg"],
+        storeData: [{
+            shopName: "Uniqlo",
+            shopID: "G1-1",
+            shopFloor: "1",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_1-scaled.jpg",
+            shopDescription: "Uniqlo (ยูนิโคล่) เป็นแบรนด์เสื้อผ้าที่มีต้นกำเนิดมาจากประเทศญี่ปุ่น และเป็นที่รู้จักอย่างกว้างขวางทั่วโลก. นับเป็นหนึ่งในแบรนด์เสื้อผ้าระดับโลกที่มีความนิยมอย่างสูง โดยUniqlo มีจุดเด่นในด้านคุณภาพ, การออกแบบ, และการให้บริการผลิตภัณฑ์ที่ครอบคลุมทุกไลฟ์สไตล์ ทำให้เป็นที่นิยมมากในวงกว้างของกลุ่มลูกค้า ++ยูนิโคล่ เซ็นทรัลเวิลด์++ ถือเป็นสาขาที่ใหญ่ที่สุดของไทยที่มีพื้นที่กว่า 3,370 ตารางเมตร, และนำเสนอโซน Re.UNIQLO Studio ที่เปิดบริการครั้งแรกในไทยด้วย Re.UNIQLO Studio เป็นบริการที่น่าสนใจ, ช่วยต่ออายุชีวิตของเสื้อผ้ายูนิโคล่ ด้วยการซ่อมแซมหรือเติมแต่งให้เกิดสไตล์ที่รักษ์โลก โดยที่ไทยเป็นประเทศที่ 14 ของโลกและประเทศที่ 3 ในเอเชียตะวันออกเฉียงใต้, หลังจากสิงคโปร์และมาเลเซีย //ยูนิโคล่ เซ็นทรัลเวิลด์ ยังมีการจัดแสดง Global Brand Ambassador ของ ยูนิโคล่พร้อมไอเทมไลฟ์แวร์ โดยเน้นที่ Roger Federer Collection by JW ANDERSON ที่มีจำหน่ายเฉพาะที่ยูนิโคล่เซ็นทรัลเวิลด์ และ ออนไลน์สโตร์ ท้ายที่สุดคือ บริการ MY UNIQLO ที่ให้บริการปักรูปแบบใหม่, ลูกค้าสามารถเลือกลวดลายหรือข้อความที่เป็นเอกลักษณ์จากตัวเลือกของยูนิโคล่ และนำมาปักบนเสื้อหรือกระเป๋าได้อีกด้วย",
+            shopPromotion: ["UNIQLO Gift Card บัตรของขวัญ ที่มีคอลเลคชันพิเศษร่วมกับศิลปินไทย อาทิ Sahred Toy, YOON PHANNAPAST, BHBH และ JARB มูลค่า 1,000 และ 2,000 บาท (สามารถใช้ได้ทุกสาขาในประเทศไทย ตั้งแต่วันที่ 1 ธันวาคม 2566 เป็นต้นไป และไม่สามารถใช้ที่ยูนิโคล่ออนไลน์สโตร์)",
+            "เสื้อโค้ท Ultra Warm Hybrid Down ลดเหลื่อ 5,990 THB จาก 6,990 THB", "กางเกง จ็อกเกอร์ ผ้าไนลอน ลดเหลื่อ 990 THB จาก 1,490 THB"],
+            shopImage: ["https://www.prachachat.net/wp-content/uploads/2023/09/New-Uniqlo-Centralworld-%E0%B8%A2%E0%B8%B9%E0%B8%99%E0%B8%B4%E0%B9%82%E0%B8%84%E0%B8%A5%E0%B9%88-%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%A5%E0%B9%80%E0%B8%A7%E0%B8%B4%E0%B8%A5%E0%B8%94%E0%B9%8C.jpeg",
+            "https://im.uniqlo.com/global-cms/spa/resffc8ff3b9ea3b67c10c49c0546abf6c7fr.jpg",
+            "https://im.uniqlo.com/global-cms/spa/resb2280b2976c0af05a0c8b8eb8108af1cfr.jpg"]
+        },
+        {
+        shopName: "Nike",
+            shopID: "G3-1",
+            shopFloor: "3",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_3-scaled.jpg",
+            shopDescription: "Nike CentralWorld เป็นสาขาที่ใหญ่ที่สุดในประเทศไทย พร้อมบริการผู้ช่วยสไตล์, กิจกรรมพัฒนาทักษะเด็ก, และสินค้าครบวงจร. ร้านมีทั้งรองเท้ากีฬา, เสื้อผ้า, และอุปกรณ์กีฬาคุณภาพสูง. สมาชิกไนกี้สามารถเข้าร่วมกิจกรรมพิเศษและติดตามข้อมูลผ่านแอป Nike และ IAM247 membership. Nike มีคุณภาพสินค้าสูง, นวัตกรรม, และเป็นที่รู้จักในวงการกีฬาและแฟชั่น. มีการสนับสนุนกีฬา, โครงการทางสังคม, และดีไซน์ที่ทันสมัย. ช้อปที่ Nike ไม่เพียงแค่ได้สินค้าคุณภาพ, แต่ยังได้ประสบการณ์ที่ทันสมัยและได้รับการสนับสนุนจากแบรนด์ที่มีชื่อเสียง.",
+            shopPromotion: ["รับสิทธิ์ซื้อรองเท้า NIKE DUNK LOW GS WHITE BLACK ในราคาเพียง 2,900 THB เมื่อซื้อสินค้าครบ2,000 THB",
+            "รองเท้า Nike Dunk Low Retro “ White Black” + กระเป๋า Nike Shoe Box + Nike Premium Lanyard เพียง 5,690 THB",
+            "รองเท้า WMNS Nike Dunk Low Next Nature “ White Black” + กระเป๋า Nike Shoe Box + Nike Premium Lanyard เพียง 5,590"],
+            shopImage: ["https://www.harpersbazaar.co.th/wp-content/uploads/images/banner/5371.jpeg",
+            "https://www.siamsport.co.th/static/6a0fceca-a3c8-4212-b4d6-dfeac3797774.jpg",
+            "https://www.thereporters.co/wp-content/uploads/2022/12/CoverN-Dec22-182-03.jpg"]
+        },
+        {
+            shopName: "Miniso",
+            shopID: "G3-2",
+            shopFloor: "3",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_3-scaled.jpg",
+            shopDescription: "Miniso เป็นร้านที่ขายของใช้ในบ้านจนถึงสินค้าดิจิตอลจากประเทศญี่ปุ่น มีสินค้าหลากหลาย(minimal ม๊ากก) และมีสไตล์การออกแบบร้านที่เป็นเอกลักษณ์น่ารัก",
+            shopPromotion: ["ซื้อสินค้าประเภทรองเท้าหรือตุ๊กตาทิกเกอร์  1 ชิ้นลด 5%, 2 ชิ้นลด 15% และ 3 ชิ้นขึ้นไปลด 25%"],
+            shopImage: ["https://positioningmag.com/wp-content/uploads/2018/09/CHO.jpg",
+            "https://psstorytrip.files.wordpress.com/2018/09/8-22.jpg",
+            "https://psstorytrip.files.wordpress.com/2018/09/1-12.jpg"]
+        },{
+            shopName: "Banana IT",
+            shopID: "G4-1",
+            shopFloor: "4",
+            floorImg: "http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_4-scaled.jpg",
+            shopDescription: "BaNANA เป็นร้านค้าที่เชื่อมโยงกับแบรนด์ไอทีชั้นนำและมีสาขามากมายทั่วประเทศ ด้วยนโยบายการขายปลีกที่นำเสนอสินค้าไอทีครบวงจร ร้านได้มีการปรับภาพลักษณ์เพื่อให้การเลือกซื้อสินค้าไอทีเป็นเรื่อง ง่ายยยย โดยเน้นที่ความหลากหลายของสินค้าและมีสาขาตั้งอยู่ในห้างสรรพสินค้าชั้นนำและไฮเปอร์มาร์เก็ตทั่วประเทศ รวมทั้งนำเสนอระบบร้านค้าเครือข่าย (Franchise) ในพื้นที่ต่าง ๆ เพื่อสนับสนุน SMEs ในภูมิภาค สินค้าที่ BaNANA ขายมีหลากหลายประเภท เช่น คอมพิวเตอร์แล็บท็อป, คอมพิวเตอร์ตั้งโต๊ะ, โทรศัพท์เคลื่อนที่, แท็บเล็ต, และอุปกรณ์เสริมอื่นๆ",
+            shopPromotion: ["ลดราคา OPPO A79 5G เหลือ 6,999 THB","พบกับ BaNANA COM SALE @ COMMART งานนี้ห้ามพลาด! ทั้ง Computer, Notebook, Gaming Gear และสินค้าไอทีลดราคาส่งท้ายปี โปรแรง ของแถมจัดเต็ม ลดสูงสุด 70%*"],
+            shopImage: ["https://lh3.googleusercontent.com/p/AF1QipPOaMFcU9ZCJp5vIkDGm3le6DGNBd8mMdLpb2OG=s1360-w1360-h1020",
+            "https://lh3.googleusercontent.com/p/AF1QipOI_hplib9FCh1Y_1gGfAb11BomA2hAZf9M14GI=s1360-w1360-h1020",
+            "https://lh3.googleusercontent.com/p/AF1QipMawIlB86PGwRxwiDRRLHQ6_qXLdP4PDYMJ3c0j=s1360-w1360-h1020"]
+        }]
     },
 ]
