@@ -30,7 +30,7 @@ export default function HomeMain() {
         return false;
       }
       await axios.post("http://localhost:3000/api/calculatedistance", location).then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setDistance(res.data);
         // console.log(location.lat, location.lng);
       });

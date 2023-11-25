@@ -47,7 +47,8 @@ const CalculateDistanceFunc = (req, res) => __awaiter(void 0, void 0, void 0, fu
             return {
                 name: item.name,
                 distance: distance,
-                adress: item.vicinity
+                adress: item.vicinity,
+                place_id: item.place_id
             };
         });
         const result3 = result2.sort((a, b) => {
