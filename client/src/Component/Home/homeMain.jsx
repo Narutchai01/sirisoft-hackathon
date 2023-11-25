@@ -27,17 +27,11 @@ function useUserLocation() {
 }
 
 // Function to fetch nearby places
-const fetchNearbyPlaces = async () => {
+const fetchNearbyPlaces = async (location) => {
   try {
-    // Geolocation API
-    const position = await new Promise((resolve, reject) => {
-      navigator.geolocation.getCurrentPosition(resolve, reject);
-    });
-
-    const { latitude, longitude } = position.coords;
 
     // Send the user location to the server
-    const response = await fetch(`http://localhost:5000/api/nearby-places?lat=${latitude}&lng=${longitude}`);
+    const response = await fetch(`http://localhost:5000/api/nearby-places?lat=${location.lat}&lng=${location.lng}`);
     const data = await response.json();
     return data.nearbyPlaces;
 
