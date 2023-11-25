@@ -1,80 +1,66 @@
-import * as React from "react";
+// import * as React from "react";
 import Grid from "@mui/material/Grid";
-import HomeContent from "./HomeContent";
-import MallData from "../Data/MallData.js";
-import { useState, useEffect } from "react";
-import axios from "axios";
-
-//Get user location
-function useUserLocation() {
-  const [location, setLocation] = useState({
-    lat: null,
-    lng: null,
-  });
-
-  useEffect(() => {
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(function (position) {
-        setLocation({
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-        });
-      });
-    }
-  }, []);
-
-  return location;
-}
-
-// Function to fetch nearby places
-const fetchNearbyPlaces = async () => {
-  try {
-    // Geolocation API
-    const position = await new Promise((resolve, reject) => {
-      navigator.geolocation.getCurrentPosition(resolve, reject);
-    });
-
-    const { latitude, longitude } = position.coords;
-
-    // Send the user location to the server
-    const response = await fetch(`http://localhost:3000/api/nearby-places?lat=${latitude}&lng=${longitude}`);
-    const data = await response.json();
-    return data.nearbyPlaces;
-
-    console.log(data); 
-  } catch (error) {
-    console.error('Error fetching nearby places:', error);
-  }
-};
-
+// import HomeContent from "./HomeContent";
+// import MallData from "../Data/MallData.js";
+import { useEffect, useState, useCallback } from "react";
+import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 
 export default function HomeMain() {
-  const location = useUserLocation();
-  const [places, setPlaces] = useState([]);
+
+  const containerStyle = {
+    width: '400px',
+    height: '400px'
+  };
+
+  const [location, setLocation] = useState({
+    lat: 0,
+    lng: 0,
+  });
+
+
+  const [map, setMap] = useState(null);
 
   useEffect(() => {
-    const fetchPlaces = async () => {
-      try {
-        const placesData = await fetchNearbyPlaces(location);
-        setPlaces(placesData);
-      } catch (error) {
-        console.error('Error in fetchPlaces:', error);
-      }
-    };
+    navigator.geolocation.getCurrentPosition(function (position) {
+      setLocation({
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      });
+    });
+  }, []);
 
-    if (location.lat && location.lng) {
-      fetchPlaces();
-    }
-  }, [location]);
-  return (
-    <Grid container direction="column" spacing={3}>
-      {places.map((place, index) => {
-        return (
-          <Grid item xs={4} key={index}>
-            <HomeContent {...place} />
-          </Grid>
-        );
-      })}
-    </Grid>
-  );
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: 'AIzaSyBkY8q3PCEZFCjDJrvIO75yHM6d3H-LzQ4'
+  });
+
+  const onLoad = useCallback(function callback(map) {
+    const bounds = new window.google.maps.LatLngBounds();
+    map.fitBounds(bounds);
+    setMap(map)
+  }, []);
+
+  const onUnmount = useCallback(function callback(map) {
+    setMap(null)
+  }, []);
+
+
+  return isLoaded ? (
+    <>
+      <Grid container spacing={2}>
+        <GoogleMap
+          mapContainerStyle={containerStyle}
+          center={{lat: location.lat, lng: location.lng}}
+          zoom={60}
+          onLoad={onLoad}
+          onUnmount={onUnmount}
+        ></GoogleMap>
+      </Grid>
+    </>
+  ) :
+    (
+      <>
+        <h1>error</h1>
+      </>
+    )
 }
