@@ -1,7 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
+import Button from '@mui/material/Button';
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -9,24 +10,39 @@ import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 
 export default function LocationInput() {
     const timeOptions = [
-        { value: 'Drive', label: 'Drive' },
-        { value: 'Motorcycle', label: 'Motorcycle' },
-        { value: 'Bicycle', label: 'Bicycle' },
-        { value: 'Transit', label: 'Transit' },
-        { value: 'Walk', label: 'Walk' },
+        { value: 'Private', label: 'Private' },
+        { value: 'Public', label: 'Public' },
     ];
+
+    const [travelMode, setTravelMode] = React.useState('');
+    const [time, setTime] = React.useState('');
+    const [destination, setDestination] = React.useState('');
+    console.log(destination);
+    console.log(time);
+    console.log(travelMode);
+
+    const props = {
+        travelMode,
+        setTravelMode,
+        time,
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(destination);
+    }
 
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
-                <TextField fullWidth label="Origin" variant="outlined" />
+                {/* <TextField fullWidth label="Origin" variant="outlined" value={origin} /> */}
                 <br /><br />
-                <TextField fullWidth label="Destination" variant="outlined" />
+                <TextField fullWidth label="Destination" variant="outlined" value={destination} onChange={(e) => setDestination(e.target.value)} />
             </Grid>
             <Grid item container xs={6}>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DemoContainer components={['TimePicker']}>
-                        <TimePicker label="Time" />
+                        <TimePicker label="Time" value={setTime} onChange={(e) => setTime(e.target.value)} />
                     </DemoContainer>
                 </LocalizationProvider>
             </Grid>
@@ -36,6 +52,8 @@ export default function LocationInput() {
                     select
                     label="Travel Mode"
                     variant="outlined"
+                    value={travelMode}
+                    onChange={(e) => setTravelMode(e.target.value)}
                 >
                     {timeOptions.map((option) => (
                         <MenuItem key={option.value} value={option.value}>
@@ -43,6 +61,9 @@ export default function LocationInput() {
                         </MenuItem>
                     ))}
                 </TextField>
+            </Grid>
+            <Grid item xs={12}>
+                <Button variant="contained" onClick={handleSubmit}>Get Directions</Button>
             </Grid>
         </Grid>
     );

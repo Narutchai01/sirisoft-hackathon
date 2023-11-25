@@ -34,7 +34,7 @@ const IconImg = styled('img') ({
   display: 'block',
   width: '100%',
   height: '100%',
-  objectFit: 'cover',
+  objectFit: 'contain',
   transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
   ":hover": {
     transform: 'scale(1.05)',
@@ -73,7 +73,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function HomeContent(props) {
-  const { mallName, mallPosition, nearYou, iconImg, storeImg, storeData  } = props;
+  const { mallName, mallPosition, nearYou, iconImg, storeImg  } = props;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const handleLeftButtonClick = () => {
@@ -110,19 +110,19 @@ function HomeContent(props) {
             </Grid>
             <Grid item xs={3} style={{ height: '90%' }}> 
             <Img
-                src={storeData[currentImageIndex].shopImage[0]}
+                src={storeImg[currentImageIndex]}
                 loading="lazy"
             />
             </Grid>
             <Grid item xs={3} style={{ height: '90%' }}> 
             <Img
-                src={storeData[(currentImageIndex + 1) % storeData.length].shopImage[0]}
+                src={storeImg[(currentImageIndex + 1) % storeImg.length]}
                 loading="lazy"
             />
             </Grid>
             <Grid item xs={3} style={{ height: '90%' }}> 
             <Img
-                src={storeData[(currentImageIndex + 2) % storeData.length].shopImage[0]}
+                src={storeImg[(currentImageIndex + 2) % storeImg.length]}
                 loading="lazy"
             />
             </Grid> 

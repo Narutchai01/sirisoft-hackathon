@@ -21,6 +21,7 @@ export default function HomeMain() {
   //     });
   //   });
   // }, []);
+  
 
 
   useEffect(() => {
@@ -37,10 +38,7 @@ export default function HomeMain() {
     sendLocation();
   }, [location]);
 
-
   console.log(distance);
-
-
 
   const getMallData = mallDataObj => {
     return (
