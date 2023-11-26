@@ -10,12 +10,50 @@ import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import axios from 'axios';
 import LocationSearch from '../Search/LocationSearch';
 
-export default function LocationInput() {
-    const timeOptions = [
-        { value: 'driving', label: 'Private' },
-        { value: 'transit', label: 'Public' },
-    ];
-    const [dataDistance , setDataDistance] = useState([]);
+class LocationInput extends Component {
+    //   constructor(props) {
+    //     super(props);
+
+    //     this.state = {
+    //       currentLocation: { lat: 40.756795, lng: -73.954298 },
+    //     };
+    //   }
+
+
+    render() {
+        const apiIsLoaded = (map, maps) => {
+            const directionsService = new google.maps.DirectionsService();
+            const directionsRenderer = new google.maps.DirectionsRenderer();
+            directionsRenderer.setMap(map);
+            const origin = { lat: user.lat, lng: user.lng };
+            const destination = { lat: deslat, lng: -78.954298 };
+
+            directionsService.route(
+                {
+                    origin: origin,
+                    destination: destination,
+                    travelMode: google.maps.TravelMode.DRIVING,
+                },
+                (result, status) => {
+                    if (status === google.maps.DirectionsStatus.OK) {
+                        directionsRenderer.setDirections(result);
+                    } else {
+                        console.error(`error fetching directions ${result}`);
+                    }
+                }
+            );
+        };
+        const user = {
+            lat: 13.745704,
+            lng: 100.535912
+        };
+    
+
+        const timeOptions = [
+            { value: 'driving', label: 'Private' },
+            { value: 'transit', label: 'Public' },
+        ];
+
 
     const [location, setLocation] = useState({
         lat: 13.745704,
@@ -119,52 +157,68 @@ export default function LocationInput() {
 
 
 
-    return (
-        <Grid container spacing={2}>
-            <Grid item xs={12}>
-                <TextField
-                    fullWidth
-                    value={selectedDescription || destination.place}
-                    label="Choose destination"
-                    variant="outlined"
-                    onFocus={handleFocus}
-                    onChange={handleChangeFindPlace}
-                />
-                {isSearchFocused && (
-                    <LocationSearch
-                        dropdown={dropdown}
-                        onDescriptionClick={handleDescriptionClick}
-                    />
-                )}
-            </Grid>
-            <Grid item container xs={2.5}>
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <DemoContainer components={['TimePicker']}>
-                        <TimePicker label="Arrival time" value={time} onChange={handleTimeChange} />
-                    </DemoContainer>
-                </LocalizationProvider>
-            </Grid>
-            <Grid item container xs={9.5} marginTop={1}>
-                <TextField
-                    fullWidth
-                    select
-                    label="Travel Mode"
-                    variant="outlined"
-                    value={selectedMode}
-                    onChange={handleModeChange}
-                >
-                    {timeOptions.map((option) => (
-                        <MenuItem key={option.value} value={option.value}>
-                            {option.label}
-                        </MenuItem>
-                    ))}
-                </TextField>
-            </Grid>
-            <Grid item xs={12}>
-                <Button variant="contained" style={{ backgroundColor: '#FF5757' } } onClick={handleSubmit}>Get Directions</Button>
-            </Grid>
-        </Grid>
-
-    );
+        return (
+            <>
+                <Grid container spacing={2}>
+                    <Grid item xs={12}>
+                        <TextField
+                            fullWidth
+                            value={selectedDescription || destination.place}
+                            label="Choose destination"
+                            variant="outlined"
+                            onFocus={handleFocus}
+                            onChange={handleChangeFindPlace}
+                        />
+                        {isSearchFocused && (
+                            <LocationSearch
+                                dropdown={dropdown}
+                                onDescriptionClick={handleDescriptionClick}
+                            />
+                        )}
+                    </Grid>
+                    <Grid item container xs={2.5}>
+                        <LocalizationProvider dateAdapter={AdapterDayjs}>
+                            <DemoContainer components={['TimePicker']}>
+                                <TimePicker label="Arrival time" value={time} onChange={handleTimeChange} />
+                            </DemoContainer>
+                        </LocalizationProvider>
+                    </Grid>
+                    <Grid item container xs={9.5} marginTop={1}>
+                        <TextField
+                            fullWidth
+                            select
+                            label="Travel Mode"
+                            variant="outlined"
+                            value={selectedMode}
+                            onChange={handleModeChange}
+                        >
+                            {timeOptions.map((option) => (
+                                <MenuItem key={option.value} value={option.value}>
+                                    {option.label}
+                                </MenuItem>
+                            ))}
+                        </TextField>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Button variant="contained" style={{ backgroundColor: '#FF5757' }} onClick={handleSubmit}>Get Directions</Button>
+                    </Grid>
+                </Grid>
+                <div>
+                    <div style={{ height: '400px', width: '100%' }}>
+                        <GoogleMapReact
+                            bootstrapURLKeys={{
+                                key: 'AIzaSyCZBeJA2Iq-vVE3HmLe_xqw_g7S6YQIWmg',
+                            }}
+                            defaultCenter={{ lat: 40.756795, lng: -73.954298 }}
+                            defaultZoom={10}
+                            center={user}
+                            yesIWantToUseGoogleMapApiInternals
+                            onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps)}
+                        />
+                    </div>
+                </div>
+            </>
+        );
+    }
 }
-
+export default LocationInput;
