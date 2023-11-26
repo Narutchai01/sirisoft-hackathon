@@ -22,7 +22,7 @@ const Direction = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         const time = (hour * 60 * 60) + (minute * 60);
         //only origin to destination
         // maybe fetch first transit 
-        // we fetch only arrival time
+        // we fetch only arrival time'
         //TODO: need to know is it generate departure time, send to front end
         // fetch step as possible, them review data and send to front end
         const geocode_URL = `https://maps.googleapis.com/maps/api/geocode/json?place_id=ChIJeRpOeF67j4AR9ydy_PIzPuM&key=${server_1.API_KEY}`;

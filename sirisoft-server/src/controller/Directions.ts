@@ -10,7 +10,7 @@ export const Direction = async (req: Request, res: Response) => {
         
         //only origin to destination
         // maybe fetch first transit 
-        // we fetch only arrival time
+        // we fetch only arrival time'
         //TODO: need to know is it generate departure time, send to front end
         // fetch step as possible, them review data and send to front end
         const geocode_URL = `https://maps.googleapis.com/maps/api/geocode/json?place_id=ChIJeRpOeF67j4AR9ydy_PIzPuM&key=${API_KEY}`;

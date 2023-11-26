@@ -30,7 +30,7 @@ class ResultMap extends Component {
       const directionsService = new google.maps.DirectionsService();
       const directionsRenderer = new google.maps.DirectionsRenderer();
       directionsRenderer.setMap(map);
-      const origin = { lat: 40.756795, lng: -73.954298 };
+      const origin = res;
       const destination = { lat: 41.756795, lng: -78.954298 };
 
       directionsService.route(
