@@ -49,10 +49,7 @@ class LocationInput extends Component {
             lat: 13.745704,
             lng: 100.535912
         };
-        const des = {
-            lat: res.data.result.deslat,
-            lng: res.data.result.deslng
-        };
+    
 
         const timeOptions = [
             { value: 'driving', label: 'Private' },
