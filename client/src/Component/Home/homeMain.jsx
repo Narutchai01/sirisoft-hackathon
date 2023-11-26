@@ -38,7 +38,7 @@ export default function HomeMain() {
     sendLocation();
   }, [location]);
 
-  console.log(distance);
+  // console.log(distance);
 
   const getMallData = (mallDataObj) => {
     const matchingDistance = distance.find((dist) => dist.place_id === mallDataObj.placeId);

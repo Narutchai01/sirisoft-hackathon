@@ -12,8 +12,8 @@ import LocationSearch from '../Search/LocationSearch';
 
 export default function LocationInput() {
     const timeOptions = [
-        { value: 'Private', label: 'Private' },
-        { value: 'Public', label: 'Public' },
+        { value: 'driving', label: 'Private' },
+        { value: 'transit', label: 'Public' },
     ];
     const [dropdown, setDropdown] = useState([]);
     const [destination, setDestination] = useState({
@@ -143,4 +143,5 @@ export default function LocationInput() {
             </Grid>
         </Grid>
     );
-}
+  }
+

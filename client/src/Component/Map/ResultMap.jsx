@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 class ResultMap extends Component {
+  
   constructor(props) {
     super(props);
 
@@ -9,6 +12,18 @@ class ResultMap extends Component {
       currentLocation: { lat: 40.756795, lng: -73.954298 },
     };
   }
+
+  // useEffect(() => {
+  //   const sendLocation = async () => {
+  //     if (location.lat === 0 && location.lng === 0) {
+  //       return false;
+  //     }
+  //     await axios.post("http://localhost:3000/api/direction",).then((res) => {
+        
+  //     });
+  //   };
+  //   sendLocation();
+  // }, []);
 
   render() {
     const apiIsLoaded = (map, maps) => {
