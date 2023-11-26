@@ -6,7 +6,7 @@ class ResultMap extends Component {
     super(props);
 
     this.state = {
-      currentLocation: { lat: 40.756795, lng: -73.954298 },
+      currentLocation: { lat: 13.745704, lng: -73.954298 },
     };
   }
 
@@ -15,8 +15,8 @@ class ResultMap extends Component {
       const directionsService = new google.maps.DirectionsService();
       const directionsRenderer = new google.maps.DirectionsRenderer();
       directionsRenderer.setMap(map);
-      const origin = { lat: 40.756795, lng: -73.954298 };
-      const destination = { lat: 41.756795, lng: -78.954298 };
+      const origin = { lat: 13.745704, lng: 100.535912 };
+      const destination = { lat: 13.6626, lng: 100.4375 };
 
       directionsService.route(
         {
@@ -40,7 +40,7 @@ class ResultMap extends Component {
             bootstrapURLKeys={{
               key: 'AIzaSyCZBeJA2Iq-vVE3HmLe_xqw_g7S6YQIWmg',
             }}
-            defaultCenter={{ lat: 40.756795, lng: -73.954298 }}
+            defaultCenter={{ lat: 13.745704, lng: 100.535912 }}
             defaultZoom={10}
             center={this.state.currentLocation}
             yesIWantToUseGoogleMapApiInternals
