@@ -22,64 +22,61 @@ export default function LocationInput() {
     });
     const [isSearchFocused, setIsSearchFocused] = useState(false);
     const [selectedDescription, setSelectedDescription] = useState('');
-    const [selectedTime, setSelectedTime] = useState([]);
-    
+    const [selectedMode, setSelectedMode] = useState('');
+    const [placeId, setPlaceId] = useState('');
+    const [time, setTime] = useState('');
 
-    const [travelMode, setTravelMode] = React.useState('');
-    const [time, setTime] = React.useState('');
-    // const [destination, setDestination] = React.useState('');
-    // console.log(destination);
-    // console.log(time);
-    // console.log(travelMode);
+    const [form, setForm] = useState([]);
 
-    const props = {
-        travelMode,
-        setTravelMode,
-        time,
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // console.log(destination);
-    }
     const handleTimeChange = (newTime) => {
         setTime(newTime);
-        // console.log(time);
     }
 
+    const handleModeChange = (event) => {
+        setSelectedMode(event.target.value);
+    }
 
-  const [location, setLocation] = React.useState({
-    lat: 13.745704,
-    lng: 100.535912
-  });
+    const handleDescriptionClick = (predictions) => {
+        setSelectedDescription(predictions.description);
+        setPlaceId(predictions.place_id);
+        setIsSearchFocused(false);
+    };
 
-  React.useEffect(() => {
-    const sendLocation = async () => {
-      if (location.lat === 0 && location.lng === 0) {
-        return false;
-      }
-      await axios.post("http://localhost:3000/api/direction", location).then((res) => {
-        console.log(res.data);
-      });
+    const handleFocus = () => {
+        setIsSearchFocused(!isSearchFocused);
     };
 
     const handleChangeFindPlace = (event) => {
         const newDestination = event.target.value;
 
         setDestination(newDestination);
-        setSelectedDescription(''); // Clear the selected description when a new place is selected
+        setSelectedDescription('');
 
         axios.post('http://localhost:3000/api/findplace', { destination: newDestination })
             .then(res => {
-                console.log(res.data);
                 setDropdown(res.data.predictions || []);
             })
             .catch(err => {
-                console.log(err);
+                console.log(dropdown.description);
             });
     };
 
-    console.log(dropdown);
+    console.log(form);
+
+    useEffect(() => {
+        setForm([
+            {
+                placeId: placeId,
+                time: [
+                    {
+                        h: time.$H,
+                        m: time.$m
+                    }
+                ],
+                selectedMode: selectedMode,
+            }
+        ]);
+    }, [placeId, time, selectedMode]);
 
     return (
         <Grid container spacing={2}>
@@ -93,7 +90,7 @@ export default function LocationInput() {
                     onFocus={handleFocus}
                     onChange={handleChangeFindPlace}
                 />
-                { isSearchFocused && (
+                {isSearchFocused && (
                     <LocationSearch
                         dropdown={dropdown}
                         onDescriptionClick={handleDescriptionClick}
@@ -103,7 +100,7 @@ export default function LocationInput() {
             <Grid item container xs={6}>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DemoContainer components={['TimePicker']}>
-                        <TimePicker label="Time" value={setTime} onChange={handleTimeChange} />
+                        <TimePicker label="Enter Time" value={time} onChange={handleTimeChange} />
                     </DemoContainer>
                 </LocalizationProvider>
             </Grid>
@@ -113,6 +110,8 @@ export default function LocationInput() {
                     select
                     label="Travel Mode"
                     variant="outlined"
+                    value={selectedMode}
+                    onChange={handleModeChange}
                 >
                     {timeOptions.map((option) => (
                         <MenuItem key={option.value} value={option.value}>
@@ -122,8 +121,10 @@ export default function LocationInput() {
                 </TextField>
             </Grid>
             <Grid item xs={12}>
-                <Button variant="contained" >Get Directions</Button>
+                <Button variant="contained">Get Directions</Button>
             </Grid>
         </Grid>
     );
   })}
+
+}

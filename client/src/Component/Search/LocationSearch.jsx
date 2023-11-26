@@ -1,5 +1,3 @@
-// LocationSearch.jsx
-
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
@@ -14,45 +12,37 @@ const Popup = styled(Paper)({
 });
 
 const LocationSearch = (props) => {
-    const { dropdown, onDescriptionClick } = props;
-    const [isHovered, setIsHovered] = React.useState(false);
+  const { dropdown, onDescriptionClick } = props;
+  const [isHovered, setIsHovered] = React.useState(false);
 
-    const handleClick = (description) => {
-        onDescriptionClick(description);
-    };
+  const handleClick = (prediction) => {
+    onDescriptionClick(prediction);
+  };
 
-    const handleMouseOver = () => {
-        setIsHovered(true);
-      };
-    
-      const handleMouseOut = () => {
-        setIsHovered(false);
-      };
+  const handleMouseOver = () => {
+    setIsHovered(true);
+  };
 
-    return (
-        <Popup>
-        {dropdown.map((prediction, index) => (
-            <Grid>
-            <Grid key={index}
-                    style={{
-                    cursor: isHovered ? 'pointer' : 'default',
-                    }}
-                    onMouseOver={handleMouseOver}
-                    onMouseOut={handleMouseOut}
-                    container width='100%'  
-                    onClick={() => handleClick(prediction.description)}
-            >
-                <Grid item container xs={12} justifyContent='center'>
-                <Grid item xs={2} />
-                <Grid item xs={12}> {prediction.description} </Grid>
-                <Grid item xs={4} />
-                </Grid>
+  const handleMouseOut = () => {
+    setIsHovered(false);
+  };
+
+  return (
+    <Popup>
+      {dropdown.map((prediction, index) => (
+        <Box key={index} onClick={() => handleClick(prediction)} style={{ cursor: 'pointer' }}>
+          <Grid container width='100%' justifyContent='center'>
+            <Grid item xs={2} />
+            <Grid item xs={8} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+              {prediction.description}
             </Grid>
-            <Box marginY={2} width='100%' borderBottom={1} borderColor='#ccc'></Box>
-            </Grid>
-        ))}
-        </Popup>
-    );
+            <Grid item xs={2} />
+          </Grid>
+          <Box marginY={2} width='100%' borderBottom={1} borderColor='#ccc'></Box>
+        </Box>
+      ))}
+    </Popup>
+  );
 };
 
 export default LocationSearch;

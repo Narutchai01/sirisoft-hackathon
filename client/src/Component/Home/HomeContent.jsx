@@ -73,7 +73,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function HomeContent(props) {
-  const { mallName, mallPosition, nearYou, iconImg, storeImg, distance  } = props;
+  const { mallName, mallPosition, iconImg, storeImg, distance  } = props;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const handleLeftButtonClick = () => {
@@ -87,21 +87,35 @@ function HomeContent(props) {
   return (
     <Item>
       <Grid item xs={2.8} style={{ paddingLeft: '10px', height: '100%' }}>
-        <IconImg
+        <Link 
+          style={{ textDecoration: 'none', color: 'blue' }} 
+          to={{
+            pathname: `/mall/${encodeURIComponent(mallName)}`,
+            search: `?iconImg=${encodeURIComponent(iconImg)}`
+          }}
+        >
+          <IconImg
           src={iconImg}
           loading="lazy"
-        />
+          />
+        </Link>
       </Grid>
       <Grid item xs={0.2} style={{ borderRight: '1px solid	#cdcdcd', height: '100%', marginRight: "20px"}}/>
       <Grid item container justifyItems="center" alignItems="center" xs={9} style={{ height: '100%' }}>
         <Grid item container xs={2} maxHeight="100px" direction="column" wrap='nowrap' alignItems="flex-start">
         <Grid item xs={4} style={{ marginBottom: '2px' }}>
-        <Link style={{ textDecoration: 'none' }} to='/plan'>
-          {mallName}
-        </Link>
+          <Link
+            style={{ textDecoration: 'none', color: '#FF5757', fontSize: '15px' }} 
+            to={{
+              pathname: `/mall/${encodeURIComponent(mallName)}`,
+              search: `?iconImg=${encodeURIComponent(iconImg)}`
+            }}
+          >
+            {mallName}
+          </Link>
         </Grid>
-          <Grid item xs={4} fontSize={9} marginBottom="3px"> {distance.toFixed(2)} km. from you </Grid>
-          <Grid item xs={4} fontSize={9} textAlign="left"> <LocationOnIcon style={{ fontSize: '10px', marginLeft: '0px', marginRight: '1px' }} /> {mallPosition} </Grid>
+          <Grid item xs={4} fontSize={12} marginBottom="3px"> {distance.toFixed(2)} km. from you </Grid>
+          <Grid item xs={4} fontSize={12} textAlign="left"> <LocationOnIcon style={{ fontSize: '10px', marginLeft: '0px', marginRight: '1px' }} /> {mallPosition} </Grid>
         </Grid>
 
         <Grid item container xs={10} spacing={2} justifyContent="center" alignItems="center" style={{ height: '100%' }}>

@@ -3,7 +3,7 @@ export default [
     mallName: "Central World",
     mallPosition: "999/9 ถ. พระรามที่ 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร 10330",
     placeId: "ChIJ4VX0ws-e4jARBGaQ2IACrcQ",
-    iconImg: "https://download-th.com/wp-content/uploads/2021/02/CentralWorld.jpg",
+    iconImg: "https://www.centralworld.co.th/storage/logo.svg",
     mallImg: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/05/7e/9d/centralworld.jpg?w=1200&h=1200&s=1",
     "https://www.prachachat.net/wp-content/uploads/2022/01/Central-@-Central-World.jpg",
     "https://www.centralworld.co.th/storage/about-us/img-01.jpg",

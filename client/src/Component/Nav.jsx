@@ -14,13 +14,12 @@ import Grid from '@mui/material/Grid'
 import { Link } from 'react-router-dom'
 import { Button } from '@mui/material';
 import MallSearch from './Search/MallSearch';
+import Logo from '../assets/MallMapLogo.png';
 import { Unstable_Popup as BasePopup } from '@mui/base/Unstable_Popup';
 
 const pages = [
     { name: 'HOME', path: '/', id: '0' },
     { name: 'PLAN', path: '/plan', id: '1' },
-    { name: 'MINIGAME', path: '/minigame', id: '2' },
-    { name: 'PROMOTION', path: '/coupon', id: '3' },
 ]
 
 const Search = styled('div')(({ theme, isSearchFocused }) => ({
@@ -80,7 +79,10 @@ export default function Nav() {
         setIsSearchFocused(true);
     };
     
-    const handleSearchBlur = () => {
+    const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+    const handleSearchBlur = async () => {
+        await sleep(1000);
         setIsSearchFocused(false);
     };
     
@@ -93,7 +95,7 @@ export default function Nav() {
 
     return (
     <>
-        <AppBar position="sticky">
+        <AppBar position="sticky" sx={{ backgroundColor: '#FF5757' }}>
             <Toolbar>
                 <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                     <IconButton
@@ -140,9 +142,9 @@ export default function Nav() {
                     variant="h6"
                     noWrap
                     component="div"
-                    sx={{ display: { xs: 'none', sm: 'block' } }}
+                    sx={{ display: { xs: 'none', sm: 'block', padding: '10px' } }}
                 >
-                    MallMap
+                    <img src={Logo} style={{ height: '40px' }}/>
                 </Typography>
 
                 <Box sx={{ flexGrow: 1 }} />
@@ -168,15 +170,15 @@ export default function Nav() {
                         </Grid> 
                     )}
                 </Search>          
-                <Box sx={{  display: { xs: 'none', md: 'flex' } }}>
+                <Box sx={{  display: { xs: 'none', md: 'flex', bgcolor: 'black' } }}>
                     {pages.map((page) => (
                         <Button
-                            variant="text"
                             key={page.id}
                             onClick={handleCloseNavMenu}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
+                            bgcolor='black'
+                            sx={{ my: 2, color: 'white' }}
                         >
-                            <Link to={page.path} style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <Link to={page.path} width='100%' height='100%' style={{ textDecoration: 'none', color: 'inherit' }}>
                                 {page.name}
                             </Link>
                         </Button>

@@ -11,19 +11,22 @@ export default function MallMain() {
     };
 
     const floorOptions = [
-        { floor: '1', image: 'https://drive.google.com/uc?export=view&id=122YdkCupNpOP4Qgp3jh70CNPXMbPSV2F' },
-        { floor: '2', image: 'https://drive.google.com/uc?export=view&id=1yJbEjrOQku23acIEz4cQwml4ZUvAuQ-J' },
-        { floor: '3', image: 'https://i.pinimg.com/564x/b5/f8/0e/b5f80e178e9b16a3956e02a7e4fe7be5.jpg' },
-        { floor: '4', image: 'https://i.pinimg.com/564x/b5/f8/0e/b5f80e178e9b16a3956e02a7e4fe7be5.jpg' },
+        { floor: '1', image: 'http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_1-scaled.jpg' },
+        { floor: '2', image: 'http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_2-scaled.jpg' },
+        { floor: '3', image: 'http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_3-scaled.jpg' },
+        { floor: '4', image: 'http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_4-scaled.jpg' },
+        { floor: '5', image: 'http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_5-scaled.jpg' },
+        { floor: '6', image: 'http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_6-scaled.jpg' },
+        { floor: '7', image: 'http://mallbangkok.com/wp-content/uploads/2023/04/centralworld_7-scaled.jpg' },
     ];
 
 return (
-    <Grid container borderLeft='1px solid #AAA' spacing={2}>
+    <Grid container spacing={2}>
     <Grid item xs={6}>
         <TextField
             fullWidth
             select
-            label="Select"
+            label="Select Floor"
             variant="outlined"
             value={selectedFloor}
             onChange={handleFloorChange}
