@@ -12,39 +12,39 @@ import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import axios from 'axios';
 import LocationSearch from '../Search/LocationSearch';
 
-class LocationInput extends Component {
-    //   constructor(props) {
-    //     super(props);
+// class LocationInput extends Component {
+//     //   constructor(props) {
+//     //     super(props);
 
-    //     this.state = {
-    //       currentLocation: { lat: 40.756795, lng: -73.954298 },
-    //     };
-    //   }
+//     //     this.state = {
+//     //       currentLocation: { lat: 40.756795, lng: -73.954298 },
+//     //     };
+//     //   }
 
 
-    render() {
-        const apiIsLoaded = (map, maps) => {
-            const directionsService = new google.maps.DirectionsService();
-            const directionsRenderer = new google.maps.DirectionsRenderer();
-            directionsRenderer.setMap(map);
-            const origin = { lat: user.lat, lng: user.lng };
-            const destination = { lat: deslat, lng: -78.954298 };
+//     render() {
+//         const apiIsLoaded = (map, maps) => {
+//             const directionsService = new google.maps.DirectionsService();
+//             const directionsRenderer = new google.maps.DirectionsRenderer();
+//             directionsRenderer.setMap(map);
+//             const origin = { lat: user.lat, lng: user.lng };
+//             const destination = { lat: deslat, lng: -78.954298 };
 
-            directionsService.route(
-                {
-                    origin: origin,
-                    destination: destination,
-                    travelMode: google.maps.TravelMode.DRIVING,
-                },
-                (result, status) => {
-                    if (status === google.maps.DirectionsStatus.OK) {
-                        directionsRenderer.setDirections(result);
-                    } else {
-                        console.error(`error fetching directions ${result}`);
-                    }
-                }
-            );
-        };
+//             directionsService.route(
+//                 {
+//                     origin: origin,
+//                     destination: destination,
+//                     travelMode: google.maps.TravelMode.DRIVING,
+//                 },
+//                 (result, status) => {
+//                     if (status === google.maps.DirectionsStatus.OK) {
+//                         directionsRenderer.setDirections(result);
+//                     } else {
+//                         console.error(`error fetching directions ${result}`);
+//                     }
+//                 }
+//             );
+//         };
         const user = {
             lat: 13.745704,
             lng: 100.535912
@@ -202,7 +202,7 @@ class LocationInput extends Component {
                         <Button variant="contained" style={{ backgroundColor: '#FF5757' }} onClick={handleSubmit}>Get Directions</Button>
                     </Grid>
                 </Grid>
-                <div>
+                {/* <div>
                     <div style={{ height: '400px', width: '100%' }}>
                         <GoogleMapReact
                             bootstrapURLKeys={{
@@ -215,7 +215,7 @@ class LocationInput extends Component {
                             onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps)}
                         />
                     </div>
-                </div>
+                </div> */}
             </>
         );
     }
