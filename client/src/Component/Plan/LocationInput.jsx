@@ -157,7 +157,7 @@ export default function LocationInput() {
                 </TextField>
             </Grid>
             <Grid item xs={12}>
-                <Button variant="contained" style={{ backgroundColor: '#FF5757' }}>Get Directions</Button>
+                <Button variant="contained" style={{ backgroundColor: '#FF5757' } } onClick={handleSubmit}>Get Directions</Button>
             </Grid>
         </Grid>
     );
