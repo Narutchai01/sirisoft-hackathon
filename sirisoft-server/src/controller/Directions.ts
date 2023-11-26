@@ -32,10 +32,6 @@ export const Direction = async (req: Request, res: Response) => {
         
         
         const response = await axios.get(destination_URL);
-        // res.send(response.data.routes[0].legs[0].steps);
-        // res.send(response.data.routes[0].legs[0].arrival_time);
-        // res.send(response.data.routes[0].legs[0].departure_time);
-
         res.send(
             {
                 steps: response.data.routes[0].legs[0].steps,

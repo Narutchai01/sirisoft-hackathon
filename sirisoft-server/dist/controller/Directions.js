@@ -36,9 +36,6 @@ const Direction = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         const deslng = gecode_latandlng.data.results[0].geometry.location.lng;
         const destination_URL = `https://maps.googleapis.com/maps/api/directions/json?origin=${lat}%2C${lng}&destination=${deslat}%2C${deslng}&timetemp=${value}&mode=${mode}&key=${server_1.API_KEY}`;
         const response = yield axios_1.default.get(destination_URL);
-        // res.send(response.data.routes[0].legs[0].steps);
-        // res.send(response.data.routes[0].legs[0].arrival_time);
-        // res.send(response.data.routes[0].legs[0].departure_time);
         res.send({
             steps: response.data.routes[0].legs[0].steps,
             arrival_time: response.data.routes[0].legs[0].arrival_time,
