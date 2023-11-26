@@ -15,6 +15,9 @@ export default function LocationInput() {
         { value: 'driving', label: 'Private' },
         { value: 'transit', label: 'Public' },
     ];
+    const [dataDistance, setDataDistance] = useState([]);
+
+
 
 
     const [location, setLocation] = useState({
@@ -103,6 +106,7 @@ export default function LocationInput() {
             axios.post('http://localhost:3000/api/direction', dataFrom)
                 .then(res => {
                     console.log(res.data);
+                    setDataDistance(res.data);
                     console.log(dataFrom);
                 })
                 .catch(err => {
