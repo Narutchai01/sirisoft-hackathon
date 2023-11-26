@@ -17,10 +17,9 @@ const server_1 = require("../server");
 const axios_1 = __importDefault(require("axios"));
 const Direction = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { lat, lng } = req.body;
-        const { Destination } = req.body;
-        const { TravelMode } = req.body;
-        const { Time } = req.body;
+        const { lat, lng, deslat, deslng, hour, minute, travalmode } = req.body;
+        // convert time to second
+        const time = (hour * 60 * 60) + (minute * 60);
         //only origin to destination
         // maybe fetch first transit 
         // we fetch only arrival time

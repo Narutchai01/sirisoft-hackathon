@@ -3,10 +3,11 @@ import { API_KEY } from "../server";
 import axios from "axios";
 export const Direction = async (req: Request, res: Response) => {
     try {
-        const { lat, lng } = req.body;
-        const { Destination } = req.body;
-        const { TravelMode } = req.body;
-        const { Time } = req.body;
+        const { lat, lng ,deslat,deslng , hour , minute , travalmode } = req.body;
+
+        // convert time to second
+        const time = (hour * 60 * 60) + (minute * 60);
+        
         //only origin to destination
         // maybe fetch first transit 
         // we fetch only arrival time

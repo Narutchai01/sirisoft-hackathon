@@ -20,6 +20,7 @@ app.use(cors(
   }
 ));
 const port = 3000;
+// const client = new Client({});
 
 // routes
 app.post("/api/calculatedistance", CalculateDistanceFunc);
