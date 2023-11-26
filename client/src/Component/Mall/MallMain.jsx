@@ -16,7 +16,6 @@ const MallMain = ({ shopFloor, onFloorChange }) => {
 
   const [selectedFloor, setSelectedFloor] = useState('1');
 
-  // Set the initial floor based on the shopFloor prop
   useEffect(() => {
     setSelectedFloor(shopFloor || '1');
   }, [shopFloor]);
@@ -24,7 +23,6 @@ const MallMain = ({ shopFloor, onFloorChange }) => {
   const handleFloorChange = (event) => {
     const newFloor = event.target.value;
     setSelectedFloor(newFloor);
-    // Notify the parent component about the floor change
     onFloorChange && onFloorChange(newFloor);
   };
 

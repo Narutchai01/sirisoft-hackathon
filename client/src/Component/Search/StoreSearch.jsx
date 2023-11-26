@@ -79,7 +79,7 @@ const StoreSearch = ({ mallName, onShopClick }) => {
     return (
     <Grid container>
     <Input
-        placeholder="Search Store..."
+        placeholder="Search Store"
         onChange={handleSearchChange}
     />
     {searchInput && (

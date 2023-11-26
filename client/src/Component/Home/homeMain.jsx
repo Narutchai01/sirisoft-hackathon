@@ -1,28 +1,16 @@
-// import * as React from "react";
-import Grid from "@mui/material/Grid";
-import HomeContent from "./HomeContent";
-import MallData from "../Data/MallData.js";
+import * as React from "react";
 import { useEffect, useState } from "react";
+import Grid from "@mui/material/Grid";
+import HomeContent from "./HomeContent.jsx";
+import MallData from "../Data/MallData.js";
 import axios from "axios";
 
 export default function HomeMain() {
-
   const [distance, setDistance] = useState([]);
   const [location, setLocation] = useState({
     lat: 13.745704,
     lng: 100.535912
   });
-
-  // useEffect(() => {
-  //   navigator.geolocation.getCurrentPosition(function (position) {
-  //     setLocation({
-  //       lat: position.coords.latitude,
-  //       lng: position.coords.longitude,
-  //     });
-  //   });
-  // }, []);
-  
-
 
   useEffect(() => {
     const sendLocation = async () => {
@@ -30,9 +18,7 @@ export default function HomeMain() {
         return false;
       }
       await axios.post("http://localhost:3000/api/calculatedistance", location).then((res) => {
-        // console.log(res.data);
         setDistance(res.data);
-        // console.log(location.lat, location.lng);
       });
     };
     sendLocation();
@@ -56,7 +42,7 @@ export default function HomeMain() {
 
   const filteredMallData = MallData.filter((mallDataObj) => {
     const matchingDistance = distance.find((dist) => dist.place_id === mallDataObj.placeId);
-    return !!matchingDistance; // Keep only if matching distance is found
+    return !!matchingDistance;
   });
   return (
     <Grid container direction="column" spacing={3}>
