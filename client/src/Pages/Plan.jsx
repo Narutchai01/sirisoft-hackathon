@@ -25,7 +25,7 @@ const Plan = () => {
 
             <Box>
               <Typography item variant="h6" fontWeight={{ fontWeight: 'bold' }} margin={0}>
-                Input locations  
+                Enter locations  
               </Typography>
               <br />
               <LocationInput />

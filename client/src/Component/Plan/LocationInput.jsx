@@ -118,11 +118,10 @@ export default function LocationInput() {
     return (
         <Grid container spacing={2}>
             <Grid item xs={12}>
-                <br /><br />
                 <TextField
                     fullWidth
                     value={selectedDescription || destination.place}
-                    label="Destination"
+                    label="Choose destination"
                     variant="outlined"
                     onFocus={handleFocus}
                     onChange={handleChangeFindPlace}
@@ -134,14 +133,14 @@ export default function LocationInput() {
                     />
                 )}
             </Grid>
-            <Grid item container xs={6}>
+            <Grid item container xs={2.5}>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DemoContainer components={['TimePicker']}>
-                        <TimePicker label="Enter Time" value={time} onChange={handleTimeChange} />
+                        <TimePicker label="Arrival time" value={time} onChange={handleTimeChange} />
                     </DemoContainer>
                 </LocalizationProvider>
             </Grid>
-            <Grid item container xs={6} marginTop={1}>
+            <Grid item container xs={9.5} marginTop={1}>
                 <TextField
                     fullWidth
                     select
@@ -158,7 +157,7 @@ export default function LocationInput() {
                 </TextField>
             </Grid>
             <Grid item xs={12}>
-                <Button variant="contained" onClick={handleSubmit}>Get Directions</Button>
+                <Button variant="contained" style={{ backgroundColor: '#FF5757' }}>Get Directions</Button>
             </Grid>
         </Grid>
     );

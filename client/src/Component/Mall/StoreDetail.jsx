@@ -28,7 +28,7 @@ const StoreDetail = () => {
                 </Grid>
                 <Grid item xs={11}>
                     <Grid>
-                        <Typography variant='h6' color='grey' paddingBottom={1}>{ detail.type }</Typography>
+                        <Typography variant='h6' color='grey' paddingBottom={1} paddingLeft={1}>{ detail.type }</Typography>
                     </Grid>
                 </Grid>
             </Grid>

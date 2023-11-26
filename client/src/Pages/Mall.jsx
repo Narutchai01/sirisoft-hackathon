@@ -42,9 +42,14 @@ const Mall = () => {
     const params = new URLSearchParams(location.search);
     const iconImg = params.get('iconImg');
     const { mallName } = useParams();
+    const [shopFloor, setShopFloor] = React.useState('');
+
+    const handleShopClick = (shopFloor) => {
+        setShopFloor(shopFloor);
+    };
 
     useEffect(() => {
-        window.scrollTo(0, 0); // Scroll to the top when the component mounts
+        window.scrollTo(0, 0);
     }, []);
 
 return (
@@ -60,16 +65,17 @@ return (
         </Grid>
 
         <Grid item container xs={9} sx={{ height: '58vh'}}>
-            <Grid xs={3.5} sx={{ width: '100%', height: '100%', paddingBottom: '10px', paddingRight: '40px' }}>
-                <StoreSearch/>
-
-                <DetailBox>
+            <Grid item container xs={3.5} sx={{ width: '100%', height: '100%', paddingBottom: '10px', paddingRight: '40px' }}>
+                <Grid item xs={12}>
+                    <StoreSearch mallName={mallName} onShopClick={handleShopClick}/>
+                </Grid>
+                <DetailBox item xs={12}>
                     <Typography variant='h6' fontWeight={{ fontWeight: 'bold' }} marginBottom={2}>Store detail</Typography>
                     <StoreDetail />
                 </DetailBox>
             </Grid>
             <Grid xs={8.5} sx={{ width: '100%', height: '100%' }}>
-                <MallMain/>
+                <MallMain shopFloor={shopFloor}/>
             </Grid>
         </Grid>
     </Grid>
