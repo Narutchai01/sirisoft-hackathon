@@ -26,7 +26,14 @@ export default function LocationInput() {
     const [placeId, setPlaceId] = useState('');
     const [time, setTime] = useState('');
 
-    const [form, setForm] = useState([]);
+    const [travelMode, setTravelMode] = React.useState('');
+    const [time, setTime] = React.useState('');
+    // const [destination, setDestination] = React.useState('');
+    // console.log(destination);
+    // console.log(time);
+    // console.log(travelMode);
+>>>>>>> origin/direction3
+
 
     const handleTimeChange = (newTime) => {
         setTime(newTime);
@@ -78,26 +85,26 @@ export default function LocationInput() {
         ]);
     }, [placeId, time, selectedMode]);
 
-// console.log(dropdown);
-console.log(dataSumbit);
+    // console.log(dropdown);
+    console.log(dataSumbit);
 
-return (
-    <Grid container spacing={2}>
-        <Grid item xs={12}>
-            <br /><br />
-            <TextField
-                fullWidth
-                value={selectedDescription || destination.place}
-                label="Destination"
-                variant="outlined"
-                onFocus={handleFocus}
-                onChange={handleChangeFindPlace}
-            />
-            {isSearchFocused && (
-                <LocationSearch
-                    dropdown={dropdown}
-                    onDescriptionClick={handleDescriptionClick}
+    return (
+        <Grid container spacing={2}>
+            <Grid item xs={12}>
+                <br /><br />
+                <TextField
+                    fullWidth
+                    value={selectedDescription || destination.place}
+                    label="Destination"
+                    variant="outlined"
+                    onFocus={handleFocus}
+                    onChange={handleChangeFindPlace}
                 />
+                {isSearchFocused && (
+                    <LocationSearch
+                        dropdown={dropdown}
+                        onDescriptionClick={handleDescriptionClick}
+                    />
                 {isSearchFocused && (
                     <LocationSearch
                         dropdown={dropdown}
