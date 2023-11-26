@@ -1,6 +1,5 @@
 import React from 'react'
-import { Typography, Box, Grid } from '@mui/material'
-import { bgcolor, styled } from '@mui/system';
+import { Typography, Grid } from '@mui/material'
 
 const details = [
     { id: '0', type: 'Restaurants', code: '#73fd47'},
@@ -19,7 +18,7 @@ const details = [
 ]
 
 const StoreDetail = () => {
-  return (
+return (
     <>
         {details.map((detail) => (
             <Grid container key={detail.id}>
@@ -34,7 +33,7 @@ const StoreDetail = () => {
             </Grid>
         ))}
     </>
-  )
+    )
 }
 
 export default StoreDetail

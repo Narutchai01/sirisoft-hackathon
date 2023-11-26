@@ -15,7 +15,6 @@ import { Link } from 'react-router-dom'
 import { Button } from '@mui/material';
 import MallSearch from './Search/MallSearch';
 import Logo from '../assets/MallMapLogo.png';
-import { Unstable_Popup as BasePopup } from '@mui/base/Unstable_Popup';
 
 const pages = [
     { name: 'HOME', path: '/', id: '0' },
@@ -64,7 +63,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Nav() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchor, setAnchor] = React.useState(null);
     const [mallSearch, setMallSearch] = React.useState('');
     const [isSearchFocused, setIsSearchFocused] = React.useState(false);
 
@@ -75,7 +73,6 @@ export default function Nav() {
     };
     
     const handleClickSearch = (event) => {
-        setAnchor(anchor ? null : event.currentTarget);
         setIsSearchFocused(true);
     };
     
@@ -85,9 +82,6 @@ export default function Nav() {
         await sleep(1000);
         setIsSearchFocused(false);
     };
-    
-    const open = Boolean(anchor);
-    const id = open ? 'simple-popup' : undefined;
     
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);

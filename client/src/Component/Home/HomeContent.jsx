@@ -1,12 +1,12 @@
 import * as React from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom'
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import { useState } from 'react';
-import { Link } from 'react-router-dom'
 
 const Img = styled('img') ({
   borderRadius: 12,
@@ -48,10 +48,10 @@ const IconComponent = direction === 'left' ? ArrowCircleLeftIcon : ArrowCircleRi
 
 return <IconComponent {...props} />;
 })({
-':hover': {
-  transform: 'scale(1.1)',
-  cursor: 'pointer',
-},
+  ':hover': {
+    transform: 'scale(1.1)',
+    cursor: 'pointer',
+  },
 });
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -114,35 +114,39 @@ function HomeContent(props) {
             {mallName}
           </Link>
         </Grid>
-          <Grid item xs={4} fontSize={12} marginBottom="3px"> {distance.toFixed(2)} km. from you </Grid>
-          <Grid item xs={4} fontSize={12} textAlign="left"> <LocationOnIcon style={{ fontSize: '10px', marginLeft: '0px', marginRight: '1px' }} /> {mallPosition} </Grid>
+          <Grid item xs={4} fontSize={12} marginBottom="3px"> 
+            {distance.toFixed(2)} km. from you 
+          </Grid>
+          <Grid item xs={4} fontSize={12} textAlign="left"> 
+            <LocationOnIcon style={{ fontSize: '10px', marginLeft: '0px', marginRight: '1px' }} /> {mallPosition} 
+          </Grid>
         </Grid>
 
         <Grid item container xs={10} spacing={2} justifyContent="center" alignItems="center" style={{ height: '100%' }}>
-            <Grid item xs={1.5} onClick={handleLeftButtonClick}> 
-              <ClickIcon direction="left"/> 
-            </Grid>
-            <Grid item xs={3} style={{ height: '90%' }}> 
+          <Grid item xs={1.5} onClick={handleLeftButtonClick}> 
+            <ClickIcon direction="left"/> 
+          </Grid>
+          <Grid item xs={3} style={{ height: '90%' }}> 
             <Img
                 src={storeImg[currentImageIndex]}
                 loading="lazy"
             />
-            </Grid>
-            <Grid item xs={3} style={{ height: '90%' }}> 
+          </Grid>
+          <Grid item xs={3} style={{ height: '90%' }}> 
             <Img
                 src={storeImg[(currentImageIndex + 1) % storeImg.length]}
                 loading="lazy"
             />
-            </Grid>
-            <Grid item xs={3} style={{ height: '90%' }}> 
+          </Grid>
+          <Grid item xs={3} style={{ height: '90%' }}> 
             <Img
                 src={storeImg[(currentImageIndex + 2) % storeImg.length]}
                 loading="lazy"
             />
-            </Grid> 
-            <Grid item xs={1.5} onClick={handleRightButtonClick}> 
-                <ClickIcon direction="right"/>
-            </Grid>
+          </Grid> 
+          <Grid item xs={1.5} onClick={handleRightButtonClick}> 
+              <ClickIcon direction="right"/>
+          </Grid>
         </Grid>
       </Grid>
     </Item>
