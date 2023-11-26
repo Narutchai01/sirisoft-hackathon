@@ -102,8 +102,9 @@ export default function LocationInput() {
             }
             axios.post('http://localhost:3000/api/direction', dataFrom)
                 .then(res => {
-                    console.log(res.data);
-                    console.log(dataFrom);
+                    // console.log(res.data);
+                    setDataDistance(res.data);
+                    // console.log(dataFrom);
                 })
                 .catch(err => {
                     console.log(err);
@@ -112,6 +113,9 @@ export default function LocationInput() {
             console.log(error);
         }
     };
+
+
+    console.log(dataDistance);
 
 
 
@@ -160,6 +164,7 @@ export default function LocationInput() {
                 <Button variant="contained" style={{ backgroundColor: '#FF5757' } } onClick={handleSubmit}>Get Directions</Button>
             </Grid>
         </Grid>
+
     );
 }
 
