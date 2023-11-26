@@ -27,7 +27,7 @@ export default function LocationInput() {
 
     const [travelMode, setTravelMode] = React.useState('');
     const [time, setTime] = React.useState('');
-    const [destination, setDestination] = React.useState('');
+    // const [destination, setDestination] = React.useState('');
     // console.log(destination);
     // console.log(time);
     // console.log(travelMode);
@@ -126,4 +126,4 @@ export default function LocationInput() {
             </Grid>
         </Grid>
     );
-}
+  })}
