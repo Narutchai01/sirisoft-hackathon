@@ -23,44 +23,21 @@ export default function LocationInput() {
     const [isSearchFocused, setIsSearchFocused] = useState(false);
     const [selectedDescription, setSelectedDescription] = useState('');
     const [selectedTime, setSelectedTime] = useState([]);
-    
+    const [selectedMode, setSelectedMode] = useState([]);
+    const dataSumbit = {
+        destination: selectedDescription,
+        time: selectedTime,
+        mode: selectedMode,
+    }
 
-    const [travelMode, setTravelMode] = React.useState('');
-    const [time, setTime] = React.useState('');
-    const [destination, setDestination] = React.useState('');
-    // console.log(destination);
-    console.log(time);
-    // console.log(travelMode);
 
-    const props = {
-        travelMode,
-        setTravelMode,
-        time,
+    const handleDescriptionClick = (description) => {
+        setSelectedDescription(description);
+        setIsSearchFocused(false); // Close the dropdown when a description is selected
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // console.log(destination);
-    }
-    const handleTimeChange = (newTime) => {
-        setTime(newTime);
-        // console.log(time);
-    }
-
-
-  const [location, setLocation] = React.useState({
-    lat: 13.745704,
-    lng: 100.535912
-  });
-
-  React.useEffect(() => {
-    const sendLocation = async () => {
-      if (location.lat === 0 && location.lng === 0) {
-        return false;
-      }
-      await axios.post("http://localhost:3000/api/direction", location).then((res) => {
-        console.log(res.data);
-      });
+    const handleFocus = () => {
+        setIsSearchFocused(!isSearchFocused);
     };
 
     const handleChangeFindPlace = (event) => {
@@ -79,51 +56,53 @@ export default function LocationInput() {
             });
     };
 
-    console.log(dropdown);
 
-    return (
-        <Grid container spacing={2}>
-            <Grid item xs={12}>
-                <br /><br />
-                <TextField
-                    fullWidth
-                    value={selectedDescription || destination.place}
-                    label="Destination"
-                    variant="outlined"
-                    onFocus={handleFocus}
-                    onChange={handleChangeFindPlace}
+// console.log(dropdown);
+console.log(dataSumbit);
+
+return (
+    <Grid container spacing={2}>
+        <Grid item xs={12}>
+            <br /><br />
+            <TextField
+                fullWidth
+                value={selectedDescription || destination.place}
+                label="Destination"
+                variant="outlined"
+                onFocus={handleFocus}
+                onChange={handleChangeFindPlace}
+            />
+            {isSearchFocused && (
+                <LocationSearch
+                    dropdown={dropdown}
+                    onDescriptionClick={handleDescriptionClick}
                 />
-                { isSearchFocused && (
-                    <LocationSearch
-                        dropdown={dropdown}
-                        onDescriptionClick={handleDescriptionClick}
-                    />
-                )}
-            </Grid>
-            <Grid item container xs={6}>
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <DemoContainer components={['TimePicker']}>
-                        <TimePicker label="Time" value={setTime} onChange={handleTimeChange} />
-                    </DemoContainer>
-                </LocalizationProvider>
-            </Grid>
-            <Grid item container xs={6} marginTop={1}>
-                <TextField
-                    fullWidth
-                    select
-                    label="Travel Mode"
-                    variant="outlined"
-                >
-                    {timeOptions.map((option) => (
-                        <MenuItem key={option.value} value={option.value}>
-                            {option.label}
-                        </MenuItem>
-                    ))}
-                </TextField>
-            </Grid>
-            <Grid item xs={12}>
-                <Button variant="contained" >Get Directions</Button>
-            </Grid>
+            )}
         </Grid>
-    );
+        <Grid item container xs={6}>
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DemoContainer components={['TimePicker']}>
+                    <TimePicker label="Time" />
+                </DemoContainer>
+            </LocalizationProvider>
+        </Grid>
+        <Grid item container xs={6} marginTop={1}>
+            <TextField
+                fullWidth
+                select
+                label="Travel Mode"
+                variant="outlined"
+            >
+                {timeOptions.map((option) => (
+                    <MenuItem key={option.value} value={option.value}>
+                        {option.label}
+                    </MenuItem>
+                ))}
+            </TextField>
+        </Grid>
+        <Grid item xs={12}>
+            <Button variant="contained" >Get Directions</Button>
+        </Grid>
+    </Grid>
+);
 }
