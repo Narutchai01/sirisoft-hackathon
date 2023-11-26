@@ -1,3 +1,5 @@
+import { Component } from 'react';
+import GoogleMapReact from 'google-map-react';
 import React, { useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
@@ -11,75 +13,108 @@ import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import axios from 'axios';
 import LocationSearch from '../Search/LocationSearch';
 
-export default function LocationInput() {
+class LocationInput extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentLocation: { lat: 40.756795, lng: -73.954298 },
+    };
+  }
+
+  render() {
+    const apiIsLoaded = (map, maps) => {
+      const directionsService = new google.maps.DirectionsService();
+      const directionsRenderer = new google.maps.DirectionsRenderer();
+      directionsRenderer.setMap(map);
+      const origin = { lat: 40.756795, lng: -73.954298 };
+      const destination = { lat: 41.756795, lng: -78.954298 };
+
+      directionsService.route(
+        {
+          origin: origin,
+          destination: destination,
+          travelMode: google.maps.TravelMode.DRIVING,
+        },
+        (result, status) => {
+          if (status === google.maps.DirectionsStatus.OK) {
+            directionsRenderer.setDirections(result);
+          } else {
+            console.error(`error fetching directions ${result}`);
+          }
+        }
+      );
+    };
+
     const timeOptions = [
-        { value: 'Private', label: 'Private' },
-        { value: 'Public', label: 'Public' },
-    ];
-    const [dropdown, setDropdown] = useState([]);
-    const [destination, setDestination] = useState({
-        place: '',
-    });
-    const [isSearchFocused, setIsSearchFocused] = useState(false);
-    const [selectedDescription, setSelectedDescription] = useState('');
-    const [selectedMode, setSelectedMode] = useState('');
-    const [placeId, setPlaceId] = useState('');
-    const [time, setTime] = useState('');
+      { value: 'Private', label: 'Private' },
+      { value: 'Public', label: 'Public' },
+  ];
+  const [dropdown, setDropdown] = useState([]);
+  const [destination, setDestination] = useState({
+      place: '',
+  });
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const [selectedDescription, setSelectedDescription] = useState('');
+  const [selectedMode, setSelectedMode] = useState('');
+  const [placeId, setPlaceId] = useState('');
+  const [time, setTime] = useState('');
 
-    const [form, setForm] = useState([]);
+  const [form, setForm] = useState([]);
 
-    const handleTimeChange = (newTime) => {
-        setTime(newTime);
-    }
+  const handleTimeChange = (newTime) => {
+      setTime(newTime);
+  }
 
-    const handleModeChange = (event) => {
-        setSelectedMode(event.target.value);
-    }
+  const handleModeChange = (event) => {
+      setSelectedMode(event.target.value);
+  }
 
-    const handleDescriptionClick = (predictions) => {
-        setSelectedDescription(predictions.description);
-        setPlaceId(predictions.place_id);
-        setIsSearchFocused(false);
-    };
+  const handleDescriptionClick = (predictions) => {
+      setSelectedDescription(predictions.description);
+      setPlaceId(predictions.place_id);
+      setIsSearchFocused(false);
+  };
 
-    const handleFocus = () => {
-        setIsSearchFocused(!isSearchFocused);
-    };
+  const handleFocus = () => {
+      setIsSearchFocused(!isSearchFocused);
+  };
 
-    const handleChangeFindPlace = (event) => {
-        const newDestination = event.target.value;
+  const handleChangeFindPlace = (event) => {
+      const newDestination = event.target.value;
 
-        setDestination(newDestination);
-        setSelectedDescription('');
+      setDestination(newDestination);
+      setSelectedDescription('');
 
-        axios.post('http://localhost:3000/api/findplace', { destination: newDestination })
-            .then(res => {
-                setDropdown(res.data.predictions || []);
-            })
-            .catch(err => {
-                console.log(dropdown.description);
-            });
-    };
+      axios.post('http://localhost:3000/api/findplace', { destination: newDestination })
+          .then(res => {
+              setDropdown(res.data.predictions || []);
+          })
+          .catch(err => {
+              console.log(dropdown.description);
+          });
+  };
 
-    console.log(form);
+  console.log(form);
 
-    useEffect(() => {
-        setForm([
-            {
-                placeId: placeId,
-                time: [
-                    {
-                        h: time.$H,
-                        m: time.$m
-                    }
-                ],
-                selectedMode: selectedMode,
-            }
-        ]);
-    }, [placeId, time, selectedMode]);
+  useEffect(() => {
+      setForm([
+          {
+              placeId: placeId,
+              time: [
+                  {
+                      h: time.$H,
+                      m: time.$m
+                  }
+              ],
+              selectedMode: selectedMode,
+          }
+      ]);
+  }, [placeId, time, selectedMode]);
 
     return (
-        <Grid container spacing={2}>
+        <>
+            <Grid container spacing={2}>
             <Grid item xs={12}>
                 <TextField
                     fullWidth
@@ -123,5 +158,22 @@ export default function LocationInput() {
                 <Button variant="contained" style={{ backgroundColor: '#FF5757' }}>Get Directions</Button>
             </Grid>
         </Grid>
+      <div>
+        <div style={{ height: '400px', width: '100%' }}>
+          <GoogleMapReact
+            bootstrapURLKeys={{
+              key: 'AIzaSyCZBeJA2Iq-vVE3HmLe_xqw_g7S6YQIWmg',
+            }}
+            defaultCenter={{ lat: 40.756795, lng: -73.954298 }}
+            defaultZoom={10}
+            center={this.state.currentLocation}
+            yesIWantToUseGoogleMapApiInternals
+            onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps)}
+          />
+        </div>
+      </div>
+        </>
     );
+  }
 }
+export default LocationInput;
