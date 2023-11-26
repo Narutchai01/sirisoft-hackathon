@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import MallData from '../Data/MallData';
@@ -36,17 +37,29 @@ const MallSearch = ({ mallSearch }) => {
             {matches.length === 0 ? (
                 <p>No matches found.</p>
             ) : (
-                <ul style={{ listStyle: 'none' }}>
+                <ul style={{ listStyle: 'none', padding: 0 }}>
                     {matches.map((match, index) => (
-                        <Grid>
-                            <Grid container key={index}>
-                                <Grid item container xs={4} justifyContent='center'> 
-                                    <Grid item xs={2}/> 
-                                    <Grid item xs={6}> {match.mallName}  </Grid>
-                                    <Grid item xs={4}/> 
+                        <Grid key={index}>
+                            <Link
+                                style={{
+                                    textDecoration: 'none',
+                                    color: 'black',
+                                    cursor: 'pointer',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                }}
+                                to={{
+                                    pathname: `/mall/${encodeURIComponent(match.mallName)}`,
+                                    search: `?iconImg=${encodeURIComponent(match.iconImg)}`,
+                                }}
+                            >
+                                <Grid item xs={3} justifyContent='center'>
+                                    <Grid item xs={12}>{match.mallName}</Grid>
                                 </Grid>
-                                <Grid item xs={8} fontSize={10} color='gray'>{match.mallPosition}</Grid> 
-                            </Grid>
+                                <Grid item xs={7} fontSize={10} color='gray'>
+                                    {match.mallPosition}
+                                </Grid>
+                            </Link>
                             <Box marginY={2} width='100%' borderBottom={1} borderColor='#ccc'></Box>
                         </Grid>
                     ))}

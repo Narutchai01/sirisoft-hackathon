@@ -16,7 +16,7 @@ function App() {
         <Route path="/plan" element={<Plan />} />
         <Route path="/coupon" element={<Coupon/>}/>
         <Route path="/minigame" element={<Minigame/>} />
-        <Route path="/mall" element={<Mall/>}/>
+        <Route path="/mall/:mallName" element={<Mall/>}/>
       </Routes>
     </>
   )

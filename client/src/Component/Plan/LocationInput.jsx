@@ -22,10 +22,17 @@ export default function LocationInput() {
     });
     const [isSearchFocused, setIsSearchFocused] = useState(false);
     const [selectedDescription, setSelectedDescription] = useState('');
+    const [time, setTime] = useState('');
+
+    const handleTimeChange = (newTime) => {
+        setTime(newTime);
+        console.log(time.$H, time.$m);
+    }
+
 
     const handleDescriptionClick = (description) => {
         setSelectedDescription(description);
-        setIsSearchFocused(false); // Close the dropdown when a description is selected
+        setIsSearchFocused(false);
     };
 
     const handleFocus = () => {
@@ -36,7 +43,7 @@ export default function LocationInput() {
         const newDestination = event.target.value;
 
         setDestination(newDestination);
-        setSelectedDescription(''); // Clear the selected description when a new place is selected
+        setSelectedDescription(''); 
 
         axios.post('http://localhost:3000/api/findplace', { destination: newDestination })
             .then(res => {
@@ -44,11 +51,9 @@ export default function LocationInput() {
                 setDropdown(res.data.predictions || []);
             })
             .catch(err => {
-                console.log(err);
+                console.log(dropdown.description);
             });
     };
-
-    console.log(dropdown);
 
     return (
         <Grid container spacing={2}>
@@ -72,7 +77,7 @@ export default function LocationInput() {
             <Grid item container xs={6}>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DemoContainer components={['TimePicker']}>
-                        <TimePicker label="Time" />
+                        <TimePicker label="Enter Time" value={time} onChange={handleTimeChange} />
                     </DemoContainer>
                 </LocalizationProvider>
             </Grid>

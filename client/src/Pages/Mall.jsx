@@ -5,13 +5,15 @@ import { styled } from '@mui/system';
 import StoreSearch from '../Component/Search/StoreSearch';
 import MallMain from '../Component/Mall/MallMain';
 import StoreDetail from '../Component/Mall/StoreDetail';
+import { useParams, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Img = styled('img') ({
     borderRadius: 12,
     display: 'block',
     width: '100%',
     height: '100%',
-    objectFit: 'cover',
+    objectFit: 'contain',
     transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
     ":hover": {
     transform: 'scale(1.01)',
@@ -36,15 +38,24 @@ const DetailBox = styled('div') ({
 })
 
 const Mall = () => {
+    const location = useLocation();
+    const params = new URLSearchParams(location.search);
+    const iconImg = params.get('iconImg');
+    const { mallName } = useParams();
+
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top when the component mounts
+    }, []);
+
 return (
     <Grid container xs={12} justifyContent='center'>
         <Grid item container justifyContent='center' xs={9}  sx={{ height: '22vh', paddingY: '20px' }}>
             <Box item container sx={{ width: '100%', height: '100%' }}>
-                <Img src='https://img.salehere.co.th/p/1200x0/2023/07/17/1qrm9d5idnzc.jpg'></Img>
+                <Img src={iconImg}></Img>
             </Box>
         </Grid>
         <Grid item xs={9} color='Grey' sx={{ height: '8vh'}}>
-            <Typography variant='h5'>Central Rama 2</Typography>
+            <Typography variant='h5'> {mallName} </Typography>
             <Box sx={{ width: '100%', borderBottom: '1px solid #AAA', paddingY: '5px'}}/>
         </Grid>
 

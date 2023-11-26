@@ -28,7 +28,8 @@ const LocationSearch = (props) => {
       const handleMouseOut = () => {
         setIsHovered(false);
       };
-
+      
+    console.log(dropdown);
     return (
         <Popup>
         {dropdown.map((prediction, index) => (
