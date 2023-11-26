@@ -13,17 +13,17 @@ class ResultMap extends Component {
     };
   }
 
-  useEffect(() => {
-    const sendLocation = async () => {
-      if (location.lat === 0 && location.lng === 0) {
-        return false;
-      }
-      await axios.post("http://localhost:3000/api/direction",).then((res) => {
+  // useEffect(() => {
+  //   const sendLocation = async () => {
+  //     if (location.lat === 0 && location.lng === 0) {
+  //       return false;
+  //     }
+  //     await axios.post("http://localhost:3000/api/direction",).then((res) => {
         
-      });
-    };
-    sendLocation();
-  }, []);
+  //     });
+  //   };
+  //   sendLocation();
+  // }, []);
 
   render() {
     const apiIsLoaded = (map, maps) => {
