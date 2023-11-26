@@ -15,6 +15,13 @@ export default function LocationInput() {
         { value: 'driving', label: 'Private' },
         { value: 'transit', label: 'Public' },
     ];
+
+
+    const [location, setLocation] = useState({
+        lat: 13.745704,
+        lng: 100.535912
+    });
+    const [distance, setDistance] = useState([]);
     const [dropdown, setDropdown] = useState([]);
     const [destination, setDestination] = useState({
         place: '',
@@ -60,41 +67,53 @@ export default function LocationInput() {
             });
     };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const dataFrom = {
-            placeId: placeId,
-            time: [
+
+
+    useEffect(() => {
+        setForm([
+            {
+                location: location,
+                placeId: placeId,
+                time:
                 {
                     h: time.$H,
                     m: time.$m
                 }
-            ],
-            selectedMode: selectedMode,
+                ,
+                mode: selectedMode,
+            }
+        ]);
+    }, [placeId, time, selectedMode, location]);
+
+    const handleSubmit = (event) => {
+        try {
+            event.preventDefault();
+            const dataFrom = {
+                lat: location.lat,
+                lng: location.lng,
+                placeId: placeId,
+                time: 
+                    {
+                        h: time.$H,
+                        m: time.$m
+                    }
+                ,
+                mode: selectedMode,
+            }
+            axios.post('http://localhost:3000/api/direction', dataFrom)
+                .then(res => {
+                    console.log(res.data);
+                    console.log(dataFrom);
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+        } catch (error) {
+            console.log(error);
         }
-        axios.post('http://localhost:3000/api/directions', dataFrom)
-            .then(res => {
-                console.log(dataFrom);
-            })
-            .catch(err => {
-                console.log(err);
-            });
     };
 
-        useEffect(() => {
-            setForm([
-                {
-                    placeId: placeId,
-                    time: [
-                        {
-                            h: time.$H,
-                            m: time.$m
-                        }
-                    ],
-                    selectedMode: selectedMode,
-                }
-            ]);
-        }, [placeId, time, selectedMode]);
+
 
     return (
         <Grid container spacing={2}>
@@ -139,9 +158,9 @@ export default function LocationInput() {
                 </TextField>
             </Grid>
             <Grid item xs={12}>
-                <Button variant="contained" onSubmit={handleSubmit}>Get Directions</Button>
+                <Button variant="contained" onClick={handleSubmit}>Get Directions</Button>
             </Grid>
         </Grid>
     );
-  }
+}
 
