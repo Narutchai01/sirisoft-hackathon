@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -57,26 +56,45 @@ export default function LocationInput() {
                 setDropdown(res.data.predictions || []);
             })
             .catch(err => {
-                console.log(dropdown.description);
+                console.log(err);
             });
     };
 
-    console.log(form);
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const dataFrom = {
+            placeId: placeId,
+            time: [
+                {
+                    h: time.$H,
+                    m: time.$m
+                }
+            ],
+            selectedMode: selectedMode,
+        }
+        axios.post('http://localhost:3000/api/directions', dataFrom)
+            .then(res => {
+                console.log(dataFrom);
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    };
 
-    useEffect(() => {
-        setForm([
-            {
-                placeId: placeId,
-                time: [
-                    {
-                        h: time.$H,
-                        m: time.$m
-                    }
-                ],
-                selectedMode: selectedMode,
-            }
-        ]);
-    }, [placeId, time, selectedMode]);
+        useEffect(() => {
+            setForm([
+                {
+                    placeId: placeId,
+                    time: [
+                        {
+                            h: time.$H,
+                            m: time.$m
+                        }
+                    ],
+                    selectedMode: selectedMode,
+                }
+            ]);
+        }, [placeId, time, selectedMode]);
 
     return (
         <Grid container spacing={2}>
@@ -121,7 +139,7 @@ export default function LocationInput() {
                 </TextField>
             </Grid>
             <Grid item xs={12}>
-                <Button variant="contained">Get Directions</Button>
+                <Button variant="contained" onSubmit={handleSubmit}>Get Directions</Button>
             </Grid>
         </Grid>
     );
