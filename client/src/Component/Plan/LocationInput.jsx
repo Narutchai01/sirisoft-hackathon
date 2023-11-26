@@ -125,6 +125,5 @@ export default function LocationInput() {
             </Grid>
         </Grid>
     );
-  })}
+  }
 
-}
