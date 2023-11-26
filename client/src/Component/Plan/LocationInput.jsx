@@ -85,26 +85,26 @@ export default function LocationInput() {
         ]);
     }, [placeId, time, selectedMode]);
 
-    // console.log(dropdown);
-    console.log(dataSumbit);
+// console.log(dropdown);
+console.log(dataSumbit);
 
-    return (
-        <Grid container spacing={2}>
-            <Grid item xs={12}>
-                <br /><br />
-                <TextField
-                    fullWidth
-                    value={selectedDescription || destination.place}
-                    label="Destination"
-                    variant="outlined"
-                    onFocus={handleFocus}
-                    onChange={handleChangeFindPlace}
+return (
+    <Grid container spacing={2}>
+        <Grid item xs={12}>
+            <br /><br />
+            <TextField
+                fullWidth
+                value={selectedDescription || destination.place}
+                label="Destination"
+                variant="outlined"
+                onFocus={handleFocus}
+                onChange={handleChangeFindPlace}
+            />
+            {isSearchFocused && (
+                <LocationSearch
+                    dropdown={dropdown}
+                    onDescriptionClick={handleDescriptionClick}
                 />
-                {isSearchFocused && (
-                    <LocationSearch
-                        dropdown={dropdown}
-                        onDescriptionClick={handleDescriptionClick}
-                    />
                 {isSearchFocused && (
                     <LocationSearch
                         dropdown={dropdown}
@@ -140,4 +140,4 @@ export default function LocationInput() {
             </Grid>
         </Grid>
     );
-}
+
