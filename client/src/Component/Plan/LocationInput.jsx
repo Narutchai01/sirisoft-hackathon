@@ -96,14 +96,14 @@ export default function LocationInput() {
                     />
                 )}
             </Grid>
-            <Grid item container xs={2}>
+            <Grid item container xs={2.5}>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DemoContainer components={['TimePicker']}>
                         <TimePicker label="Arrival time" value={time} onChange={handleTimeChange} />
                     </DemoContainer>
                 </LocalizationProvider>
             </Grid>
-            <Grid item container xs={10} marginTop={1}>
+            <Grid item container xs={9.5} marginTop={1}>
                 <TextField
                     fullWidth
                     select

@@ -9,13 +9,12 @@ const Input = React.forwardRef(function CustomInput(props, ref) {
   return <BaseInput slots={{ input: InputElement }} {...props} ref={ref} />;
 });
 
-const blue = {
-  100: '#DAECFF',
-  200: '#b6daff',
-  400: '#3399FF',
-  500: '#007FFF',
-  600: '#0072E5',
-  900: '#003A75',
+const red = {
+  100: '#FF7D7D',
+  200: '#FF6A6A',
+  400: '#FF5757',
+  500: '#E24E4E',
+  600: '#C84141',
 };
 
 const grey = {
@@ -45,14 +44,14 @@ const InputElement = styled('input')(({ theme }) => `
     box-shadow: 0px 2px 4px ${theme.palette.mode === 'dark' ? 'rgba(0,0,0, 0.5)' : 'rgba(0,0,0, 0.05)'};
 
     &:hover {
-        border-color: ${blue[400]};
+        border-color: ${red[400]};
     }
 
     &:focus {
-        border-color: ${blue[400]};
+        border-color: ${red[400]};
         transition: all 0.15s ease-in-out;
-        scale: 1.1;
-        box-shadow: 0 0 0 3px ${theme.palette.mode === 'dark' ? blue[600] : blue[200]};
+        scale: 1.05;
+        box-shadow: 0 0 0 3px ${theme.palette.mode === 'dark' ? 'rgba( 100, 0, 0, 0.05 )' : 'rgba( 50, 0, 0, 0.05 )'};
     }
 
     // firefox
@@ -62,42 +61,54 @@ const InputElement = styled('input')(({ theme }) => `
 `);
 
 const StoreSearch = ({ mallName, onShopClick }) => {
-  const [searchInput, setSearchInput] = useState('');
+    const [searchInput, setSearchInput] = useState('');
 
-  const handleSearchChange = (event) => {
-    setSearchInput(event.target.value);
-  };
+    const handleSearchChange = (event) => {
+        setSearchInput(event.target.value);
+    };
 
-  const handleClickShop = (shop) => {
-    onShopClick(shop.shopFloor);
-  };
+    const handleClickShop = (shop) => {
+        onShopClick(shop.shopFloor);
+    };
 
-  const filteredStores = MallData
-    .filter(mall => mall.mallName === mallName)
-    .flatMap(mall => mall.storeData)
-    .filter(store => store.shopName.toLowerCase().includes(searchInput.toLowerCase())); // Filter by search input
+    const filteredStores = MallData
+        .filter(mall => mall.mallName === mallName)
+        .flatMap(mall => mall.storeData)
+        .filter(store => store.shopName.toLowerCase().includes(searchInput.toLowerCase()));
 
-  return (
+    return (
     <Grid container>
-      <Input
+    <Input
         placeholder="Search Store..."
         onChange={handleSearchChange}
-      />
-      {searchInput && (
+    />
+    {searchInput && (
         <Grid container borderRadius={1} boxShadow={2} style={{ borderRadius: '' }} xs={12}>
-          {filteredStores.map((store, index) => (
-            <Grid item container style={{ display: 'flex' }} padding={2} key={index} onClick={() => handleClickShop(store)}>
-                <Grid item container paddingLeft={5} xs={8}>
-                    <Typography item xs={12} color='grey'>{store.shopName}</Typography>
-                </Grid>
-                <Grid item xs={4} color='grey' textAlign='center'> Floor: {store.shopFloor} </Grid>
-                <Grid item xs={12} padding={0.5} borderBottom='1px solid #AAA'></Grid>
+        {filteredStores.map((store, index) => (
+            <Grid
+            item
+            container
+            style={{ display: 'flex', cursor: 'pointer' }}
+            padding={2}
+            key={index}
+            onClick={() => handleClickShop(store)}
+            sx={{
+                '&:hover': {
+                backgroundColor: 'rgba( 0, 0, 0, 0.05 )',
+                },
+            }}
+            >
+            <Grid item container paddingLeft={5} xs={8}>
+                <Typography item xs={12} color='grey'>{store.shopName}</Typography>
             </Grid>
-          ))}
+            <Grid item xs={4} color='grey' paddingTop={0.5} textAlign='center'> Floor: {store.shopFloor} </Grid>
+            <Grid item xs={12} padding={0.5} borderBottom='1px solid #AAA'></Grid>
+            </Grid>
+        ))}
         </Grid>
-      )}
+    )}
     </Grid>
-  );
+    );
 };
 
 export default StoreSearch;
