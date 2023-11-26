@@ -147,7 +147,7 @@ export default function Nav() {
                         <SearchIcon />
                     </SearchIconWrapper>
                     <StyledInputBase
-                        placeholder="Search…"
+                        placeholder="Search Malls & Stores"
                         value={mallSearch}
                         inputProps={{ 'aria-label': 'search' }}
                         onChange={(e) => setMallSearch(e.target.value)}
