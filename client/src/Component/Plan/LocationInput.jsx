@@ -19,7 +19,7 @@ export default function LocationInput() {
     const [time, setTime] = React.useState('');
     const [destination, setDestination] = React.useState('');
     // console.log(destination);
-    console.log(time);
+    // console.log(time);
     // console.log(travelMode);
 
     const props = {
