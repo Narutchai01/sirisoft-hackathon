@@ -36,7 +36,10 @@ export const Direction = async (req: Request, res: Response) => {
             {
                 steps: response.data.routes[0].legs[0].steps,
                 arrival_time: response.data.routes[0].legs[0].arrival_time,
-                departure_time: response.data.routes[0].legs[0].departure_time
+                departure_time: response.data.routes[0].legs[0].departure_time,
+                deslat: deslat,
+                deslng: deslng,
+
             }
         )
 

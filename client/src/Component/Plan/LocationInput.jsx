@@ -13,21 +13,22 @@ import axios from 'axios';
 import LocationSearch from '../Search/LocationSearch';
 
 class LocationInput extends Component {
-  constructor(props) {
-    super(props);
+//   constructor(props) {
+//     super(props);
 
-    this.state = {
-      currentLocation: { lat: 40.756795, lng: -73.954298 },
-    };
-  }
+//     this.state = {
+//       currentLocation: { lat: 40.756795, lng: -73.954298 },
+//     };
+//   }
+  
 
   render() {
     const apiIsLoaded = (map, maps) => {
       const directionsService = new google.maps.DirectionsService();
       const directionsRenderer = new google.maps.DirectionsRenderer();
       directionsRenderer.setMap(map);
-      const origin = { lat: 40.756795, lng: -73.954298 };
-      const destination = { lat: 41.756795, lng: -78.954298 };
+      const origin = { lat: user.lat, lng: user.lng };
+      const destination = { lat: deslat, lng: -78.954298 };
 
       directionsService.route(
         {
@@ -43,6 +44,14 @@ class LocationInput extends Component {
           }
         }
       );
+    };
+    const user = {
+        lat: 13.745704,
+        lng: 100.535912
+      };
+    const des = {
+        lat: res.data.result.deslat,
+        lng: res.data.result.deslng
     };
 
     const timeOptions = [
@@ -146,6 +155,7 @@ class LocationInput extends Component {
             console.log(error);
         }
     };
+   
 
 
 
@@ -203,7 +213,7 @@ class LocationInput extends Component {
             }}
             defaultCenter={{ lat: 40.756795, lng: -73.954298 }}
             defaultZoom={10}
-            center={this.state.currentLocation}
+            center={}
             yesIWantToUseGoogleMapApiInternals
             onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps)}
           />
