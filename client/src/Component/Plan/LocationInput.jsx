@@ -9,6 +9,8 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import axios from 'axios';
 import LocationSearch from '../Search/LocationSearch';
+import GoogleMapReact from 'google-map-react';
+import { Component } from 'react';
 
 class LocationInput extends Component {
     //   constructor(props) {
